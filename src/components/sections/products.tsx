@@ -1,23 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Check, Factory, Keyboard } from "lucide-react";
+import type { ComponentType } from "react";
+import { ArrowRight, Check, Factory } from "lucide-react";
 import { useLocale } from "@/components/providers/locale-provider";
 import { Badge } from "@/components/ui/badge";
+import { TypingMasterMark } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
+/** Product marks, matching the icons the apps themselves ship. */
+const ICONS: Record<
+  "neon" | "violet",
+  ComponentType<{ className?: string }>
+> = {
+  neon: TypingMasterMark,
+  violet: Factory,
+};
+
 const VISUALS = {
   neon: {
-    icon: Keyboard,
     accent: "from-neon-400/25 to-violet-glow-500/10",
     ring: "border-neon-400/30 text-neon-300",
     bar: "from-neon-400 to-neon-300",
     href: "/products/typing-master",
   },
   violet: {
-    icon: Factory,
     accent: "from-violet-glow-500/25 to-magenta-500/10",
     ring: "border-violet-glow-400/30 text-violet-glow-300",
     bar: "from-violet-glow-400 to-magenta-400",
@@ -28,7 +37,7 @@ const VISUALS = {
 /** Abstract product preview — a stylised dashboard rather than a real screenshot. */
 function ProductPreview({ tone }: { tone: "neon" | "violet" }) {
   const cfg = VISUALS[tone];
-  const Icon = cfg.icon;
+  const Icon = ICONS[tone];
 
   return (
     <div

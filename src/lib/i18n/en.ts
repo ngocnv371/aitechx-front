@@ -95,15 +95,15 @@ export const en = {
         id: "typing-master",
         badge: "Education",
         name: "Typing Master",
-        tagline: "Turn typing into a measurable skill.",
+        tagline: "Learn to touch-type, one key at a time.",
         description:
-          "A web-based typing trainer with adaptive lessons, real-time analytics and multiplayer races. Built for schools, training centres and enterprises that care about productivity.",
+          "A browser-based touch-typing tutor with a self-unlocking course, a guided reading library and honest progress analytics. Works offline, no account required.",
         features: [
-          "Adaptive lesson engine that targets weak keys",
-          "Real-time WPM, accuracy and rhythm analytics",
-          "Vietnamese Telex & VNI plus 30+ layouts",
-          "Multiplayer races and class leaderboards",
-          "Teacher dashboards and progress certificates",
+          "24-lesson course across six units, unlocked one at a time",
+          "20 guided reading passages from public-domain classics",
+          "Live coaching keyboard with finger guide and next-key hints",
+          "Free practice, a 60-second sprint and the Word rain game",
+          "Progress dashboard with speed, accuracy and streak trends",
         ],
       },
       {
@@ -324,8 +324,8 @@ export const en = {
         a: "Workshop connects to common ERP and MES platforms through REST, message queues and OPC-UA/MQTT for shop-floor equipment. Custom connectors are part of the standard rollout.",
       },
       {
-        q: "Is Typing Master suitable for large deployments?",
-        a: "Yes. It supports multi-tenant organisations, SSO, teacher/admin roles and bulk onboarding. It runs on standard cloud infrastructure and scales horizontally.",
+        q: "How do learners use Typing Master?",
+        a: "It runs entirely in the browser — nothing to install, and it keeps working offline. Progress is stored locally on the device, and signing in is optional to sync it across devices. The first two units and four guided stories are free.",
       },
       {
         q: "Who owns the code and the models?",
@@ -583,102 +583,102 @@ export const en = {
     ctaTitle: "Ready to see it in action?",
     typingMaster: {
       meta: {
-        title: "Typing Master — web-based typing trainer",
+        title: "Typing Master — browser-based touch-typing tutor",
         description:
-          "Adaptive typing practice with real-time analytics, multiplayer races, Vietnamese input support and teacher dashboards.",
+          "A structured touch-typing course, a guided reading library and honest progress analytics — running entirely in the browser, offline and with no account required.",
       },
       eyebrow: "Product · Education",
       title: "Typing Master",
-      tagline: "Turn typing speed into a measured, improvable skill.",
+      tagline: "Learn to touch-type, one key at a time.",
       description:
-        "A browser-based typing trainer built for real classrooms and real productivity goals. Adaptive drills, honest metrics and enough gamification to keep people coming back.",
+        "A browser-based typing tutor that follows the progression of the classic TypingMaster course: start on the home row, add a pair of keys at a time, then move on to real words, sentences and speed work.",
       highlights: [
-        { value: "30+", label: "Keyboard layouts" },
-        { value: "12", label: "Adaptive drill types" },
-        { value: "<50ms", label: "Keystroke to feedback" },
-        { value: "99.9%", label: "Platform uptime" },
+        { value: "24", label: "Lessons across 6 units" },
+        { value: "20", label: "Guided reading passages" },
+        { value: "3", label: "Practice & game modes" },
+        { value: "Offline", label: "Runs in the browser" },
       ],
-      overviewTitle: "Why teams choose Typing Master",
+      overviewTitle: "A course that unlocks itself",
       overview:
-        "Most typing tools measure raw speed. Typing Master models each learner — which keys they fumble, how their accuracy degrades under speed, when they plateau — and builds the next drill from that evidence. Teachers get cohort-level insight without chasing spreadsheets.",
+        "Typing Master keeps the discipline of the original desktop drills — accuracy first, one key at a time — and puts it in a browser. A live coaching keyboard highlights the next key and names the finger to use, while a strict drill refuses to move on until you press the right key. Lessons open one after another: the next unlocks only once you reach its accuracy target, so speed never outruns correctness.",
       capabilities: [
         {
-          title: "Adaptive lesson engine",
+          title: "Six-unit course",
           description:
-            "Lessons are generated from your error profile, so weak keys get more repetitions automatically.",
+            "24 lessons from the home row through the top and bottom rows, numbers and symbols, real text, and finally speed and endurance.",
         },
         {
-          title: "Real-time analytics",
+          title: "Guided reading library",
           description:
-            "WPM, accuracy, rhythm consistency and finger-load charts update as you type.",
+            "20 opening passages from public-domain children's classics, in flow mode, ramping in tiers of four to build real-world speed.",
         },
         {
-          title: "Vietnamese input support",
+          title: "Live coaching keyboard",
           description:
-            "First-class Telex and VNI handling alongside QWERTY, AZERTY, Dvorak and 30 more layouts.",
+            "The next key is highlighted, the shift key you need is lit on the opposite side, and every key is coloured by the finger that owns it.",
         },
         {
-          title: "Multiplayer races",
+          title: "Strict and flow modes",
           description:
-            "Live rooms and seasonal leaderboards that turn practice into something people volunteer for.",
+            "Strict drills block wrong keys so accuracy comes first; flow mode marks errors and lets you keep typing on real sentences.",
         },
         {
-          title: "Teacher & admin dashboards",
+          title: "Practice and games",
           description:
-            "Assign curricula, track cohorts, spot at-risk learners and export progress reports.",
+            "Type your own text, run a 60-second one-minute sprint, or play Word rain — and watch it all feed the same statistics.",
         },
         {
-          title: "Certificates & reporting",
+          title: "Progress dashboard",
           description:
-            "Automated certificates and exportable evidence for accreditation and internal audits.",
+            "Speed and accuracy trends, a 14-day practice chart, per-lesson advancement bars, streaks and best scores — all drawn without a charting library.",
         },
       ],
-      outcomesTitle: "Typical results",
+      outcomesTitle: "What learners get",
       outcomes: [
-        "Meaningful accuracy gains within four weeks of consistent 15-minute sessions",
-        "Objective, comparable metrics across classes, campuses or departments",
-        "Reduced instructor admin time thanks to automatic grading and reporting",
-        "Higher voluntary practice rates through races and streaks",
+        "Touch-typing built from the home row up, one key pair at a time",
+        "Accuracy-gated progress, so slow-but-careful learners are never left behind",
+        "Star ratings and personal bests that make improvement visible",
+        "A clear picture of speed and accuracy trends over time",
       ],
       useCasesTitle: "Where it fits",
       useCases: [
         {
-          title: "Schools & universities",
+          title: "Classrooms",
           description:
-            "Curriculum-aligned typing programmes with cohort tracking.",
+            "A self-paced course students can start in seconds, with progress they can see for themselves.",
+        },
+        {
+          title: "Self-learners",
+          description:
+            "A structured path instead of random typing tests — no setup, no account, nothing to install.",
         },
         {
           title: "Training centres",
           description:
-            "Certification-ready assessment and student progress reporting.",
+            "A consistent touch-typing baseline before learners move on to specialist software.",
         },
         {
-          title: "Enterprise onboarding",
+          title: "Teams that type all day",
           description:
-            "Bring new hires to a measurable baseline before they touch production systems.",
-        },
-        {
-          title: "Data entry teams",
-          description:
-            "Continuous practice for teams where keystroke accuracy has a direct cost.",
+            "Short daily practice that shows up as measurable speed and accuracy gains.",
         },
       ],
       faq: [
         {
-          q: "Does it work without installing anything?",
-          a: "Yes. Typing Master runs entirely in the browser. No plugin or desktop install is required for learners.",
+          q: "Do we need to install anything?",
+          a: "No. Typing Master runs entirely in the browser and works offline — progress is stored locally on the device.",
         },
         {
-          q: "Can we import existing students?",
-          a: "Yes — CSV import and SSO/LDAP user provisioning are supported for organisational deployments.",
+          q: "Do learners need an account?",
+          a: "No. The course, guided reading, practice and games all work without an account. Signing in is optional and adds cloud sync across devices.",
         },
         {
-          q: "Does it support Vietnamese typing?",
-          a: "Telex and VNI are supported natively, including tone-mark accuracy scoring, which most global trainers get wrong.",
+          q: "Is it free?",
+          a: "The first two units (lessons 1–9) and the first four guided stories are free. An optional membership unlocks the remaining lessons and stories.",
         },
       ],
       ctaDescription:
-        "Run a pilot with a class or team, or book a guided walkthrough of the analytics and admin tools.",
+        "Try the course in your browser, or talk to us about rolling Typing Master out across a class, centre or team.",
     },
     workshop: {
       meta: {

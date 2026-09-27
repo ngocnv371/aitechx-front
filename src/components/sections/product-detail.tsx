@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Factory, Sparkles } from "lucide-react";
 import { useLocale } from "@/components/providers/locale-provider";
 import { Accordion } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import { TypingMasterMark } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
@@ -47,9 +48,32 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
 
           <div className="flex flex-col gap-5">
             <Reveal delay={0.05}>
-              <Badge tone={tone === "neon" ? "neon" : "violet"}>
-                {p.eyebrow}
-              </Badge>
+              <div className="flex items-center gap-3">
+                <span
+                  className={cn(
+                    "grid size-12 shrink-0 place-items-center rounded-2xl border bg-gradient-to-br from-ink-800 to-ink-900",
+                    tone === "neon"
+                      ? "border-neon-400/30 shadow-[0_0_26px_-10px_rgba(34,211,238,0.9)]"
+                      : "border-violet-glow-400/30 shadow-[0_0_26px_-10px_rgba(167,139,250,0.9)]",
+                  )}
+                >
+                  {productKey === "typingMaster" ? (
+                    <TypingMasterMark className="size-6" />
+                  ) : (
+                    <Factory
+                      className={cn(
+                        "size-6",
+                        tone === "neon"
+                          ? "text-neon-300"
+                          : "text-violet-glow-300",
+                      )}
+                    />
+                  )}
+                </span>
+                <Badge tone={tone === "neon" ? "neon" : "violet"}>
+                  {p.eyebrow}
+                </Badge>
+              </div>
             </Reveal>
 
             <Reveal delay={0.1}>

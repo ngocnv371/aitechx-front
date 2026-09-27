@@ -97,15 +97,15 @@ export const vi: Dictionary = {
         id: "typing-master",
         badge: "Giáo dục",
         name: "Typing Master",
-        tagline: "Biến kỹ năng gõ thành chỉ số đo lường được.",
+        tagline: "Học gõ mười ngón, từng phím một.",
         description:
-          "Ứng dụng luyện gõ trên web với bài học thích ứng, phân tích theo thời gian thực và đấu trường nhiều người. Dành cho trường học, trung tâm đào tạo và doanh nghiệp quan tâm đến năng suất.",
+          "Ứng dụng luyện gõ mười ngón trên trình duyệt với khoá học tự mở khoá, thư viện đọc có hướng dẫn và phân tích tiến độ trung thực. Hoạt động offline, không cần tài khoản.",
         features: [
-          "Bộ bài học thích ứng nhắm đúng các phím còn yếu",
-          "Phân tích WPM, độ chính xác và nhịp gõ theo thời gian thực",
-          "Hỗ trợ Telex & VNI cùng hơn 30 kiểu bàn phím",
-          "Đấu trường nhiều người và bảng xếp hạng lớp học",
-          "Bảng điều khiển cho giáo viên và chứng nhận tiến bộ",
+          "Khoá học 24 bài trong sáu chặng, mở lần lượt từng bài",
+          "20 bài đọc có hướng dẫn từ các tác phẩm kinh điển phạm vi công cộng",
+          "Bàn phím hướng dẫn trực tiếp với gợi ý ngón và phím kế tiếp",
+          "Luyện tập tự do, bài sprint 60 giây và trò chơi Word rain",
+          "Bảng tiến độ với xu hướng tốc độ, độ chính xác và chuỗi ngày",
         ],
       },
       {
@@ -327,8 +327,8 @@ export const vi: Dictionary = {
         a: "Workshop kết nối với các nền tảng ERP và MES phổ biến qua REST, hàng đợi thông điệp và OPC-UA/MQTT cho thiết bị nhà xưởng. Bộ kết nối tùy chỉnh nằm trong phạm vi triển khai tiêu chuẩn.",
       },
       {
-        q: "Typing Master có phù hợp để triển khai quy mô lớn?",
-        a: "Có. Sản phẩm hỗ trợ tổ chức đa tenant, SSO, phân quyền giáo viên/quản trị và tạo tài khoản hàng loạt. Chạy trên hạ tầng cloud tiêu chuẩn và mở rộng theo chiều ngang.",
+        q: "Người học dùng Typing Master như thế nào?",
+        a: "Ứng dụng chạy hoàn toàn trên trình duyệt — không cần cài đặt và vẫn hoạt động offline. Tiến độ được lưu ngay trên thiết bị, việc đăng nhập là tuỳ chọn để đồng bộ giữa các thiết bị. Hai chặng đầu và bốn bài đọc đầu tiên miễn phí.",
       },
       {
         q: "Ai sở hữu mã nguồn và mô hình?",
@@ -583,102 +583,102 @@ export const vi: Dictionary = {
     ctaTitle: "Sẵn sàng xem sản phẩm vận hành?",
     typingMaster: {
       meta: {
-        title: "Typing Master — luyện gõ bàn phím trên web",
+        title: "Typing Master — luyện gõ mười ngón trên trình duyệt",
         description:
-          "Luyện gõ thích ứng với phân tích theo thời gian thực, đấu trường nhiều người, hỗ trợ gõ tiếng Việt và bảng điều khiển cho giáo viên.",
+          "Khoá học gõ mười ngón có lộ trình, thư viện đọc có hướng dẫn và phân tích tiến độ trung thực — chạy hoàn toàn trên trình duyệt, offline và không cần tài khoản.",
       },
       eyebrow: "Sản phẩm · Giáo dục",
       title: "Typing Master",
-      tagline: "Biến tốc độ gõ thành một kỹ năng đo lường và cải thiện được.",
+      tagline: "Học gõ mười ngón, từng phím một.",
       description:
-        "Ứng dụng luyện gõ chạy trên trình duyệt, được xây cho lớp học thật và mục tiêu năng suất thật. Bài tập thích ứng, chỉ số trung thực và đủ yếu tố trò chơi để người học quay lại.",
+        "Ứng dụng luyện gõ chạy trên trình duyệt, theo đúng lộ trình của TypingMaster cổ điển: bắt đầu ở hàng phím cơ sở, thêm từng cặp phím một, rồi chuyển sang từ thật, câu và luyện tốc độ.",
       highlights: [
-        { value: "30+", label: "Kiểu bàn phím" },
-        { value: "12", label: "Dạng bài tập thích ứng" },
-        { value: "<50ms", label: "Từ phím gõ đến phản hồi" },
-        { value: "99.9%", label: "Thời gian hoạt động" },
+        { value: "24", label: "Bài học trong 6 chặng" },
+        { value: "20", label: "Bài đọc có hướng dẫn" },
+        { value: "3", label: "Chế độ luyện & trò chơi" },
+        { value: "Offline", label: "Chạy trên trình duyệt" },
       ],
-      overviewTitle: "Vì sao các đội ngũ chọn Typing Master",
+      overviewTitle: "Lộ trình tự mở khoá",
       overview:
-        "Hầu hết công cụ luyện gõ chỉ đo tốc độ thô. Typing Master mô hình hóa từng người học — họ vấp ở phím nào, độ chính xác giảm ra sao khi tăng tốc, khi nào chững lại — và tạo bài tập tiếp theo từ chính dữ liệu đó. Giáo viên có cái nhìn cấp lớp học mà không phải loay hoay với bảng tính.",
+        "Typing Master giữ kỷ luật của các bài luyện desktop nguyên bản — chính xác trước, từng phím một — và đưa lên trình duyệt. Bàn phím hướng dẫn trực tiếp làm nổi phím kế tiếp và chỉ rõ ngón cần dùng, còn bài luyện chế độ nghiêm ngặt không cho đi tiếp cho đến khi bạn gõ đúng phím. Các bài học mở lần lượt: bài sau chỉ mở khi bạn đạt ngưỡng độ chính xác, nên tốc độ không bao giờ vượt mặt độ chính xác.",
       capabilities: [
         {
-          title: "Bộ bài học thích ứng",
+          title: "Khoá học sáu chặng",
           description:
-            "Bài học được sinh ra từ hồ sơ lỗi của bạn, nên các phím yếu được lặp lại nhiều hơn một cách tự động.",
+            "24 bài học từ hàng phím cơ sở đến hàng trên, hàng dưới, số và ký hiệu, văn bản thật, rồi cuối cùng là tốc độ và sức bền.",
         },
         {
-          title: "Phân tích thời gian thực",
+          title: "Thư viện đọc có hướng dẫn",
           description:
-            "Biểu đồ WPM, độ chính xác, độ ổn định nhịp gõ và tải trọng từng ngón cập nhật khi bạn gõ.",
+            "20 đoạn mở đầu từ các tác phẩm thiếu nhi thuộc phạm vi công cộng, ở chế độ flow, chia theo bậc bốn bài để xây tốc độ thực tế.",
         },
         {
-          title: "Hỗ trợ gõ tiếng Việt",
+          title: "Bàn phím hướng dẫn trực tiếp",
           description:
-            "Xử lý Telex và VNI ở mức độ ưu tiên, cùng QWERTY, AZERTY, Dvorak và hơn 30 kiểu khác.",
+            "Phím kế tiếp được làm nổi, phím shift cần dùng sáng lên ở phía đối diện, và mỗi phím được tô màu theo ngón phụ trách.",
         },
         {
-          title: "Đấu trường nhiều người",
+          title: "Chế độ nghiêm ngặt và flow",
           description:
-            "Phòng thi trực tiếp và bảng xếp hạng theo mùa biến việc luyện tập thành điều người học tự nguyện làm.",
+            "Bài luyện nghiêm ngặt chặn phím sai để đặt độ chính xác lên trước; chế độ flow đánh dấu lỗi và cho gõ tiếp trên câu thật.",
         },
         {
-          title: "Bảng điều khiển giáo viên & quản trị",
+          title: "Luyện tập và trò chơi",
           description:
-            "Giao chương trình, theo dõi lớp học, phát hiện học viên gặp khó và xuất báo cáo tiến độ.",
+            "Gõ văn bản của riêng bạn, chạy bài sprint 60 giây, hoặc chơi Word rain — tất cả đều đổ vào cùng một bộ thống kê.",
         },
         {
-          title: "Chứng nhận & báo cáo",
+          title: "Bảng tiến độ",
           description:
-            "Chứng nhận tự động và hồ sơ xuất được cho kiểm định và đánh giá nội bộ.",
+            "Xu hướng tốc độ và độ chính xác, biểu đồ luyện tập 14 ngày, thanh tiến độ từng bài, chuỗi ngày và điểm cao nhất — không cần thư viện vẽ biểu đồ.",
         },
       ],
-      outcomesTitle: "Kết quả điển hình",
+      outcomesTitle: "Người học nhận được gì",
       outcomes: [
-        "Cải thiện độ chính xác rõ rệt sau bốn tuần luyện tập đều đặn 15 phút mỗi ngày",
-        "Chỉ số khách quan, so sánh được giữa các lớp, cơ sở hoặc phòng ban",
-        "Giảm thời gian quản lý của giảng viên nhờ chấm điểm và báo cáo tự động",
-        "Tỷ lệ tự giác luyện tập cao hơn nhờ thi đấu và chuỗi ngày liên tục",
+        "Gõ mười ngón được xây từ hàng phím cơ sở lên, từng cặp phím một",
+        "Tiến độ mở theo độ chính xác, nên người học chậm mà kỹ không bị bỏ lại",
+        "Xếp hạng sao và thành tích cá nhân giúp tiến bộ thấy được",
+        "Bức tranh rõ ràng về xu hướng tốc độ và độ chính xác theo thời gian",
       ],
       useCasesTitle: "Phù hợp với",
       useCases: [
         {
-          title: "Trường học & đại học",
+          title: "Lớp học",
           description:
-            "Chương trình luyện gõ gắn với giáo trình và theo dõi theo lớp.",
+            "Khoá học tự nhịp mà học sinh bắt đầu trong vài giây, với tiến độ các em tự thấy được.",
+        },
+        {
+          title: "Người tự học",
+          description:
+            "Lộ trình có cấu trúc thay vì các bài kiểm tra gõ ngẫu nhiên — không cần cài đặt, không cần tài khoản.",
         },
         {
           title: "Trung tâm đào tạo",
           description:
-            "Đánh giá sẵn sàng cấp chứng chỉ và báo cáo tiến độ học viên.",
+            "Một nền tảng gõ mười ngón nhất quán trước khi học viên chuyển sang phần mềm chuyên ngành.",
         },
         {
-          title: "Đào tạo nhân sự mới",
+          title: "Đội ngũ gõ cả ngày",
           description:
-            "Đưa nhân viên mới đạt mức cơ bản đo lường được trước khi làm việc trên hệ thống thật.",
-        },
-        {
-          title: "Đội nhập liệu",
-          description:
-            "Luyện tập liên tục cho những đội mà độ chính xác gõ ảnh hưởng trực tiếp đến chi phí.",
+            "Luyện ngắn mỗi ngày, thể hiện thành mức tăng tốc độ và độ chính xác đo lường được.",
         },
       ],
       faq: [
         {
           q: "Có cần cài đặt gì không?",
-          a: "Không. Typing Master chạy hoàn toàn trên trình duyệt. Người học không cần cài plugin hay phần mềm.",
+          a: "Không. Typing Master chạy hoàn toàn trên trình duyệt và hoạt động offline — tiến độ được lưu ngay trên thiết bị.",
         },
         {
-          q: "Có thể nhập danh sách học viên sẵn có không?",
-          a: "Có — hỗ trợ nhập CSV và cấp tài khoản qua SSO/LDAP cho triển khai ở quy mô tổ chức.",
+          q: "Người học có cần tài khoản không?",
+          a: "Không. Khoá học, phần đọc có hướng dẫn, luyện tập và trò chơi đều dùng được khi chưa có tài khoản. Đăng nhập là tuỳ chọn, thêm đồng bộ đám mây giữa các thiết bị.",
         },
         {
-          q: "Có hỗ trợ gõ tiếng Việt không?",
-          a: "Telex và VNI được hỗ trợ nguyên bản, bao gồm chấm điểm độ chính xác dấu — điều mà hầu hết công cụ quốc tế làm sai.",
+          q: "Có miễn phí không?",
+          a: "Hai chặng đầu (bài 1–9) và bốn bài đọc đầu tiên miễn phí. Gói thành viên tuỳ chọn sẽ mở phần bài học và bài đọc còn lại.",
         },
       ],
       ctaDescription:
-        "Chạy thử với một lớp học hoặc đội ngũ, hoặc đặt lịch xem trực tiếp phần phân tích và công cụ quản trị.",
+        "Thử khoá học ngay trên trình duyệt, hoặc trao đổi với chúng tôi để triển khai Typing Master cho cả lớp, trung tâm hay đội ngũ.",
     },
     workshop: {
       meta: {
