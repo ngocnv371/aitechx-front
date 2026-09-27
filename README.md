@@ -155,15 +155,55 @@ the source when you rename the repository.
    ```
 
    The workflow detects this file and drops the path prefix, because a custom domain is served
-   from the root.
+   from the root. This file is not optional for Actions-based deployments: GitHub keeps the custom
+   domain setting only if `CNAME` is present in the published artifact. Without it the domain would
+   render an unstyled page, because every asset is built for `/<repo>/` instead of `/`.
 
 2. Add a repository variable `SITE_URL` = `https://aitechx.vn`
    (**Settings → Secrets and variables → Actions → Variables**). Canonical URLs, Open Graph tags
    and the sitemap then use the real domain instead of the `github.io` origin.
-3. Point DNS at GitHub Pages — four `A` records for `aitechx.vn` to
-   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, plus a `CNAME`
-   record for `www` pointing at `<owner>.github.io`.
-4. Back in **Settings → Pages**, tick **Enforce HTTPS** once the certificate is issued.
+3. Point DNS at GitHub Pages. The apex needs **four `A` records** and `www` needs a **`CNAME`**:
+
+   | Host / Name | Type | Value | TTL |
+   | --- | --- | --- | --- |
+   | `@` (or blank) | `A` | `185.199.108.153` | 3600 |
+   | `@` (or blank) | `A` | `185.199.109.153` | 3600 |
+   | `@` (or blank) | `A` | `185.199.110.153` | 3600 |
+   | `@` (or blank) | `A` | `185.199.111.153` | 3600 |
+   | `www` | `CNAME` | `ngocnv371.github.io` | 3600 |
+
+   > **Watch the Host field.** Some panels (Mat Bao included) append the zone name to whatever you
+   > type. Entering `aitechx.vn` as the Host creates the record `aitechx.vn.aitechx.vn`, which looks
+   > correct in the UI but leaves the real domain unresolved. Use `@` — or leave Host empty — for
+   > the apex.
+
+4. Back in **Settings → Pages**, confirm the custom domain reads `aitechx.vn` and tick
+   **Enforce HTTPS** once the certificate is issued (can take up to ~24 hours after the DNS check
+   passes).
+
+### Troubleshooting "DNS check unsuccessful"
+
+Ask a public resolver what the domain actually returns:
+
+```bash
+nslookup -type=A aitechx.vn 1.1.1.1        # expect the four 185.199.x.x addresses
+nslookup www.aitechx.vn 1.1.1.1            # expect a CNAME to <owner>.github.io
+nslookup -type=NS aitechx.vn               # which nameservers are actually authoritative
+```
+
+Common causes, in the order they usually bite:
+
+- **The records live at the wrong hostname**, e.g. `aitechx.vn.aitechx.vn`. Confirm with
+  `nslookup -type=A aitechx.vn.aitechx.vn 1.1.1.1` — if that answers with the GitHub IPs, the Host
+  field is the bug.
+- **The apex returns only an SOA record** — that means NODATA: the zone exists but has no `A` record
+  at the apex. The records were probably saved in a different panel than the delegated nameservers.
+- **`NotServedByPagesError`** — while a custom domain is configured, the `github.io` URL
+  301-redirects to that domain. A broken DNS record therefore takes the *whole* site down, not just
+  the custom domain. Either fix the DNS or temporarily remove the custom domain to get the
+  `github.io` URL back.
+- **Propagation / TTL** — allow up to an hour for a 3600s TTL, then press **Check again**.
+
 
 ### Other hosts
 
