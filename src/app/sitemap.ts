@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/i18n/config";
 
+// Required for `output: "export"` — metadata routes must opt into static generation.
+export const dynamic = "force-static";
+
 type ChangeFrequency = MetadataRoute.Sitemap[number]["changeFrequency"];
 
 const routes: Array<{
@@ -23,15 +26,20 @@ const routes: Array<{
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
+  // Mirrors `trailingSlash: true` in next.config.ts so sitemap entries point at
+  // the final URL instead of taking a redirect hop.
+  const absolute = (path: string) =>
+    path === "" ? `${SITE_URL}/` : `${SITE_URL}${path}/`;
+
   return routes.map((route) => ({
-    url: `${SITE_URL}${route.path}`,
+    url: absolute(route.path),
     lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
     alternates: {
       languages: {
-        vi: `${SITE_URL}${route.path}`,
-        en: `${SITE_URL}${route.path}?lang=en`,
+        vi: absolute(route.path),
+        en: `${absolute(route.path)}?lang=en`,
       },
     },
   }));

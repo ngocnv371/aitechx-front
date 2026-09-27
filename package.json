@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "serve out",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
@@ -27,6 +27,7 @@
     "@types/react-dom": "^19.1.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^15.5.26",
+    "serve": "^14.2.6",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.0"
   }

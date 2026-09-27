@@ -88,6 +88,7 @@ export default function RootLayout({
   return (
     <html
       lang="vi"
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
       className={`${inter.variable} ${display.variable} ${mono.variable}`}
     >

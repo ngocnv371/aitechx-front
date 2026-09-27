@@ -29,11 +29,15 @@ npm run dev        # http://localhost:3000
 Other scripts:
 
 ```bash
-npm run build      # production build (also runs type checking + ESLint)
-npm run start      # serve the production build
+npm run build      # static export into ./out (also runs type checking + ESLint)
+npm run start      # serve the exported ./out locally
 npm run lint       # eslint only
 npm run typecheck  # tsc --noEmit
 ```
+
+`next.config.ts` uses `output: "export"` plus `trailingSlash: true`, so the build emits a
+fully static `out/` directory (`/about` → `out/about/index.html`). There is no Node server at
+runtime — that is what makes the GitHub Pages deployment possible.
 
 Copy `.env.example` to `.env.local` if you want to override the public site URL:
 
@@ -44,6 +48,8 @@ NEXT_PUBLIC_SITE_URL=https://aitechx.vn
 ## Project structure
 
 ```
+.github/workflows/deploy-pages.yml   #build + publish to GitHub Pages
+public/.nojekyll                     #stops GitHub Pages from running Jekyll
 src/
 ├─ app/
 │  ├─ layout.tsx            # fonts, metadata, providers, navbar/footer
@@ -118,16 +124,82 @@ a prefilled message (no backend required). To submit to a real endpoint instead,
 `window.location.href = mailto` block with a `fetch` to your API or form service
 (e.g. Resend, Formspree) and keep the existing `sending` / `success` states.
 
-## Deploy
+## Deploy to GitHub Pages
 
-The site is fully static and deploys to any Next.js host. For Vercel:
+The build is a fully static export, so `.github/workflows/deploy-pages.yml` can build it and
+publish it to GitHub Pages on every push to `main` or `master` (edit the `branches` list in the
+workflow to match your default branch).
+
+### One-time setup
+
+1. Push the repository to GitHub.
+2. Go to **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
+   The workflow passes `enablement: true` so it can turn Pages on for you, but the source must
+   be "GitHub Actions" for the deploy job to publish.
+
+That's all — the site is served from `https://<owner>.github.io/<repo>/`.
+
+### How the path prefix works
+
+GitHub Pages serves project sites from `/<repo>/`, so every asset and internal link needs that
+prefix. The workflow reads `base_path` from `actions/configure-pages`, passes it to the build as
+`PAGES_BASE_PATH`, and `next.config.ts` maps it onto Next's `basePath`. Nothing needs editing in
+the source when you rename the repository.
+
+### Serving from a custom domain (aitechx.vn)
+
+1. Add a `public/CNAME` file containing just the bare domain:
+
+   ```
+   aitechx.vn
+   ```
+
+   The workflow detects this file and drops the path prefix, because a custom domain is served
+   from the root.
+
+2. Add a repository variable `SITE_URL` = `https://aitechx.vn`
+   (**Settings → Secrets and variables → Actions → Variables**). Canonical URLs, Open Graph tags
+   and the sitemap then use the real domain instead of the `github.io` origin.
+3. Point DNS at GitHub Pages — four `A` records for `aitechx.vn` to
+   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, plus a `CNAME`
+   record for `www` pointing at `<owner>.github.io`.
+4. Back in **Settings → Pages**, tick **Enforce HTTPS** once the certificate is issued.
+
+### Other hosts
+
+`out/` is a plain static directory, so it also drops straight onto Netlify, Cloudflare Pages,
+S3 or any web server — run `npm run build` and publish `out/`. Set `NEXT_PUBLIC_SITE_URL` to the
+public origin and leave `PAGES_BASE_PATH` unset when the site is served from the domain root.
+
+### Previewing the export locally
 
 ```bash
-npx vercel
+npm run build
+npm run start                       # serves ./out on http://localhost:3000
 ```
 
-Set `NEXT_PUBLIC_SITE_URL=https://aitechx.vn` in the project's environment variables and point
-the `aitechx.vn` domain at the deployment.
+To rehearse a project-page deployment (site under `/<repo>/`), build with the prefix and stage
+it inside a directory with that name:
+
+```bash
+# bash
+PAGES_BASE_PATH=/my-repo npm run build
+
+# PowerShell
+$env:PAGES_BASE_PATH = "/my-repo"; npm run build
+```
+
+### Trade-off to be aware of
+
+Static hosting has no server, so the HTTP security headers that a Node deployment could set are
+not applied. If you need `CSP`, `X-Frame-Options` or similar, set them at a CDN or proxy in
+front of Pages.
+
+## Deploying elsewhere (Node runtime)
+
+Everything here is prerendered, so the site also runs on Vercel, Netlify or any Node host. If you
+prefer that, drop `output: "export"` from `next.config.ts`, restore `"start": "next start"` in
+`package.json`, and set `NEXT_PUBLIC_SITE_URL=https://aitechx.vn`.
 
 ## Known dependency advisory
 
