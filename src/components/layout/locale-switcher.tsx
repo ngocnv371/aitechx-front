@@ -2,7 +2,8 @@
 
 import { motion } from "motion/react";
 import { useLocale } from "@/components/providers/locale-provider";
-import { locales, localeShortLabels } from "@/lib/i18n";
+import { FlagIcon } from "@/components/ui/flag-icon";
+import { locales, localeLabels, localeShortLabels } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 export function LocaleSwitcher({ className }: { className?: string }) {
@@ -25,9 +26,10 @@ export function LocaleSwitcher({ className }: { className?: string }) {
             type="button"
             onClick={() => setLocale(code)}
             aria-pressed={active}
-            title={localeShortLabels[code]}
+            aria-label={localeLabels[code]}
+            title={localeLabels[code]}
             className={cn(
-              "relative z-10 rounded-full px-2.5 py-1 text-xs font-semibold tracking-wide transition-colors duration-200",
+              "relative z-10 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold tracking-wide transition-colors duration-200",
               active ? "text-ink-950" : "text-ink-300 hover:text-white",
             )}
           >
@@ -38,6 +40,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
                 transition={{ type: "spring", stiffness: 380, damping: 30 }}
               />
             ) : null}
+            <FlagIcon code={code} />
             {localeShortLabels[code]}
           </button>
         );
