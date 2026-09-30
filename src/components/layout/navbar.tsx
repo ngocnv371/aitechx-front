@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import {
   ArrowRight,
   ChevronDown,
+  CloudRain,
   Factory,
   Keyboard,
   Menu,
@@ -56,6 +57,12 @@ export function Navbar() {
       name: t.products.items[1].name,
       description: t.products.items[1].tagline,
       icon: Factory,
+    },
+    {
+      href: "/products/word-rain",
+      name: t.products.items[2].name,
+      description: t.products.items[2].tagline,
+      icon: CloudRain,
     },
   ];
 

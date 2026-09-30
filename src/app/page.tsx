@@ -56,6 +56,15 @@ export default function HomePage() {
           operatingSystem: "Web",
         },
       },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Word Rain",
+          applicationCategory: "GameApplication",
+          operatingSystem: "Web",
+        },
+      },
     ],
   };
 

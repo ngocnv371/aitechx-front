@@ -5,18 +5,18 @@ import type { ComponentType } from "react";
 import { ArrowRight, Check, Factory } from "lucide-react";
 import { useLocale } from "@/components/providers/locale-provider";
 import { Badge } from "@/components/ui/badge";
-import { TypingMasterMark } from "@/components/ui/product-mark";
+import { TypingMasterMark, WordRainMark } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
+type Tone = "neon" | "violet" | "lime";
+
 /** Product marks, matching the icons the apps themselves ship. */
-const ICONS: Record<
-  "neon" | "violet",
-  ComponentType<{ className?: string }>
-> = {
+const ICONS: Record<Tone, ComponentType<{ className?: string }>> = {
   neon: TypingMasterMark,
   violet: Factory,
+  lime: WordRainMark,
 };
 
 const VISUALS = {
@@ -24,18 +24,27 @@ const VISUALS = {
     accent: "from-neon-400/25 to-violet-glow-500/10",
     ring: "border-neon-400/30 text-neon-300",
     bar: "from-neon-400 to-neon-300",
+    bullet: "bg-neon-400/15 text-neon-300",
     href: "/products/typing-master",
   },
   violet: {
     accent: "from-violet-glow-500/25 to-magenta-500/10",
     ring: "border-violet-glow-400/30 text-violet-glow-300",
     bar: "from-violet-glow-400 to-magenta-400",
+    bullet: "bg-violet-glow-500/15 text-violet-glow-300",
     href: "/products/workshop",
+  },
+  lime: {
+    accent: "from-lime-neon-400/25 to-neon-400/10",
+    ring: "border-lime-neon-400/30 text-lime-neon-400",
+    bar: "from-lime-neon-400 to-neon-300",
+    bullet: "bg-lime-neon-400/15 text-lime-neon-400",
+    href: "/products/word-rain",
   },
 } as const;
 
 /** Abstract product preview — a stylised dashboard rather than a real screenshot. */
-function ProductPreview({ tone }: { tone: "neon" | "violet" }) {
+function ProductPreview({ tone }: { tone: Tone }) {
   const cfg = VISUALS[tone];
   const Icon = ICONS[tone];
 
@@ -94,7 +103,7 @@ function ProductPreview({ tone }: { tone: "neon" | "violet" }) {
 
 export function Products() {
   const { t } = useLocale();
-  const tones = ["neon", "violet"] as const;
+  const tones = ["neon", "violet", "lime"] as const;
 
   return (
     <section id="products" className="relative scroll-mt-24 py-24 lg:py-32">
@@ -105,7 +114,7 @@ export function Products() {
           description={t.products.description}
         />
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {t.products.items.map((product, index) => {
             const tone = tones[index] ?? "neon";
             const cfg = VISUALS[tone];
@@ -114,9 +123,7 @@ export function Products() {
               <Reveal key={product.id} delay={index * 0.1}>
                 <article className="glass-panel hairline-gradient group flex h-full flex-col gap-6 rounded-3xl p-6 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_40px_80px_-40px_rgba(34,211,238,0.35)] sm:p-8">
                   <div className="flex items-center justify-between gap-4">
-                    <Badge tone={tone === "neon" ? "neon" : "violet"}>
-                      {product.badge}
-                    </Badge>
+                    <Badge tone={tone}>{product.badge}</Badge>
                     <span className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-ink-500">
                       0{index + 1}
                     </span>
@@ -145,9 +152,7 @@ export function Products() {
                         <span
                           className={cn(
                             "mt-0.5 grid size-4 shrink-0 place-items-center rounded-full",
-                            tone === "neon"
-                              ? "bg-neon-400/15 text-neon-300"
-                              : "bg-violet-glow-500/15 text-violet-glow-300",
+                            cfg.bullet,
                           )}
                         >
                           <Check className="size-2.5" />

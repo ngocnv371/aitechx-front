@@ -4,7 +4,7 @@ export const vi: Dictionary = {
   meta: {
     title: "AiTechX — Công ty phần mềm lấy AI làm trọng tâm",
     description:
-      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master và giải pháp quản trị sản xuất Workshop.",
+      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop và trò chơi luyện gõ Word Rain.",
     keywords: [
       "công ty phần mềm AI",
       "phát triển AI Việt Nam",
@@ -24,6 +24,7 @@ export const vi: Dictionary = {
     contactSales: "Liên hệ kinh doanh",
     seeProducts: "Xem sản phẩm",
     viewProduct: "Xem sản phẩm",
+    playFree: "Chơi miễn phí",
     backHome: "Về trang chủ",
     comingSoon: "Sắp ra mắt",
     new: "Mới",
@@ -88,7 +89,7 @@ export const vi: Dictionary = {
 
   products: {
     label: "Sản phẩm của chúng tôi",
-    title: "Hai sản phẩm. Một sự cầu toàn.",
+    title: "Ba sản phẩm. Một sự cầu toàn.",
     description:
       "Những nền tảng đã được kiểm chứng, chúng tôi trực tiếp vận hành và liên tục cải tiến trong môi trường thực tế.",
     cta: "Khám phá sản phẩm",
@@ -121,6 +122,21 @@ export const vi: Dictionary = {
           "Phân tích OEE, thời gian dừng máy và chất lượng",
           "Dự báo nhu cầu và điều độ bằng AI",
           "Kết nối máy móc/IoT qua OPC-UA & MQTT",
+        ],
+      },
+      {
+        id: "word-rain",
+        badge: "Trò chơi",
+        name: "Word Rain",
+        tagline: "Gõ những từ đang rơi trước khi chạm vạch.",
+        description:
+          "Trò chơi luyện gõ mười ngón: từ rơi như mưa và bạn gõ vỡ chúng trước khi chạm vạch đỏ. Mười hai chặng, và sao được trao cho độ chính xác — không bao giờ cho tốc độ.",
+        features: [
+          "12 chặng trong 4 chương, từ hàng cơ sở đến tốc độ",
+          "Khoá mục tiêu với phím nghiêm ngặt, ưu tiên độ chính xác",
+          "Hệ số chuỗi lên tới 3× khi đạt chuỗi 50 từ",
+          "Sao xếp theo độ chính xác, không theo điểm hay tốc độ",
+          "17 thành tích và hồ sơ tiến độ lưu trên thiết bị",
         ],
       },
     ],
@@ -360,6 +376,7 @@ export const vi: Dictionary = {
         "Sản phẩm AI theo yêu cầu",
         "Typing Master",
         "Workshop",
+        "Word Rain",
         "Tư vấn / đánh giá AI",
         "Nội dung khác",
       ],
@@ -788,6 +805,105 @@ export const vi: Dictionary = {
       ],
       ctaDescription:
         "Đặt một buổi khảo sát để vẽ lại dòng chảy sản xuất của bạn, hoặc yêu cầu demo với chính dữ liệu quy trình của bạn.",
+    },
+    wordRain: {
+      meta: {
+        title: "Word Rain — trò chơi luyện gõ mười ngón trên trình duyệt",
+        description:
+          "Từ rơi như mưa. Gõ vỡ chúng trước khi chạm vạch đỏ qua mười hai chặng, nơi sao được trao cho độ chính xác và không bao giờ cho tốc độ.",
+      },
+      eyebrow: "Sản phẩm · Trò chơi",
+      title: "Word Rain",
+      tagline: "Gõ những từ đang rơi trước khi chạm vạch.",
+      description:
+        "Trò chơi luyện gõ mười ngón đặt độ chính xác lên trước tốc độ: từ rơi như mưa và bạn gõ vỡ chúng trước khi chạm vạch đỏ, trong khi mười hai chặng đưa bạn từ hàng phím cơ sở đến tốc độ thật sự.",
+      highlights: [
+        { value: "12", label: "Chặng trong 4 chương" },
+        { value: "17", label: "Thành tích để mở khoá" },
+        { value: "3×", label: "Hệ số chuỗi cao nhất" },
+        { value: "Không cài", label: "Chạy trên trình duyệt" },
+      ],
+      overviewTitle: "Chính xác trước, tốc độ sau",
+      overview:
+        "Word Rain lấy kỷ luật của bài luyện gõ mười ngón và biến thành trò chơi. Lần gõ đầu tiên sẽ khoá vào từ thấp nhất bắt đầu bằng ký tự đó — từ gần vạch đỏ nhất — và khi một từ đã bị khoá, phím sai bị từ chối, nên chuỗi thưởng cho việc gõ sạch chứ không phải gõ cuống. Backspace thoát khỏi từ đang khoá mà không bị phạt. Mỗi chặng mở ngay khi chặng trước được hoàn thành, không cần đạt ngưỡng điểm nào, nhưng sao chỉ xếp theo độ chính xác: một sao để hoàn thành, hai sao ở 90%, ba sao ở 96% và không để từ nào lọt qua. Các chặng đầu cho bạn năm mạng; các chương tốc độ giảm còn ba.",
+      capabilities: [
+        {
+          title: "Mười hai chặng trong bốn chương",
+          description:
+            "Nền tảng, Mở rộng, Ký tự và Tốc độ đưa bạn từ hàng phím cơ sở qua hàng trên, hàng dưới, số và chữ hoa, rồi đến từ dài ở tốc độ tối đa.",
+        },
+        {
+          title: "Kho từ bám theo phím đã học",
+          description:
+            "Mỗi chặng lấy từ từ kho được dựng riêng cho những phím bạn đã học, nên từ mới chỉ đến sau khi ngón tay đã quen.",
+        },
+        {
+          title: "Khoá mục tiêu và phím nghiêm ngặt",
+          description:
+            "Lần gõ đầu khoá từ khớp thấp nhất; phím sai bị từ chối và đặt lại chuỗi, còn Backspace thoát ra mà không bị phạt.",
+        },
+        {
+          title: "Hệ số chuỗi",
+          description:
+            "Mỗi từ bị phá làm tăng hệ số, tối đa 3× khi đạt chuỗi năm mươi từ — lượt gõ sạch bỏ xa lượt gõ vội.",
+        },
+        {
+          title: "Sao xếp theo độ chính xác",
+          description:
+            "Một sao để hoàn thành, hai sao ở 90% độ chính xác, ba sao ở 96% và không từ nào lọt qua. Tốc độ không bao giờ mua được sao.",
+        },
+        {
+          title: "Thành tích và tiến độ",
+          description:
+            "Mười bảy thành tích và hồ sơ tiến độ lưu trên thiết bị theo dõi sao, điểm cao nhất và các mốc cá nhân giữa các phiên.",
+        },
+      ],
+      outcomesTitle: "Người chơi nhận được gì",
+      outcomes: [
+        "Lộ trình từ hàng cơ sở đến tốc độ, không bao giờ thưởng cho việc gõ ẩu",
+        "Chuỗi và hệ số khiến việc gõ chính xác trở nên thú vị",
+        "Sao và thành tích giúp tiến bộ thấy được ngay",
+        "Vào chơi bằng một cú nhấp — không tài khoản, không cần cài đặt",
+      ],
+      useCasesTitle: "Phù hợp với",
+      useCases: [
+        {
+          title: "Khởi động",
+          description:
+            "Bài luyện chính xác hai phút trước khi vào việc, vào giờ học hay buổi đào tạo.",
+        },
+        {
+          title: "Lớp học",
+          description:
+            "Trò chơi học sinh thực sự muốn chơi lại, nơi bảng điểm thưởng cho sự chính xác thay vì sự cuống.",
+        },
+        {
+          title: "Luyện giữa các bài học",
+          description:
+            "Bạn đồng hành vui nhộn cho khoá luyện gõ có cấu trúc, củng cố đúng những phím vừa học.",
+        },
+        {
+          title: "Người mê typing-sport",
+          description:
+            "Lượt chơi ngắn, chơi lại được, với sao, chuỗi và thành tích cá nhân đáng để theo đuổi.",
+        },
+      ],
+      faq: [
+        {
+          q: "Có cần cài đặt gì không?",
+          a: "Không. Word Rain là ứng dụng web tĩnh — chạy trên trình duyệt, không backend, không tài khoản, không cần thiết lập.",
+        },
+        {
+          q: "Có phải là Typing Master không?",
+          a: "Không. Word Rain là trò chơi arcade độc lập, còn Typing Master là khoá học có cấu trúc. Hai sản phẩm chỉ chung một lĩnh vực, không chung điều gì khác.",
+        },
+        {
+          q: "Điều gì xảy ra khi một từ chạm vạch?",
+          a: "Nó nổ và mất một mạng — năm mạng ở các chặng đầu, ba mạng ở các chương tốc độ. Mất hết là kết thúc lượt chơi.",
+        },
+      ],
+      ctaDescription:
+        "Word Rain miễn phí — không tài khoản, không tải, không cần cài đặt. Mở wordrain.aitechx.vn trên trình duyệt và vào chơi ngay.",
     },
   },
 };

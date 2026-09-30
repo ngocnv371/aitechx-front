@@ -1,21 +1,90 @@
 "use client";
 
 import Link from "next/link";
+import type { ComponentType } from "react";
 import { ArrowRight, Check, Factory, Sparkles } from "lucide-react";
 import { useLocale } from "@/components/providers/locale-provider";
 import { Accordion } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { TypingMasterMark } from "@/components/ui/product-mark";
+import { TypingMasterMark, WordRainMark } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
-type ProductKey = "typingMaster" | "workshop";
+type ProductKey = "typingMaster" | "workshop" | "wordRain";
+type Tone = "neon" | "violet" | "lime";
+
+/** Product mark, matching the icon the app itself ships. */
+const MARKS: Record<ProductKey, ComponentType<{ className?: string }>> = {
+  typingMaster: TypingMasterMark,
+  workshop: Factory,
+  wordRain: WordRainMark,
+};
+
+/** Accent colours per product — one source for every tinted element on the page. */
+const TONES: Record<
+  ProductKey,
+  {
+    name: Tone;
+    glow: string;
+    ring: string;
+    shadow: string;
+    icon: string;
+    chip: string;
+    bullet: string;
+    sparkle: string;
+  }
+> = {
+  typingMaster: {
+    name: "neon",
+    glow: "bg-neon-500/20",
+    ring: "border-neon-400/30",
+    shadow: "shadow-[0_0_26px_-10px_rgba(34,211,238,0.9)]",
+    icon: "text-neon-300",
+    chip: "border-neon-400/30 bg-neon-400/10 text-neon-300",
+    bullet: "bg-neon-400/15 text-neon-300",
+    sparkle: "text-neon-400",
+  },
+  workshop: {
+    name: "violet",
+    glow: "bg-violet-glow-600/25",
+    ring: "border-violet-glow-400/30",
+    shadow: "shadow-[0_0_26px_-10px_rgba(167,139,250,0.9)]",
+    icon: "text-violet-glow-300",
+    chip: "border-violet-glow-400/30 bg-violet-glow-500/10 text-violet-glow-300",
+    bullet: "bg-violet-glow-500/15 text-violet-glow-300",
+    sparkle: "text-violet-glow-400",
+  },
+  wordRain: {
+    name: "lime",
+    glow: "bg-lime-neon-400/20",
+    ring: "border-lime-neon-400/30",
+    shadow: "shadow-[0_0_26px_-10px_rgba(163,230,53,0.9)]",
+    icon: "text-lime-neon-400",
+    chip: "border-lime-neon-400/30 bg-lime-neon-400/10 text-lime-neon-400",
+    bullet: "bg-lime-neon-400/15 text-lime-neon-400",
+    sparkle: "text-lime-neon-400",
+  },
+};
+
+/**
+ * Products that are simply free to play in the browser. These skip the demo and
+ * sales CTAs entirely and link straight at the live app.
+ */
+const PLAY_URLS: Partial<Record<ProductKey, string>> = {
+  wordRain: "https://wordrain.aitechx.vn",
+};
+
+/** The primary gradient pill, shared by the hero and closing CTAs. */
+const PRIMARY_CTA =
+  "group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neon-400 via-neon-300 to-violet-glow-400 px-7 py-3.5 text-base font-semibold text-ink-950 shadow-[0_14px_44px_-14px_rgba(34,211,238,0.9)] transition-all duration-300 hover:brightness-110";
 
 export function ProductDetail({ productKey }: { productKey: ProductKey }) {
   const { t } = useLocale();
   const p = t.productPages[productKey];
-  const tone = productKey === "typingMaster" ? "neon" : "violet";
+  const cfg = TONES[productKey];
+  const Mark = MARKS[productKey];
+  const playUrl = PLAY_URLS[productKey];
 
   return (
     <>
@@ -29,7 +98,7 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
           <div
             className={cn(
               "absolute -top-40 left-1/4 h-[32rem] w-[32rem] rounded-full blur-[140px] animate-float-slow",
-              tone === "neon" ? "bg-neon-500/20" : "bg-violet-glow-600/25",
+              cfg.glow,
             )}
           />
           <div className="absolute -right-20 top-1/3 h-[24rem] w-[24rem] rounded-full bg-magenta-500/12 blur-[130px] animate-float" />
@@ -52,27 +121,13 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
                 <span
                   className={cn(
                     "grid size-12 shrink-0 place-items-center rounded-2xl border bg-gradient-to-br from-ink-800 to-ink-900",
-                    tone === "neon"
-                      ? "border-neon-400/30 shadow-[0_0_26px_-10px_rgba(34,211,238,0.9)]"
-                      : "border-violet-glow-400/30 shadow-[0_0_26px_-10px_rgba(167,139,250,0.9)]",
+                    cfg.ring,
+                    cfg.shadow,
                   )}
                 >
-                  {productKey === "typingMaster" ? (
-                    <TypingMasterMark className="size-6" />
-                  ) : (
-                    <Factory
-                      className={cn(
-                        "size-6",
-                        tone === "neon"
-                          ? "text-neon-300"
-                          : "text-violet-glow-300",
-                      )}
-                    />
-                  )}
+                  <Mark className={cn("size-6", cfg.icon)} />
                 </span>
-                <Badge tone={tone === "neon" ? "neon" : "violet"}>
-                  {p.eyebrow}
-                </Badge>
+                <Badge tone={cfg.name}>{p.eyebrow}</Badge>
               </div>
             </Reveal>
 
@@ -97,19 +152,30 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
 
           <Reveal delay={0.28}>
             <div className="flex flex-wrap items-center gap-3">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neon-400 via-neon-300 to-violet-glow-400 px-7 py-3.5 text-base font-semibold text-ink-950 shadow-[0_14px_44px_-14px_rgba(34,211,238,0.9)] transition-all duration-300 hover:brightness-110"
-              >
-                {t.common.bookDemo}
-                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-              <Link
-                href="/#pricing"
-                className="glass-panel inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold text-ink-100 transition-colors duration-300 hover:border-neon-400/60 hover:text-white"
-              >
-                {t.common.contactSales}
-              </Link>
+              {playUrl ? (
+                <a
+                  href={playUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={PRIMARY_CTA}
+                >
+                  {t.common.playFree}
+                  <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
+              ) : (
+                <>
+                  <Link href="/contact" className={PRIMARY_CTA}>
+                    {t.common.bookDemo}
+                    <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+                  <Link
+                    href="/#pricing"
+                    className="glass-panel inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold text-ink-100 transition-colors duration-300 hover:border-neon-400/60 hover:text-white"
+                  >
+                    {t.common.contactSales}
+                  </Link>
+                </>
+              )}
             </div>
           </Reveal>
 
@@ -167,9 +233,7 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
                   <span
                     className={cn(
                       "grid size-9 place-items-center rounded-lg border text-xs font-semibold",
-                      tone === "neon"
-                        ? "border-neon-400/30 bg-neon-400/10 text-neon-300"
-                        : "border-violet-glow-400/30 bg-violet-glow-500/10 text-violet-glow-300",
+                      cfg.chip,
                     )}
                   >
                     {String(index + 1).padStart(2, "0")}
@@ -203,9 +267,7 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
                     <span
                       className={cn(
                         "mt-0.5 grid size-5 shrink-0 place-items-center rounded-full",
-                        tone === "neon"
-                          ? "bg-neon-400/15 text-neon-300"
-                          : "bg-violet-glow-500/15 text-violet-glow-300",
+                        cfg.bullet,
                       )}
                     >
                       <Check className="size-3" />
@@ -232,14 +294,7 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
                 >
                   <div className="glass-panel hairline-gradient h-full rounded-2xl p-5 transition-transform duration-500 hover:-translate-y-1">
                     <div className="flex items-center gap-2">
-                      <Sparkles
-                        className={cn(
-                          "size-3.5",
-                          tone === "neon"
-                            ? "text-neon-400"
-                            : "text-violet-glow-400",
-                        )}
-                      />
+                      <Sparkles className={cn("size-3.5", cfg.sparkle)} />
                       <h3 className="font-display text-sm font-semibold text-ink-50">
                         {useCase.title}
                       </h3>
@@ -286,13 +341,22 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
               {p.ctaDescription}
             </p>
           </div>
-          <Link
-            href="/contact"
-            className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-r from-neon-400 via-neon-300 to-violet-glow-400 px-7 py-3.5 text-base font-semibold text-ink-950 shadow-[0_14px_44px_-14px_rgba(34,211,238,0.9)] transition-all duration-300 hover:brightness-110"
-          >
-            {t.common.bookDemo}
-            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          {playUrl ? (
+            <a
+              href={playUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(PRIMARY_CTA, "shrink-0")}
+            >
+              {t.common.playFree}
+              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+          ) : (
+            <Link href="/contact" className={cn(PRIMARY_CTA, "shrink-0")}>
+              {t.common.bookDemo}
+              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          )}
         </div>
       </section>
     </>
