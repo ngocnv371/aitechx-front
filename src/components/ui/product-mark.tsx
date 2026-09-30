@@ -116,3 +116,53 @@ export function WordRainMark({ className }: MarkProps) {
     </svg>
   );
 }
+
+/** The amber Easy Quiz reserves for its "spark" accent. */
+const SPARK = "#fbbf24";
+
+/**
+ * Easy Quiz: a question mark inside a rounded tile, its dot lit as a spark with
+ * a small star above it — the mark the quiz platform ships as its own favicon.
+ * Matches `easy-quiz/public/favicon.svg`.
+ */
+export function EasyQuizMark({ className }: MarkProps) {
+  const gradientId = useGradientId("easy-quiz-mark");
+
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      aria-hidden
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient
+          id={gradientId}
+          x1="0"
+          y1="4"
+          x2="24"
+          y2="24"
+          gradientUnits="userSpaceOnUse"
+        >
+          {STOPS.map((stop) => (
+            <stop
+              key={stop.offset}
+              offset={stop.offset}
+              stopColor={stop.color}
+            />
+          ))}
+        </linearGradient>
+      </defs>
+      <g {...GLYPH} stroke={`url(#${gradientId})`}>
+        <rect x="3.6" y="4.2" width="16.8" height="16.4" rx="5.2" />
+        <path d="M9.55 10.4a2.6 2.6 0 0 1 5.06.83c0 1.75-2.45 2.1-2.45 3.72" />
+      </g>
+      <circle cx="12.16" cy="17.4" r="1.12" fill={SPARK} />
+      <path
+        d="M19.1 1.5l.62 1.53 1.53.62-1.53.62-.62 1.53-.62-1.53-1.53-.62 1.53-.62z"
+        fill={SPARK}
+      />
+    </svg>
+  );
+}

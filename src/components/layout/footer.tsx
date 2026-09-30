@@ -16,6 +16,7 @@ export function Footer() {
         { label: t.products.items[0].name, href: "/products/typing-master" },
         { label: t.products.items[1].name, href: "/products/workshop" },
         { label: t.products.items[2].name, href: "/products/word-rain" },
+        { label: t.products.items[3].name, href: "/products/easy-quiz" },
         { label: t.pricing.label, href: "/#pricing" },
         { label: t.nav.solutions, href: "/#solutions" },
       ],

@@ -5,18 +5,23 @@ import type { ComponentType } from "react";
 import { ArrowRight, Check, Factory } from "lucide-react";
 import { useLocale } from "@/components/providers/locale-provider";
 import { Badge } from "@/components/ui/badge";
-import { TypingMasterMark, WordRainMark } from "@/components/ui/product-mark";
+import {
+  TypingMasterMark,
+  WordRainMark,
+  EasyQuizMark,
+} from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
-type Tone = "neon" | "violet" | "lime";
+type Tone = "neon" | "violet" | "lime" | "spark";
 
 /** Product marks, matching the icons the apps themselves ship. */
 const ICONS: Record<Tone, ComponentType<{ className?: string }>> = {
   neon: TypingMasterMark,
   violet: Factory,
   lime: WordRainMark,
+  spark: EasyQuizMark,
 };
 
 const VISUALS = {
@@ -40,6 +45,13 @@ const VISUALS = {
     bar: "from-lime-neon-400 to-neon-300",
     bullet: "bg-lime-neon-400/15 text-lime-neon-400",
     href: "/products/word-rain",
+  },
+  spark: {
+    accent: "from-spark-400/25 to-magenta-500/10",
+    ring: "border-spark-400/30 text-spark-300",
+    bar: "from-spark-400 to-magenta-400",
+    bullet: "bg-spark-400/15 text-spark-300",
+    href: "/products/easy-quiz",
   },
 } as const;
 
@@ -103,7 +115,7 @@ function ProductPreview({ tone }: { tone: Tone }) {
 
 export function Products() {
   const { t } = useLocale();
-  const tones = ["neon", "violet", "lime"] as const;
+  const tones = ["neon", "violet", "lime", "spark"] as const;
 
   return (
     <section id="products" className="relative scroll-mt-24 py-24 lg:py-32">
@@ -114,7 +126,7 @@ export function Products() {
           description={t.products.description}
         />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {t.products.items.map((product, index) => {
             const tone = tones[index] ?? "neon";
             const cfg = VISUALS[tone];

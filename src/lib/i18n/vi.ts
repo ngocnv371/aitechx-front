@@ -4,7 +4,7 @@ export const vi: Dictionary = {
   meta: {
     title: "AiTechX — Công ty phần mềm lấy AI làm trọng tâm",
     description:
-      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop và trò chơi luyện gõ Word Rain.",
+      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop, nền tảng trắc nghiệm lớp học Easy Quiz và trò chơi luyện gõ Word Rain.",
     keywords: [
       "công ty phần mềm AI",
       "phát triển AI Việt Nam",
@@ -89,7 +89,7 @@ export const vi: Dictionary = {
 
   products: {
     label: "Sản phẩm của chúng tôi",
-    title: "Ba sản phẩm. Một sự cầu toàn.",
+    title: "Bốn sản phẩm. Một sự cầu toàn.",
     description:
       "Những nền tảng đã được kiểm chứng, chúng tôi trực tiếp vận hành và liên tục cải tiến trong môi trường thực tế.",
     cta: "Khám phá sản phẩm",
@@ -137,6 +137,21 @@ export const vi: Dictionary = {
           "Hệ số chuỗi lên tới 3× khi đạt chuỗi 50 từ",
           "Sao xếp theo độ chính xác, không theo điểm hay tốc độ",
           "17 thành tích và hồ sơ tiến độ lưu trên thiết bị",
+        ],
+      },
+      {
+        id: "easy-quiz",
+        badge: "Giáo dục",
+        name: "Easy Quiz",
+        tagline: "Trắc nghiệm học sinh thích chơi, giáo viên dễ tạo.",
+        description:
+          "Nền tảng trắc nghiệm hai chiều: học sinh duyệt theo chủ đề, chơi ngay với tư cách khách và leo bảng xếp hạng, còn giáo viên tự soạn câu hỏi — hoặc để AI Assist biến một dòng mô tả thành bộ câu hỏi sẵn sàng chỉnh sửa.",
+        features: [
+          "Danh mục trắc nghiệm theo chủ đề, chơi ngay không cần tài khoản",
+          "Bảng xếp hạng riêng cho từng bài, chơi theo kiểu thi",
+          "Chấm điểm phía máy chủ — đáp án không bao giờ rời khỏi cơ sở dữ liệu",
+          "Giáo viên tự soạn câu hỏi trắc nghiệm kèm lời giải",
+          "AI Assist soạn trọn bộ câu hỏi từ một mô tả ngắn",
         ],
       },
     ],
@@ -377,6 +392,7 @@ export const vi: Dictionary = {
         "Typing Master",
         "Workshop",
         "Word Rain",
+        "Easy Quiz",
         "Tư vấn / đánh giá AI",
         "Nội dung khác",
       ],
@@ -904,6 +920,109 @@ export const vi: Dictionary = {
       ],
       ctaDescription:
         "Word Rain miễn phí — không tài khoản, không tải, không cần cài đặt. Mở wordrain.aitechx.vn trên trình duyệt và vào chơi ngay.",
+    },
+    easyQuiz: {
+      meta: {
+        title: "Easy Quiz — nền tảng trắc nghiệm hai chiều cho lớp học",
+        description:
+          "Học sinh chơi trắc nghiệm theo chủ đề ngay tức thì dưới dạng khách và leo bảng xếp hạng, còn giáo viên tự soạn câu hỏi hoặc để AI Assist phác thảo — chấm điểm phía máy chủ, không bao giờ trên trình duyệt.",
+      },
+      eyebrow: "Sản phẩm · Giáo dục",
+      title: "Easy Quiz",
+      tagline: "Chơi một bài trong vài giây, hoặc tạo một bài trong vài phút.",
+      description:
+        "Easy Quiz là nền tảng hai chiều: học sinh duyệt trắc nghiệm theo chủ đề, chơi ngay — có hoặc không có tài khoản — và leo bảng xếp hạng, còn giáo viên tự soạn câu hỏi hoặc đưa cho AI Assist một dòng mô tả rồi chỉnh sửa kết quả.",
+      highlights: [
+        { value: "Khách", label: "Chơi không cần tài khoản" },
+        { value: "Máy chủ", label: "Chấm điểm — giấu đáp án" },
+        { value: "AI", label: "Assist soạn câu hỏi" },
+        { value: "Trực tiếp", label: "Bảng xếp hạng từng bài" },
+      ],
+      overviewTitle: "Một bảng xếp hạng công bằng bắt đầu từ máy chủ",
+      overview:
+        "Cách dễ nhất để làm một ứng dụng trắc nghiệm — gửi kèm câu hỏi cùng đáp án đúng rồi chấm ngay trên trình duyệt — khiến bảng xếp hạng trở nên vô nghĩa, vì bất kỳ ai cũng đọc được đáp án từ tab network. Easy Quiz chia việc theo cách khác: người chơi nhận bài của mình với phần đáp án đã bị loại bỏ, và mọi lượt làm bài đều được chấm bên trong cơ sở dữ liệu, nên điểm số được ghi nhận mới thực sự đáng tin. Khách cũng là người dùng đã đăng nhập thật, nên điểm có thể lên bảng xếp hạng ngay khi bài kết thúc, và việc lưu kết quả sau đó chỉ nâng cấp chính tài khoản đó thay vì bắt đầu lại từ đầu. Cách chơi theo kiểu thi — không gợi ý từng câu khi đang làm, rồi mở phần xem lại đầy đủ kèm lời giải sau khi bài được chấm.",
+      capabilities: [
+        {
+          title: "Danh mục theo chủ đề",
+          description:
+            "Học sinh duyệt các bài đã công bố theo chủ đề và bắt đầu chỉ với một cú nhấp — không cần học qua một khoá học trước.",
+        },
+        {
+          title: "Chơi với tư cách khách",
+          description:
+            "Đăng nhập ẩn danh cho khách một danh tính thật: đủ để lên bảng xếp hạng ngay, và giữ mọi kết quả nếu sau đó họ lưu tài khoản.",
+        },
+        {
+          title: "Chấm điểm phía máy chủ",
+          description:
+            "Bài làm được chấm bên trong cơ sở dữ liệu và đáp án không bao giờ tới trình duyệt — đó là điều khiến điểm được ghi nhận đáng tin.",
+        },
+        {
+          title: "Giáo viên tự soạn đề",
+          description:
+            "Giáo viên tạo bài theo từng câu, với các lựa chọn trắc nghiệm, lời giải và cấp độ; mỗi bộ được lưu trọn vẹn.",
+        },
+        {
+          title: "AI Assist",
+          description:
+            "Nhập chủ đề, cấp độ, độ khó và số câu, nhận về bản nháp đã kiểm chứng sẵn sàng chỉnh sửa — tính theo tín dụng, có chế độ giả lập để luồng vẫn chạy khi không có khoá API.",
+        },
+        {
+          title: "Bảng xếp hạng & xem lại",
+          description:
+            "Mỗi bài có bảng xếp hạng riêng, và mọi lượt đã chấm đều trả về phần xem lại từng câu kèm lời giải.",
+        },
+      ],
+      outcomesTitle: "Mang lại điều gì",
+      outcomes: [
+        "Trắc nghiệm học sinh vào chơi trong vài giây, không cần cài đặt gì",
+        "Điểm số đáng tin, vì việc chấm diễn ra trên máy chủ",
+        "Kho câu hỏi để giáo viên phát triển mà không cần đội ngũ nội dung",
+        "Luyện theo kiểu thi kèm phần xem lại thực sự sau mỗi lượt làm",
+      ],
+      useCasesTitle: "Phù hợp với",
+      useCases: [
+        {
+          title: "Lớp học",
+          description:
+            "Giao một bài, để học sinh chơi trên thiết bị của mình và nhìn bảng xếp hạng đầy dần.",
+        },
+        {
+          title: "Nhóm ôn tập",
+          description:
+            "Luyện theo chủ đề biến việc lặp lại thành trò chơi, với phần xem lại giải thích từng đáp án.",
+        },
+        {
+          title: "Giáo viên thiếu thời gian",
+          description:
+            "AI Assist soạn bộ câu hỏi từ một mô tả ngắn, để giáo viên chỉnh sửa thay vì viết từ con số không.",
+        },
+        {
+          title: "Đào tạo & hội nhập",
+          description:
+            "Kiểm tra mức độ hiểu bất kỳ chủ đề nào bằng bài trắc nghiệm mà người ta thực sự làm hết.",
+        },
+      ],
+      faq: [
+        {
+          q: "Học sinh có cần tài khoản không?",
+          a: "Không. Học sinh có thể chơi dưới dạng khách và vẫn xuất hiện trên bảng xếp hạng. Việc lưu kết quả chỉ nâng cấp chính tài khoản khách đó, nên những gì đã ghi nhận không bị mất.",
+        },
+        {
+          q: "Người chơi có thấy đáp án đúng không?",
+          a: "Không trong lúc đang trả lời. Bài được gửi đi với phần đáp án đã bị loại bỏ và mọi lượt làm đều được chấm bên trong cơ sở dữ liệu, nên đáp án đúng không bao giờ tới trình duyệt.",
+        },
+        {
+          q: "AI Assist là gì?",
+          a: "Nó biến một mô tả ngắn — chủ đề, cấp độ, độ khó và số câu — thành bản nháp bài trắc nghiệm để giáo viên chỉnh sửa. Nó tính theo tín dụng và có chế độ giả lập để luồng vẫn chạy khi không có khoá API.",
+        },
+        {
+          q: "Tín dụng AI Assist được xử lý thế nào?",
+          a: "Mỗi lần tạo bài sẽ trừ vào số tín dụng của giáo viên, do quản trị viên cấp; hiện chưa có luồng mua.",
+        },
+      ],
+      ctaDescription:
+        "Thử Easy Quiz ngay trên trình duyệt với tư cách khách, hoặc liên hệ để dùng trong lớp học, nhà trường hay chương trình đào tạo của bạn.",
     },
   },
 };

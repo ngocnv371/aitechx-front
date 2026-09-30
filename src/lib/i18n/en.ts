@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: "AiTechX — AI-first software engineering",
     description:
-      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite and the Word Rain typing game.",
+      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite, the Easy Quiz classroom platform and the Word Rain typing game.",
     keywords: [
       "AI software company",
       "AI development Vietnam",
@@ -87,7 +87,7 @@ export const en = {
 
   products: {
     label: "Our products",
-    title: "Three products. One obsession with craft.",
+    title: "Four products. One obsession with craft.",
     description:
       "Proven platforms we built, operate and keep improving in production — not slideware.",
     cta: "Explore product",
@@ -135,6 +135,21 @@ export const en = {
           "Combo multipliers up to 3× at a 50-word streak",
           "Stars graded on accuracy, not score or speed",
           "17 achievements and a local progress profile",
+        ],
+      },
+      {
+        id: "easy-quiz",
+        badge: "Education",
+        name: "Easy Quiz",
+        tagline: "Quizzes students play, teachers build.",
+        description:
+          "A two-sided quiz platform: students browse by topic, play instantly as a guest and land on a leaderboard, while teachers author questions — or let AI Assist turn a one-line brief into a ready-to-edit set.",
+        features: [
+          "Topic-based quiz catalogue with instant guest play",
+          "Live per-quiz leaderboards, exam-style attempts",
+          "Server-side grading — the answer key never leaves the database",
+          "Teacher authoring with multiple-choice questions and explanations",
+          "AI Assist drafts a full question set from a short brief",
         ],
       },
     ],
@@ -374,6 +389,7 @@ export const en = {
         "Typing Master",
         "Workshop",
         "Word Rain",
+        "Easy Quiz",
         "AI consulting / audit",
         "Something else",
       ],
@@ -904,6 +920,109 @@ export const en = {
       ],
       ctaDescription:
         "Word Rain is free to play — no account, no download, nothing to install. Open wordrain.aitechx.vn in your browser and start a stage.",
+    },
+    easyQuiz: {
+      meta: {
+        title: "Easy Quiz — a two-sided quiz platform for classrooms",
+        description:
+          "Students play topic quizzes instantly as a guest and climb the leaderboard, while teachers author questions or let AI Assist draft them — graded on the server, never in the browser.",
+      },
+      eyebrow: "Product · Education",
+      title: "Easy Quiz",
+      tagline: "Play a quiz in seconds, or build one in minutes.",
+      description:
+        "Easy Quiz is a two-sided platform: students browse quizzes by topic, play immediately — with or without an account — and land on a leaderboard, while teachers author their own questions or hand AI Assist a single line of brief and edit the result.",
+      highlights: [
+        { value: "Guest", label: "Play with no account" },
+        { value: "Server", label: "Graded — key stays hidden" },
+        { value: "AI", label: "Assist drafts questions" },
+        { value: "Live", label: "Per-quiz leaderboards" },
+      ],
+      overviewTitle: "A fair leaderboard starts on the server",
+      overview:
+        "The easy way to build a quiz app — ship the questions with their correct answers and grade in the browser — makes a leaderboard meaningless, because anyone can read the answer key from the network tab. Easy Quiz splits the work instead: a player receives their quiz with the answer key stripped out, and every attempt is graded inside the database, so a posted score means something. Guests are real signed-in users too, which means a score can appear on the leaderboard the moment a quiz ends, and saving it later upgrades that same account in place rather than starting over. Play is exam-style — no per-question hints while answering, then a full review with explanations once the attempt is graded.",
+      capabilities: [
+        {
+          title: "Topic-based catalogue",
+          description:
+            "Students browse published quizzes by topic and start one in a click — no course to work through first.",
+        },
+        {
+          title: "Play as a guest",
+          description:
+            "Anonymous sign-in gives a visitor a real identity: enough to reach the leaderboard straight away, and to keep every result if they save the account later.",
+        },
+        {
+          title: "Server-side grading",
+          description:
+            "Attempts are scored inside the database and the answer key never reaches the browser, which is what makes a posted score trustworthy.",
+        },
+        {
+          title: "Teacher authoring",
+          description:
+            "Teachers build quizzes question by question, with multiple-choice options, explanations and a level, and each set is saved atomically.",
+        },
+        {
+          title: "AI Assist",
+          description:
+            "Give it a topic, level, difficulty and question count and it returns a validated, ready-to-edit draft — metered by credits, with a mock provider that keeps the flow working without a key.",
+        },
+        {
+          title: "Leaderboards & review",
+          description:
+            "Each quiz carries its own leaderboard, and every graded attempt comes back with a per-question review and explanations.",
+        },
+      ],
+      outcomesTitle: "What it delivers",
+      outcomes: [
+        "Quizzes students can play in seconds, with nothing to install",
+        "Scores you can trust, because grading happens on the server",
+        "A question library teachers grow without a content team",
+        "Exam-style practice with a real review after every attempt",
+      ],
+      useCasesTitle: "Where it fits",
+      useCases: [
+        {
+          title: "Classrooms",
+          description:
+            "Set a quiz, let students play on their own devices and watch the leaderboard fill up.",
+        },
+        {
+          title: "Revision groups",
+          description:
+            "Topic practice that turns repetition into a game, with a review that explains every answer.",
+        },
+        {
+          title: "Teachers short on time",
+          description:
+            "AI Assist drafts a question set from a brief, so the teacher edits rather than writes from scratch.",
+        },
+        {
+          title: "Training & onboarding",
+          description:
+            "Check understanding on any subject with a quiz people actually finish.",
+        },
+      ],
+      faq: [
+        {
+          q: "Do students need an account?",
+          a: "No. Students can play as a guest and still appear on the leaderboard. Saving their results simply upgrades that guest account in place, so nothing recorded so far is lost.",
+        },
+        {
+          q: "Can players see the correct answers?",
+          a: "Not while they are answering. The quiz is served with the answer key stripped out and every attempt is graded inside the database, so the correct answers never reach the browser.",
+        },
+        {
+          q: "What is AI Assist?",
+          a: "It turns a short brief — topic, level, difficulty and question count — into a draft quiz the teacher then edits. It is metered by credits and has a mock mode so the flow keeps working without an API key.",
+        },
+        {
+          q: "How are AI Assist credits handled?",
+          a: "Each generation draws on the teacher's credit balance, which an administrator grants; there is no purchase flow yet.",
+        },
+      ],
+      ctaDescription:
+        "Try Easy Quiz in your browser as a guest, or talk to us about using it in your classroom, school or training programme.",
     },
   },
 };

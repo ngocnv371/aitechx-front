@@ -19,6 +19,7 @@ const routes: Array<{
   },
   { path: "/products/workshop", priority: 0.9, changeFrequency: "monthly" },
   { path: "/products/word-rain", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/products/easy-quiz", priority: 0.9, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
   { path: "/careers", priority: 0.7, changeFrequency: "weekly" },
   { path: "/contact", priority: 0.8, changeFrequency: "yearly" },

@@ -6,19 +6,24 @@ import { ArrowRight, Check, Factory, Sparkles } from "lucide-react";
 import { useLocale } from "@/components/providers/locale-provider";
 import { Accordion } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { TypingMasterMark, WordRainMark } from "@/components/ui/product-mark";
+import {
+  TypingMasterMark,
+  WordRainMark,
+  EasyQuizMark,
+} from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
-type ProductKey = "typingMaster" | "workshop" | "wordRain";
-type Tone = "neon" | "violet" | "lime";
+type ProductKey = "typingMaster" | "workshop" | "wordRain" | "easyQuiz";
+type Tone = "neon" | "violet" | "lime" | "spark";
 
 /** Product mark, matching the icon the app itself ships. */
 const MARKS: Record<ProductKey, ComponentType<{ className?: string }>> = {
   typingMaster: TypingMasterMark,
   workshop: Factory,
   wordRain: WordRainMark,
+  easyQuiz: EasyQuizMark,
 };
 
 /** Accent colours per product — one source for every tinted element on the page. */
@@ -65,6 +70,16 @@ const TONES: Record<
     bullet: "bg-lime-neon-400/15 text-lime-neon-400",
     sparkle: "text-lime-neon-400",
   },
+  easyQuiz: {
+    name: "spark",
+    glow: "bg-spark-500/20",
+    ring: "border-spark-400/30",
+    shadow: "shadow-[0_0_26px_-10px_rgba(251,191,36,0.9)]",
+    icon: "text-spark-300",
+    chip: "border-spark-400/30 bg-spark-400/10 text-spark-300",
+    bullet: "bg-spark-400/15 text-spark-300",
+    sparkle: "text-spark-400",
+  },
 };
 
 /**
@@ -73,6 +88,7 @@ const TONES: Record<
  */
 const PLAY_URLS: Partial<Record<ProductKey, string>> = {
   wordRain: "https://wordrain.aitechx.vn",
+  easyQuiz: "https://easyquiz.aitechx.vn",
 };
 
 /** The primary gradient pill, shared by the hero and closing CTAs. */

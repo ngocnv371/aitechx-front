@@ -8,13 +8,14 @@ export function Badge({
 }: {
   children: ReactNode;
   className?: string;
-  tone?: "neon" | "violet" | "neutral" | "lime";
+  tone?: "neon" | "violet" | "neutral" | "lime" | "spark";
 }) {
   const tones = {
     neon: "border-neon-400/40 bg-neon-400/10 text-neon-300",
     violet:
       "border-violet-glow-400/40 bg-violet-glow-500/10 text-violet-glow-300",
     lime: "border-lime-neon-400/40 bg-lime-neon-400/10 text-lime-neon-400",
+    spark: "border-spark-400/40 bg-spark-400/10 text-spark-300",
     neutral: "border-ink-600 bg-ink-800/70 text-ink-200",
   } as const;
 

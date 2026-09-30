@@ -65,6 +65,15 @@ export default function HomePage() {
           operatingSystem: "Web",
         },
       },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Easy Quiz",
+          applicationCategory: "EducationalApplication",
+          operatingSystem: "Web",
+        },
+      },
     ],
   };
 
