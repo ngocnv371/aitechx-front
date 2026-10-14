@@ -13,6 +13,7 @@ Built with Next.js 15 (App Router), TypeScript, Tailwind CSS v4 and Motion.
 | `/about`                      | Company story, values, capabilities, tech stack, leadership                                                |
 | `/careers`                    | Benefits, open roles and hiring process                                                                    |
 | `/contact`                    | Contact form and company details                                                                           |
+| `/privacy`, `/terms`, `/security` | Short legal pages: privacy policy, terms of service and security                                        |
 | `/sitemap.xml`, `/robots.txt` | SEO routes, generated from `src/lib/i18n/config.ts`                                                        |
 
 Other features: bilingual **Vietnamese / English** with a live language switcher, dark futuristic

@@ -7,20 +7,18 @@ import { useLocale } from "@/components/providers/locale-provider";
 import { Badge } from "@/components/ui/badge";
 import {
   TypingMasterMark,
-  WordRainMark,
   EasyQuizMark,
 } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
-type Tone = "neon" | "violet" | "lime" | "spark";
+type Tone = "neon" | "violet" | "spark";
 
 /** Product marks, matching the icons the apps themselves ship. */
 const ICONS: Record<Tone, ComponentType<{ className?: string }>> = {
   neon: TypingMasterMark,
   violet: Factory,
-  lime: WordRainMark,
   spark: EasyQuizMark,
 };
 
@@ -38,13 +36,6 @@ const VISUALS = {
     bar: "from-violet-glow-400 to-magenta-400",
     bullet: "bg-violet-glow-500/15 text-violet-glow-300",
     href: "/products/workshop",
-  },
-  lime: {
-    accent: "from-lime-neon-400/25 to-neon-400/10",
-    ring: "border-lime-neon-400/30 text-lime-neon-400",
-    bar: "from-lime-neon-400 to-neon-300",
-    bullet: "bg-lime-neon-400/15 text-lime-neon-400",
-    href: "/products/word-rain",
   },
   spark: {
     accent: "from-spark-400/25 to-magenta-500/10",
@@ -115,7 +106,7 @@ function ProductPreview({ tone }: { tone: Tone }) {
 
 export function Products() {
   const { t } = useLocale();
-  const tones = ["neon", "violet", "lime", "spark"] as const;
+  const tones = ["neon", "violet", "spark"] as const;
 
   return (
     <section id="products" className="relative scroll-mt-24 py-24 lg:py-32">

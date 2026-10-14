@@ -60,15 +60,6 @@ export default function HomePage() {
         "@type": "Offer",
         itemOffered: {
           "@type": "SoftwareApplication",
-          name: "Word Rain",
-          applicationCategory: "GameApplication",
-          operatingSystem: "Web",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "SoftwareApplication",
           name: "Easy Quiz",
           applicationCategory: "EducationalApplication",
           operatingSystem: "Web",

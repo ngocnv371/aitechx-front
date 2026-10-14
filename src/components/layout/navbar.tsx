@@ -7,7 +7,6 @@ import { AnimatePresence, motion } from "motion/react";
 import {
   ArrowRight,
   ChevronDown,
-  CloudRain,
   Factory,
   GraduationCap,
   Keyboard,
@@ -60,15 +59,9 @@ export function Navbar() {
       icon: Factory,
     },
     {
-      href: "/products/word-rain",
+      href: "/products/easy-quiz",
       name: t.products.items[2].name,
       description: t.products.items[2].tagline,
-      icon: CloudRain,
-    },
-    {
-      href: "/products/easy-quiz",
-      name: t.products.items[3].name,
-      description: t.products.items[3].tagline,
       icon: GraduationCap,
     },
   ];

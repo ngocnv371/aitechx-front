@@ -8,21 +8,19 @@ import { Accordion } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import {
   TypingMasterMark,
-  WordRainMark,
   EasyQuizMark,
 } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
-type ProductKey = "typingMaster" | "workshop" | "wordRain" | "easyQuiz";
+type ProductKey = "typingMaster" | "workshop" | "easyQuiz";
 type Tone = "neon" | "violet" | "lime" | "spark";
 
 /** Product mark, matching the icon the app itself ships. */
 const MARKS: Record<ProductKey, ComponentType<{ className?: string }>> = {
   typingMaster: TypingMasterMark,
   workshop: Factory,
-  wordRain: WordRainMark,
   easyQuiz: EasyQuizMark,
 };
 
@@ -60,16 +58,6 @@ const TONES: Record<
     bullet: "bg-violet-glow-500/15 text-violet-glow-300",
     sparkle: "text-violet-glow-400",
   },
-  wordRain: {
-    name: "lime",
-    glow: "bg-lime-neon-400/20",
-    ring: "border-lime-neon-400/30",
-    shadow: "shadow-[0_0_26px_-10px_rgba(163,230,53,0.9)]",
-    icon: "text-lime-neon-400",
-    chip: "border-lime-neon-400/30 bg-lime-neon-400/10 text-lime-neon-400",
-    bullet: "bg-lime-neon-400/15 text-lime-neon-400",
-    sparkle: "text-lime-neon-400",
-  },
   easyQuiz: {
     name: "spark",
     glow: "bg-spark-500/20",
@@ -87,7 +75,6 @@ const TONES: Record<
  * sales CTAs entirely and link straight at the live app.
  */
 const PLAY_URLS: Partial<Record<ProductKey, string>> = {
-  wordRain: "https://wordrain.aitechx.vn",
   easyQuiz: "https://easyquiz.aitechx.vn",
 };
 

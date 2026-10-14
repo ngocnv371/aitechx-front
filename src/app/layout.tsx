@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | AiTechX",
   },
   description:
-    "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop và trò chơi luyện gõ Word Rain.",
+    "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop và nền tảng trắc nghiệm lớp học Easy Quiz.",
   keywords: [
     "AiTechX",
     "aitechx.vn",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     title: "AiTechX — Phần mềm biết suy nghĩ, sản phẩm đủ sức mở rộng",
     description:
-      "Kỹ nghệ phần mềm lấy AI làm trọng tâm: sản phẩm AI theo yêu cầu, Typing Master, Workshop và Word Rain.",
+      "Kỹ nghệ phần mềm lấy AI làm trọng tâm: sản phẩm AI theo yêu cầu, Typing Master, Workshop và Easy Quiz.",
   },
   twitter: {
     card: "summary_large_image",

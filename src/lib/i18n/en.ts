@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: "AiTechX — AI-first software engineering",
     description:
-      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite, the Easy Quiz classroom platform and the Word Rain typing game.",
+      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite and the Easy Quiz classroom platform.",
     keywords: [
       "AI software company",
       "AI development Vietnam",
@@ -87,7 +87,7 @@ export const en = {
 
   products: {
     label: "Our products",
-    title: "Four products. One obsession with craft.",
+    title: "Three products. One obsession with craft.",
     description:
       "Proven platforms we built, operate and keep improving in production — not slideware.",
     cta: "Explore product",
@@ -103,7 +103,7 @@ export const en = {
           "24-lesson course across six units, unlocked one at a time",
           "20 guided reading passages from public-domain classics",
           "Live coaching keyboard with finger guide and next-key hints",
-          "Free practice, a 60-second sprint and the Word rain game",
+          "Free practice and a 60-second typing sprint",
           "Progress dashboard with speed, accuracy and streak trends",
         ],
       },
@@ -120,21 +120,6 @@ export const en = {
           "OEE, downtime and quality analytics",
           "AI demand forecasting and scheduling",
           "Machine/IoT integration via OPC-UA & MQTT",
-        ],
-      },
-      {
-        id: "word-rain",
-        badge: "Games",
-        name: "Word Rain",
-        tagline: "Type the falling words before they hit the line.",
-        description:
-          "A ten-finger typing game: words rain down and you shatter them before they reach the red line. Twelve stages, and stars awarded for accuracy — never for speed.",
-        features: [
-          "12 stages across 4 chapters, home row to velocity",
-          "Lock-on targeting with strict, accuracy-first keys",
-          "Combo multipliers up to 3× at a 50-word streak",
-          "Stars graded on accuracy, not score or speed",
-          "17 achievements and a local progress profile",
         ],
       },
       {
@@ -388,7 +373,6 @@ export const en = {
         "Custom AI product",
         "Typing Master",
         "Workshop",
-        "Word Rain",
         "Easy Quiz",
         "AI consulting / audit",
         "Something else",
@@ -435,6 +419,95 @@ export const en = {
     security: "Security",
     rights: "AiTechX. All rights reserved.",
     backToTop: "Back to top",
+  },
+
+  legal: {
+    label: "Legal",
+    updatedLabel: "Last updated",
+    privacy: {
+      meta: {
+        title: "Privacy policy",
+        description:
+          "How AiTechX collects, uses and protects personal data across our website and products.",
+      },
+      title: "Privacy policy",
+      lead: "How we collect, use and protect personal data across the AiTechX website and products.",
+      updated: "October 2026",
+      sections: [
+        {
+          heading: "Information we collect",
+          body: "We collect only what we need to answer enquiries and run our products: the details you submit through our contact form (name, email, company and message) plus basic technical data such as your browser and the pages you visit.",
+        },
+        {
+          heading: "How we use it",
+          body: "Your information is used to reply to your enquiry, provide and improve our products, and keep the services secure. We never sell personal data.",
+        },
+        {
+          heading: "Local storage in our products",
+          body: "Typing Master and Easy Quiz keep progress and preferences in your browser. Playing as a guest needs no account, and signing in is optional for cloud sync.",
+        },
+        {
+          heading: "Your choices",
+          body: "You can ask to access, correct or delete your personal data at any time by emailing hello@aitechx.vn.",
+        },
+      ],
+    },
+    terms: {
+      meta: {
+        title: "Terms of service",
+        description:
+          "The terms that govern your use of the AiTechX website and products.",
+      },
+      title: "Terms of service",
+      lead: "The terms that govern your use of the AiTechX website and products.",
+      updated: "October 2026",
+      sections: [
+        {
+          heading: "Acceptance",
+          body: "By using our website or products you agree to these terms. If you do not agree, please do not use the services.",
+        },
+        {
+          heading: "Use of the services",
+          body: "Use the services for lawful purposes only, and do not attempt to disrupt them, reverse engineer them or gain unauthorised access.",
+        },
+        {
+          heading: "Accounts and content",
+          body: "You are responsible for the accuracy of the content you submit and for keeping your credentials secure. You keep ownership of the content you create.",
+        },
+        {
+          heading: "Liability",
+          body: 'The services are provided "as is". To the extent the law allows, AiTechX is not liable for indirect or consequential losses arising from their use.',
+        },
+      ],
+    },
+    security: {
+      meta: {
+        title: "Security",
+        description:
+          "How AiTechX protects the data entrusted to our website and products.",
+      },
+      title: "Security",
+      lead: "How we protect the data entrusted to our website and products.",
+      updated: "October 2026",
+      sections: [
+        {
+          heading: "Our approach",
+          body: "Security is designed in from the start: least-privilege access, encryption in transit, dependency and code review, and automated testing before every release.",
+        },
+        {
+          heading: "Data protection",
+          body: "Personal data is kept only as long as needed and protected with encryption in transit and at rest. Access is limited to the team members who require it.",
+        },
+        {
+          heading: "Responsible disclosure",
+          body: "If you believe you have found a vulnerability, please email hello@aitechx.vn. We will acknowledge your report and work with you on a fix.",
+        },
+        {
+          heading: "Availability",
+          body: "We monitor our services and rehearse recovery so that problems are found and resolved quickly.",
+        },
+      ],
+    },
   },
 
   about: {
@@ -658,7 +731,7 @@ export const en = {
         {
           title: "Practice and games",
           description:
-            "Type your own text, run a 60-second one-minute sprint, or play Word rain — and watch it all feed the same statistics.",
+            "Type your own text, run a 60-second one-minute sprint, or work through a guided passage — and watch it all feed the same statistics.",
         },
         {
           title: "Progress dashboard",
@@ -821,105 +894,6 @@ export const en = {
       ],
       ctaDescription:
         "Book a discovery session to map your production flow, or request a demo with your own process data.",
-    },
-    wordRain: {
-      meta: {
-        title: "Word Rain — a ten-finger typing game for the browser",
-        description:
-          "Words fall like rain. Type them before they reach the red line across twelve stages, where stars are won for accuracy and never for speed.",
-      },
-      eyebrow: "Product · Games",
-      title: "Word Rain",
-      tagline: "Type the falling words before they hit the line.",
-      description:
-        "A ten-finger typing game that puts accuracy ahead of speed: words rain down and you shatter them before they reach the red line, while twelve stages carry you from the home row to real velocity.",
-      highlights: [
-        { value: "12", label: "Stages across 4 chapters" },
-        { value: "17", label: "Achievements to unlock" },
-        { value: "3×", label: "Top combo multiplier" },
-        { value: "No setup", label: "Runs in the browser" },
-      ],
-      overviewTitle: "Accuracy first, speed later",
-      overview:
-        "Word Rain takes the discipline of a touch-typing drill and turns it into a game. Your first keystroke locks onto the lowest word starting with that letter — the one closest to the red line — and while a word is locked a wrong key is simply refused, so combos reward clean typing rather than frantic typing. Backspace backs out of a word with no penalty. Every stage unlocks as soon as the one before it is cleared, with no score threshold to hit, but the stars are graded on accuracy alone: one for finishing, two at 90%, three at 96% with nothing escaping. The early stages hand you five lives; the velocity chapters cut that to three.",
-      capabilities: [
-        {
-          title: "Twelve stages in four chapters",
-          description:
-            "Foundation, Reach, Characters and Velocity walk you from the home row through the top and bottom rows, numbers and capitals, then long words at full speed.",
-        },
-        {
-          title: "Word banks that follow your keys",
-          description:
-            "Each stage draws from a pool built for the keys you have learned, so new words arrive only after the fingers that type them.",
-        },
-        {
-          title: "Lock-on and strict keys",
-          description:
-            "Your first keystroke locks the lowest matching word; a wrong key is rejected and resets the combo, while Backspace backs out with no penalty.",
-        },
-        {
-          title: "Combo multipliers",
-          description:
-            "Every destroyed word raises the multiplier, up to 3× at a fifty-word streak — clean runs score far ahead of fast ones.",
-        },
-        {
-          title: "Stars graded on accuracy",
-          description:
-            "One star to clear, two at 90% accuracy, three at 96% with no escaped words. Speed never buys a star.",
-        },
-        {
-          title: "Achievements and progress",
-          description:
-            "Seventeen achievements and a local progress profile track stars, best scores and personal milestones between sessions.",
-        },
-      ],
-      outcomesTitle: "What players get",
-      outcomes: [
-        "A home-row-to-velocity curve that never rewards sloppy typing",
-        "Combos and multipliers that make clean accuracy feel good",
-        "Stars and achievements that make progress visible at a glance",
-        "Runs you can start in one click — no account, nothing to install",
-      ],
-      useCasesTitle: "Where it fits",
-      useCases: [
-        {
-          title: "Warm-ups",
-          description:
-            "A two-minute accuracy drill before real work, study or a training session.",
-        },
-        {
-          title: "Classrooms",
-          description:
-            "A game students actually want to replay, where the scoreboard rewards precision over panic.",
-        },
-        {
-          title: "Practice between lessons",
-          description:
-            "A playful companion to a structured touch-typing course, reinforcing the keys just learned.",
-        },
-        {
-          title: "Typing-sport fans",
-          description:
-            "Short, replayable runs with stars, combos and personal bests worth chasing.",
-        },
-      ],
-      faq: [
-        {
-          q: "Do I need to install anything?",
-          a: "No. Word Rain is a static web app — it runs in the browser with no backend, no account and no setup.",
-        },
-        {
-          q: "Is it the same as Typing Master?",
-          a: "No. Word Rain is a standalone arcade game, while Typing Master is the structured course. They share a niche and nothing else.",
-        },
-        {
-          q: "What happens when a word reaches the line?",
-          a: "It explodes and costs a life — five in the early stages, three in the velocity chapters. Lose them all and the run ends.",
-        },
-      ],
-      ctaDescription:
-        "Word Rain is free to play — no account, no download, nothing to install. Open wordrain.aitechx.vn in your browser and start a stage.",
     },
     easyQuiz: {
       meta: {
