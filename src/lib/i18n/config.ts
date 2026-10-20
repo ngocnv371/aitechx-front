@@ -19,6 +19,9 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://aitechx.vn"
 ).replace(/\/$/, "");
 
+/** Live Easy Slides app — every "make a quiz" CTA on the site links here. */
+export const EASY_SLIDES_URL = "https://easyslides.aitechx.vn";
+
 export const LOCALE_STORAGE_KEY = "aitechx.locale";
 
 export function isLocale(value: unknown): value is Locale {

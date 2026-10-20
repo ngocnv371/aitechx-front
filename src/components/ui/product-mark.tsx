@@ -123,3 +123,52 @@ export function EasyQuizMark({ className }: MarkProps) {
     </svg>
   );
 }
+
+/** The coral Easy Slides uses for its accent. */
+const CORAL = "#fb8466";
+
+/**
+ * Easy Slides: a presentation slide on a short stand with a play button at its
+ * centre — the deck runs as a show — and a coral sparkle for the animations.
+ */
+export function EasySlidesMark({ className }: MarkProps) {
+  const gradientId = useGradientId("easy-slides-mark");
+
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      aria-hidden
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient
+          id={gradientId}
+          x1="0"
+          y1="4"
+          x2="24"
+          y2="24"
+          gradientUnits="userSpaceOnUse"
+        >
+          {STOPS.map((stop) => (
+            <stop
+              key={stop.offset}
+              offset={stop.offset}
+              stopColor={stop.color}
+            />
+          ))}
+        </linearGradient>
+      </defs>
+      <g {...GLYPH} stroke={`url(#${gradientId})`}>
+        <rect x="2.8" y="5.6" width="15.6" height="11.6" rx="3" />
+        <path d="M10.6 17.2v3.1M7.6 20.6h6" />
+        <path d="M9.2 9.1v5.4l4.5-2.7z" />
+      </g>
+      <path
+        d="M20.4 1.9l.68 1.62 1.62.68-1.62.68-.68 1.62-.68-1.62-1.62-.68 1.62-.68z"
+        fill={CORAL}
+      />
+    </svg>
+  );
+}

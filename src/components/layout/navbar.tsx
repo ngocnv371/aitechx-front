@@ -11,6 +11,7 @@ import {
   GraduationCap,
   Keyboard,
   Menu,
+  Presentation,
   X,
 } from "lucide-react";
 import { Logo } from "@/components/layout/logo";
@@ -63,6 +64,12 @@ export function Navbar() {
       name: t.products.items[2].name,
       description: t.products.items[2].tagline,
       icon: GraduationCap,
+    },
+    {
+      href: "/products/easy-slides",
+      name: t.products.items[3].name,
+      description: t.products.items[3].tagline,
+      icon: Presentation,
     },
   ];
 

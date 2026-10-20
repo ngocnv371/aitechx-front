@@ -65,6 +65,17 @@ export default function HomePage() {
           operatingSystem: "Web",
         },
       },
+      {
+        "@type": "Offer",
+        price: 0,
+        priceCurrency: "VND",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          name: "Easy Slides",
+          applicationCategory: "EducationalApplication",
+          operatingSystem: "Web",
+        },
+      },
     ],
   };
 

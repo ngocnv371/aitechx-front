@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: "AiTechX — AI-first software engineering",
     description:
-      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite and the Easy Quiz classroom platform.",
+      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite, the Easy Quiz classroom platform and Easy Slides, a free PowerPoint quiz-game maker for teachers.",
     keywords: [
       "AI software company",
       "AI development Vietnam",
@@ -10,6 +10,7 @@ export const en = {
       "typing trainer",
       "computer vision",
       "LLM integration",
+      "PowerPoint quiz maker",
     ],
   },
 
@@ -23,6 +24,7 @@ export const en = {
     seeProducts: "See our products",
     viewProduct: "View product",
     playFree: "Play free",
+    createFree: "Create a quiz free",
     backHome: "Back home",
     comingSoon: "Coming soon",
     new: "New",
@@ -87,7 +89,7 @@ export const en = {
 
   products: {
     label: "Our products",
-    title: "Three products. One obsession with craft.",
+    title: "Four products. One obsession with craft.",
     description:
       "Proven platforms we built, operate and keep improving in production — not slideware.",
     cta: "Explore product",
@@ -135,6 +137,21 @@ export const en = {
           "Server-side grading — the answer key never leaves the database",
           "Teacher authoring with multiple-choice questions and explanations",
           "AI Assist drafts a full question set from a short brief",
+        ],
+      },
+      {
+        id: "easy-slides",
+        badge: "Education",
+        name: "Easy Slides",
+        tagline: "Quiz questions in, animated PowerPoint game out.",
+        description:
+          "A free tool for teachers: type your questions, pick a look and download a .pptx quiz game that plays in PowerPoint with no add-ins. Runs in the browser, nothing uploaded, no account.",
+        features: [
+          "15 design templates, from Chalkboard to Under the sea",
+          "Click-to-reveal or tap-an-answer modes with confetti",
+          "30 entrance + 11 emphasis effects, 37 transitions",
+          "40+ sound effects and an optional countdown bar",
+          "Built-in slideshow preview before you download",
         ],
       },
     ],
@@ -344,6 +361,10 @@ export const en = {
         a: "It runs entirely in the browser — nothing to install, and it keeps working offline. Progress is stored locally on the device, and signing in is optional to sync it across devices. The first two units and four guided stories are free.",
       },
       {
+        q: "Is Easy Slides really free?",
+        a: "Yes. Easy Slides is free and needs no account. It builds your PowerPoint quiz entirely in the browser, so your questions and pictures are never uploaded.",
+      },
+      {
         q: "Who owns the code and the models?",
         a: "You do. Custom development is delivered on your repository and cloud accounts, with IP transferred on final payment unless we agree otherwise in writing.",
       },
@@ -374,6 +395,7 @@ export const en = {
         "Typing Master",
         "Workshop",
         "Easy Quiz",
+        "Easy Slides",
         "AI consulting / audit",
         "Something else",
       ],
@@ -444,7 +466,7 @@ export const en = {
         },
         {
           heading: "Local storage in our products",
-          body: "Typing Master and Easy Quiz keep progress and preferences in your browser. Playing as a guest needs no account, and signing in is optional for cloud sync.",
+          body: "Typing Master and Easy Quiz keep progress and preferences in your browser. Playing as a guest needs no account, and signing in is optional for cloud sync. Easy Slides builds your presentation entirely in the browser — the questions and pictures you add are never uploaded.",
         },
         {
           heading: "Your choices",
@@ -997,6 +1019,125 @@ export const en = {
       ],
       ctaDescription:
         "Try Easy Quiz in your browser as a guest, or talk to us about using it in your classroom, school or training programme.",
+    },
+    easySlides: {
+      meta: {
+        title: "Easy Slides — make a PowerPoint quiz game for kids, free",
+        description:
+          "Free quiz maker for teachers: type your questions, pick a look and download an animated PowerPoint quiz game with sounds, confetti and answer reveals. No sign-up, nothing uploaded.",
+        keywords: [
+          "make quiz powerpoint",
+          "powerpoint quiz game for kids",
+          "powerpoint quiz maker",
+          "classroom quiz game",
+          "free quiz maker for teachers",
+          "animated powerpoint quiz",
+        ],
+      },
+      eyebrow: "Product · Education",
+      title: "Easy Slides",
+      tagline: "Turn quiz questions into an animated PowerPoint game in minutes.",
+      description:
+        "Type or paste your questions, mark the right answers, pick a look and download a .pptx quiz that plays in PowerPoint with no add-ins — questions that animate in, answers that light up, sounds and confetti included. Free, with no account.",
+      highlights: [
+        { value: "15", label: "Design templates" },
+        { value: "41", label: "Entrance & emphasis effects" },
+        { value: "37", label: "Slide transitions" },
+        { value: "40+", label: "Sound effects" },
+      ],
+      overviewTitle: "A quiz game, not just a slide deck",
+      overview:
+        "Building a quiz game in PowerPoint by hand means an evening of animation panes and triggers for a single lesson. Easy Slides does that part for you. Each question gets two to four answers and an optional picture; you choose a design and download an ordinary .pptx file. In class, every question slide animates in, then the answer is revealed one of two ways: click through and the wrong answers dim with a red ✗ while the right one turns green with a tick, a \"Well done!\" banner and confetti — or switch to tap-an-answer mode and click whichever answer the children shout out, so wrong ones shake and buzz and the right one celebrates. Effects are picked at random but sensibly for each slide, in a Calm, Fun or Wild mood, so no two questions feel the same. Leave everything to the magic in Simple mode, or choose per slide in Advanced mode.",
+      capabilities: [
+        {
+          title: "Questions in, game out",
+          description:
+            "Type or paste your questions, give each two to four answers, mark the right one and add a picture if you like.",
+        },
+        {
+          title: "Two ways to reveal",
+          description:
+            "Click to reveal — wrong answers dim with a red ✗, the right one turns green — or tap the answer the class shouts out and watch it shake or celebrate.",
+        },
+        {
+          title: "15 design templates",
+          description:
+            "From Chalkboard and Comic to Space and Under the sea, with title and \"Great job\" finish slides to open and close the game.",
+        },
+        {
+          title: "Effects that never repeat",
+          description:
+            "30 entrance and 11 emphasis effects plus 37 slide transitions, mixed per slide in a Calm, Fun or Wild mood. Simple mode picks for you; Advanced mode lets you choose.",
+        },
+        {
+          title: "Sounds and a countdown",
+          description:
+            "40+ sound effects, from built-in chimes to voices saying \"Correct!\", and an optional countdown bar that ends with a \"Time's up!\" badge.",
+        },
+        {
+          title: "Private by design",
+          description:
+            "Everything runs in your browser: nothing is uploaded, it works offline, and a built-in slideshow lets you preview the game before you download.",
+        },
+      ],
+      outcomesTitle: "What it gives you",
+      outcomes: [
+        "A ready-to-play quiz game in minutes instead of an evening",
+        "A standard .pptx that plays in PowerPoint with no add-ins",
+        "A lively deck every time, because effects vary from slide to slide",
+        "Your questions and pictures stay on your own computer",
+      ],
+      useCasesTitle: "Where it fits",
+      useCases: [
+        {
+          title: "Primary classrooms",
+          description:
+            "Warm-ups and end-of-lesson reviews the whole class can shout answers to.",
+        },
+        {
+          title: "Secondary revision",
+          description:
+            "Turn a revision sheet into a timed quiz game before a test.",
+        },
+        {
+          title: "Tutors and English centres",
+          description:
+            "Quick, colourful vocabulary and grammar games for small groups.",
+        },
+        {
+          title: "Trainers",
+          description:
+            "Light knowledge checks that keep a workshop or onboarding session awake.",
+        },
+      ],
+      faq: [
+        {
+          q: "Is Easy Slides free?",
+          a: "Yes. Easy Slides is completely free to use, with no account and no sign-up.",
+        },
+        {
+          q: "Do I need to install anything or stay online?",
+          a: "No installation is needed — it runs in your web browser. Once the page has loaded it also works offline, and the downloaded .pptx plays in PowerPoint without any add-ins.",
+        },
+        {
+          q: "Which versions of PowerPoint does it work with?",
+          a: "The file is a standard .pptx. The more elaborate slide transitions need PowerPoint 2010 or later; older versions simply show a fade instead, and everything else still plays.",
+        },
+        {
+          q: "Can I edit the slides afterwards?",
+          a: "Yes. It is a normal PowerPoint file, so you can change text, pictures, colours or animations in PowerPoint just like any deck you made yourself.",
+        },
+        {
+          q: "Are my questions and pictures uploaded anywhere?",
+          a: "No. The presentation is built entirely in your browser. Your questions and pictures never leave your computer.",
+        },
+        {
+          q: "Which languages is it available in?",
+          a: "Easy Slides is available in Vietnamese and English.",
+        },
+      ],
+      ctaDescription:
+        "Open Easy Slides, paste in your questions and have an animated PowerPoint quiz game ready for your next lesson — free, with no account.",
     },
   },
 };

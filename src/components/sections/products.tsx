@@ -8,18 +8,20 @@ import { Badge } from "@/components/ui/badge";
 import {
   TypingMasterMark,
   EasyQuizMark,
+  EasySlidesMark,
 } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
-type Tone = "neon" | "violet" | "spark";
+type Tone = "neon" | "violet" | "spark" | "coral";
 
 /** Product marks, matching the icons the apps themselves ship. */
 const ICONS: Record<Tone, ComponentType<{ className?: string }>> = {
   neon: TypingMasterMark,
   violet: Factory,
   spark: EasyQuizMark,
+  coral: EasySlidesMark,
 };
 
 const VISUALS = {
@@ -43,6 +45,13 @@ const VISUALS = {
     bar: "from-spark-400 to-magenta-400",
     bullet: "bg-spark-400/15 text-spark-300",
     href: "/products/easy-quiz",
+  },
+  coral: {
+    accent: "from-coral-400/25 to-violet-glow-500/10",
+    ring: "border-coral-400/30 text-coral-300",
+    bar: "from-coral-400 to-spark-400",
+    bullet: "bg-coral-400/15 text-coral-300",
+    href: "/products/easy-slides",
   },
 } as const;
 
@@ -106,7 +115,7 @@ function ProductPreview({ tone }: { tone: Tone }) {
 
 export function Products() {
   const { t } = useLocale();
-  const tones = ["neon", "violet", "spark"] as const;
+  const tones = ["neon", "violet", "spark", "coral"] as const;
 
   return (
     <section id="products" className="relative scroll-mt-24 py-24 lg:py-32">

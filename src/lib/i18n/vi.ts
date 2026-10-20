@@ -4,7 +4,7 @@ export const vi: Dictionary = {
   meta: {
     title: "AiTechX — Công ty phần mềm lấy AI làm trọng tâm",
     description:
-      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop và nền tảng trắc nghiệm lớp học Easy Quiz.",
+      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop, nền tảng trắc nghiệm lớp học Easy Quiz và Easy Slides — công cụ miễn phí giúp thầy cô tạo trò chơi đố vui PowerPoint.",
     keywords: [
       "công ty phần mềm AI",
       "phát triển AI Việt Nam",
@@ -12,6 +12,7 @@ export const vi: Dictionary = {
       "luyện gõ bàn phím",
       "thị giác máy tính",
       "tích hợp LLM",
+      "tạo trò chơi PowerPoint",
     ],
   },
 
@@ -25,6 +26,7 @@ export const vi: Dictionary = {
     seeProducts: "Xem sản phẩm",
     viewProduct: "Xem sản phẩm",
     playFree: "Chơi miễn phí",
+    createFree: "Tạo trò chơi miễn phí",
     backHome: "Về trang chủ",
     comingSoon: "Sắp ra mắt",
     new: "Mới",
@@ -89,7 +91,7 @@ export const vi: Dictionary = {
 
   products: {
     label: "Sản phẩm của chúng tôi",
-    title: "Ba sản phẩm. Một sự cầu toàn.",
+    title: "Bốn sản phẩm. Một sự cầu toàn.",
     description:
       "Những nền tảng đã được kiểm chứng, chúng tôi trực tiếp vận hành và liên tục cải tiến trong môi trường thực tế.",
     cta: "Khám phá sản phẩm",
@@ -137,6 +139,21 @@ export const vi: Dictionary = {
           "Chấm điểm phía máy chủ — đáp án không bao giờ rời khỏi cơ sở dữ liệu",
           "Giáo viên tự soạn câu hỏi trắc nghiệm kèm lời giải",
           "AI Assist soạn trọn bộ câu hỏi từ một mô tả ngắn",
+        ],
+      },
+      {
+        id: "easy-slides",
+        badge: "Giáo dục",
+        name: "Easy Slides",
+        tagline: "Nhập câu hỏi, nhận ngay trò chơi PowerPoint sinh động.",
+        description:
+          "Công cụ miễn phí cho thầy cô: nhập câu hỏi, chọn giao diện và tải về trò chơi đố vui dạng .pptx, trình chiếu ngay trên PowerPoint không cần tiện ích. Chạy trên trình duyệt, không tải dữ liệu lên, không cần tài khoản.",
+        features: [
+          "15 mẫu giao diện, từ Bảng đen đến Đáy biển",
+          "Bấm để lật đáp án hoặc chọn đáp án, kèm pháo giấy",
+          "30 hiệu ứng xuất hiện, 11 nhấn mạnh, 37 kiểu chuyển trang",
+          "Hơn 40 âm thanh và thanh đếm ngược tuỳ chọn",
+          "Trình chiếu thử ngay trước khi tải về",
         ],
       },
     ],
@@ -347,6 +364,10 @@ export const vi: Dictionary = {
         a: "Ứng dụng chạy hoàn toàn trên trình duyệt — không cần cài đặt và vẫn hoạt động offline. Tiến độ được lưu ngay trên thiết bị, việc đăng nhập là tuỳ chọn để đồng bộ giữa các thiết bị. Hai chặng đầu và bốn bài đọc đầu tiên miễn phí.",
       },
       {
+        q: "Easy Slides có thực sự miễn phí không?",
+        a: "Có. Easy Slides miễn phí và không cần tài khoản. Bài trình chiếu được tạo hoàn toàn trên trình duyệt, nên câu hỏi và hình ảnh của thầy cô không bao giờ bị tải lên mạng.",
+      },
+      {
         q: "Ai sở hữu mã nguồn và mô hình?",
         a: "Là bạn. Phần phát triển theo yêu cầu được bàn giao trên repository và tài khoản cloud của bạn, quyền sở hữu trí tuệ chuyển giao khi thanh toán đợt cuối, trừ khi có thỏa thuận khác bằng văn bản.",
       },
@@ -377,6 +398,7 @@ export const vi: Dictionary = {
         "Typing Master",
         "Workshop",
         "Easy Quiz",
+        "Easy Slides",
         "Tư vấn / đánh giá AI",
         "Nội dung khác",
       ],
@@ -446,7 +468,7 @@ export const vi: Dictionary = {
         },
         {
           heading: "Lưu trữ cục bộ trong sản phẩm",
-          body: "Typing Master và Easy Quiz lưu tiến độ và tuỳ chọn trong trình duyệt của bạn. Chơi với tư cách khách không cần tài khoản, và đăng nhập là tuỳ chọn để đồng bộ đám mây.",
+          body: "Typing Master và Easy Quiz lưu tiến độ và tuỳ chọn trong trình duyệt của bạn. Chơi với tư cách khách không cần tài khoản, và đăng nhập là tuỳ chọn để đồng bộ đám mây. Easy Slides tạo bài trình chiếu hoàn toàn trên trình duyệt — câu hỏi và hình ảnh bạn thêm vào không bao giờ bị tải lên.",
         },
         {
           heading: "Quyền của bạn",
@@ -997,6 +1019,125 @@ export const vi: Dictionary = {
       ],
       ctaDescription:
         "Thử Easy Quiz ngay trên trình duyệt với tư cách khách, hoặc liên hệ để dùng trong lớp học, nhà trường hay chương trình đào tạo của bạn.",
+    },
+    easySlides: {
+      meta: {
+        title: "Easy Slides — tạo trò chơi đố vui PowerPoint cho học sinh",
+        description:
+          "Công cụ miễn phí giúp thầy cô tạo trò chơi đố vui PowerPoint trong vài phút: nhập câu hỏi, chọn giao diện, tải về file .pptx có hiệu ứng, âm thanh và pháo giấy. Không cần đăng ký.",
+        keywords: [
+          "tạo trò chơi powerpoint",
+          "trò chơi đố vui powerpoint cho học sinh",
+          "trò chơi powerpoint cho học sinh tiểu học",
+          "tạo câu hỏi trắc nghiệm powerpoint",
+          "trò chơi khởi động powerpoint",
+          "make quiz powerpoint",
+        ],
+      },
+      eyebrow: "Sản phẩm · Giáo dục",
+      title: "Easy Slides",
+      tagline: "Biến câu hỏi thành trò chơi PowerPoint sinh động chỉ trong vài phút.",
+      description:
+        "Thầy cô chỉ cần gõ hoặc dán câu hỏi, đánh dấu đáp án đúng, chọn giao diện rồi tải về file .pptx trình chiếu được ngay trên PowerPoint, không cần cài thêm tiện ích. Câu hỏi hiện ra có hiệu ứng, đáp án bừng sáng, kèm âm thanh và pháo giấy. Miễn phí, không cần tài khoản.",
+      highlights: [
+        { value: "15", label: "Mẫu giao diện" },
+        { value: "41", label: "Hiệu ứng xuất hiện & nhấn mạnh" },
+        { value: "37", label: "Hiệu ứng chuyển trang" },
+        { value: "40+", label: "Âm thanh vui nhộn" },
+      ],
+      overviewTitle: "Một trò chơi thực sự, không chỉ là bộ slide",
+      overview:
+        "Tự làm một trò chơi đố vui trên PowerPoint thường ngốn cả buổi tối chỉ để chỉnh hiệu ứng và trigger cho một tiết học. Easy Slides làm phần việc đó thay thầy cô. Mỗi câu hỏi có từ hai đến bốn đáp án, có thể kèm một hình ảnh; thầy cô chọn giao diện và tải về một file .pptx bình thường. Khi lên lớp, từng câu hỏi xuất hiện có hiệu ứng, rồi đáp án được công bố theo một trong hai cách: bấm để lật đáp án — các đáp án sai mờ đi kèm dấu ✗ đỏ, đáp án đúng chuyển xanh kèm dấu tích, một lời khen như \"Giỏi quá!\" và pháo giấy — hoặc chuyển sang chế độ chọn đáp án, thầy cô bấm vào đúng đáp án mà các con hô lên: chọn sai thì rung lắc kèm tiếng còi, chọn đúng thì cả lớp cùng ăn mừng. Hiệu ứng được chọn ngẫu nhiên nhưng hợp lý cho từng slide, theo ba phong cách Nhẹ nhàng, Vui nhộn hoặc Sôi động, nên không câu nào giống câu nào. Ở chế độ Đơn giản, mọi thứ được chọn tự động; ở chế độ Nâng cao, thầy cô tuỳ chỉnh từng slide.",
+      capabilities: [
+        {
+          title: "Nhập câu hỏi, nhận trò chơi",
+          description:
+            "Gõ hoặc dán câu hỏi, mỗi câu từ hai đến bốn đáp án, đánh dấu đáp án đúng và thêm hình minh hoạ nếu muốn.",
+        },
+        {
+          title: "Hai cách công bố đáp án",
+          description:
+            "Bấm để lật đáp án — sai thì mờ đi kèm dấu ✗ đỏ, đúng thì chuyển xanh — hoặc bấm vào đáp án cả lớp hô lên để xem nó rung lắc hay ăn mừng.",
+        },
+        {
+          title: "15 mẫu giao diện",
+          description:
+            "Từ Bảng đen, Truyện tranh đến Vũ trụ, Đáy biển, kèm slide mở đầu và slide kết thúc \"Cả lớp giỏi quá!\" cho trọn vẹn trò chơi.",
+        },
+        {
+          title: "Hiệu ứng không lặp lại",
+          description:
+            "30 hiệu ứng xuất hiện, 11 hiệu ứng nhấn mạnh và 37 kiểu chuyển trang, phối riêng cho từng slide theo phong cách Nhẹ nhàng, Vui nhộn hoặc Sôi động. Chế độ Đơn giản tự chọn giúp, chế độ Nâng cao để thầy cô tự quyết.",
+        },
+        {
+          title: "Âm thanh và đồng hồ đếm ngược",
+          description:
+            "Hơn 40 âm thanh, từ tiếng chuông có sẵn đến giọng đọc \"Correct!\", cùng thanh đếm ngược tuỳ chọn, hết giờ hiện nhãn \"Hết giờ!\".",
+        },
+        {
+          title: "Riêng tư ngay từ thiết kế",
+          description:
+            "Mọi thứ chạy trên trình duyệt: không tải gì lên mạng, dùng được cả khi offline, và có chế độ trình chiếu thử để xem trước trước khi tải về.",
+        },
+      ],
+      outcomesTitle: "Thầy cô nhận được gì",
+      outcomes: [
+        "Trò chơi đố vui sẵn sàng trong vài phút thay vì cả buổi tối",
+        "File .pptx chuẩn, trình chiếu được trên PowerPoint mà không cần tiện ích",
+        "Bài nào cũng sinh động vì hiệu ứng thay đổi theo từng slide",
+        "Câu hỏi và hình ảnh vẫn nằm trên máy tính của thầy cô",
+      ],
+      useCasesTitle: "Phù hợp với ai",
+      useCases: [
+        {
+          title: "Lớp học tiểu học",
+          description:
+            "Trò chơi khởi động đầu giờ hay ôn bài cuối tiết, cả lớp cùng hô đáp án.",
+        },
+        {
+          title: "Ôn tập THCS, THPT",
+          description:
+            "Biến phiếu ôn tập thành trò chơi có tính giờ trước mỗi bài kiểm tra.",
+        },
+        {
+          title: "Gia sư và trung tâm tiếng Anh",
+          description:
+            "Trò chơi từ vựng, ngữ pháp nhanh gọn, nhiều màu sắc cho các nhóm nhỏ.",
+        },
+        {
+          title: "Giảng viên, đào tạo nội bộ",
+          description:
+            "Câu hỏi kiểm tra nhanh giúp buổi đào tạo hay hội nhập nhân viên mới bớt buồn ngủ.",
+        },
+      ],
+      faq: [
+        {
+          q: "Easy Slides có miễn phí không?",
+          a: "Có. Easy Slides hoàn toàn miễn phí, không cần tạo tài khoản hay đăng ký.",
+        },
+        {
+          q: "Có cần cài đặt hay kết nối mạng không?",
+          a: "Không cần cài đặt — công cụ chạy ngay trên trình duyệt. Sau khi trang đã tải xong, thầy cô vẫn dùng được khi không có mạng, và file .pptx tải về trình chiếu trên PowerPoint mà không cần tiện ích nào.",
+        },
+        {
+          q: "Dùng được với phiên bản PowerPoint nào?",
+          a: "File tải về là file .pptx chuẩn. Một số hiệu ứng chuyển trang cầu kỳ cần PowerPoint 2010 trở lên; ở phiên bản cũ hơn, chúng tự chuyển thành hiệu ứng mờ dần, còn mọi thứ khác vẫn chạy bình thường.",
+        },
+        {
+          q: "Tôi có chỉnh sửa slide sau khi tải về được không?",
+          a: "Được. Đây là file PowerPoint bình thường, thầy cô có thể sửa chữ, hình ảnh, màu sắc hay hiệu ứng như với bất kỳ bài trình chiếu nào tự làm.",
+        },
+        {
+          q: "Câu hỏi và hình ảnh có bị tải lên mạng không?",
+          a: "Không. Bài trình chiếu được tạo hoàn toàn trên trình duyệt; câu hỏi và hình ảnh của thầy cô không bao giờ rời khỏi máy tính.",
+        },
+        {
+          q: "Công cụ có những ngôn ngữ nào?",
+          a: "Easy Slides có giao diện tiếng Việt và tiếng Anh.",
+        },
+      ],
+      ctaDescription:
+        "Mở Easy Slides, dán câu hỏi vào và có ngay trò chơi đố vui PowerPoint sinh động cho tiết học tới — miễn phí, không cần tài khoản.",
     },
   },
 };

@@ -37,6 +37,11 @@
   --color-spark-400: #fbbf24;
   --color-spark-500: #f59e0b;
 
+  /* Easy Slides' coral — a nod to the PowerPoint decks it exports. */
+  --color-coral-300: #fdae9b;
+  --color-coral-400: #fb8466;
+  --color-coral-500: #f4623f;
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, sans-serif;
   --font-display: var(--font-display), var(--font-inter), ui-sans-serif,

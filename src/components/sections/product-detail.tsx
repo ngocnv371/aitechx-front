@@ -9,19 +9,22 @@ import { Badge } from "@/components/ui/badge";
 import {
   TypingMasterMark,
   EasyQuizMark,
+  EasySlidesMark,
 } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { EASY_SLIDES_URL } from "@/lib/i18n/config";
 import { cn } from "@/lib/utils";
 
-type ProductKey = "typingMaster" | "workshop" | "easyQuiz";
-type Tone = "neon" | "violet" | "lime" | "spark";
+type ProductKey = "typingMaster" | "workshop" | "easyQuiz" | "easySlides";
+type Tone = "neon" | "violet" | "lime" | "spark" | "coral";
 
 /** Product mark, matching the icon the app itself ships. */
 const MARKS: Record<ProductKey, ComponentType<{ className?: string }>> = {
   typingMaster: TypingMasterMark,
   workshop: Factory,
   easyQuiz: EasyQuizMark,
+  easySlides: EasySlidesMark,
 };
 
 /** Accent colours per product — one source for every tinted element on the page. */
@@ -68,6 +71,16 @@ const TONES: Record<
     bullet: "bg-spark-400/15 text-spark-300",
     sparkle: "text-spark-400",
   },
+  easySlides: {
+    name: "coral",
+    glow: "bg-coral-500/20",
+    ring: "border-coral-400/30",
+    shadow: "shadow-[0_0_26px_-10px_rgba(251,132,102,0.9)]",
+    icon: "text-coral-300",
+    chip: "border-coral-400/30 bg-coral-400/10 text-coral-300",
+    bullet: "bg-coral-400/15 text-coral-300",
+    sparkle: "text-coral-400",
+  },
 };
 
 /**
@@ -76,6 +89,12 @@ const TONES: Record<
  */
 const PLAY_URLS: Partial<Record<ProductKey, string>> = {
   easyQuiz: "https://easyquiz.aitechx.vn",
+  easySlides: EASY_SLIDES_URL,
+};
+
+/** Label for the live-app CTA; tools say "create", games say "play". */
+const PLAY_LABELS: Partial<Record<ProductKey, "playFree" | "createFree">> = {
+  easySlides: "createFree",
 };
 
 /** The primary gradient pill, shared by the hero and closing CTAs. */
@@ -88,6 +107,7 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
   const cfg = TONES[productKey];
   const Mark = MARKS[productKey];
   const playUrl = PLAY_URLS[productKey];
+  const playLabel = t.common[PLAY_LABELS[productKey] ?? "playFree"];
 
   return (
     <>
@@ -162,7 +182,7 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
                   rel="noopener noreferrer"
                   className={PRIMARY_CTA}
                 >
-                  {t.common.playFree}
+                  {playLabel}
                   <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               ) : (
@@ -351,7 +371,7 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
               rel="noopener noreferrer"
               className={cn(PRIMARY_CTA, "shrink-0")}
             >
-              {t.common.playFree}
+              {playLabel}
               <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           ) : (
