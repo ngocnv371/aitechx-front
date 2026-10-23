@@ -8,6 +8,7 @@ import {
   ArrowRight,
   ChevronDown,
   Factory,
+  Gamepad2,
   GraduationCap,
   Keyboard,
   Menu,
@@ -70,6 +71,12 @@ export function Navbar() {
       name: t.products.items[3].name,
       description: t.products.items[3].tagline,
       icon: Presentation,
+    },
+    {
+      href: "/products/arc-ascension",
+      name: t.products.items[4].name,
+      description: t.products.items[4].tagline,
+      icon: Gamepad2,
     },
   ];
 

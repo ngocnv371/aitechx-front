@@ -76,6 +76,17 @@ export default function HomePage() {
           operatingSystem: "Web",
         },
       },
+      {
+        "@type": "Offer",
+        price: 0,
+        priceCurrency: "VND",
+        itemOffered: {
+          "@type": "VideoGame",
+          name: "ARC: Ascension",
+          applicationCategory: "GameApplication",
+          operatingSystem: "Windows, Android",
+        },
+      },
     ],
   };
 

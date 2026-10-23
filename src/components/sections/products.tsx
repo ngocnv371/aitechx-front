@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import type { ComponentType } from "react";
 import { ArrowRight, Check, Factory } from "lucide-react";
@@ -9,12 +10,13 @@ import {
   TypingMasterMark,
   EasyQuizMark,
   EasySlidesMark,
+  ArcAscensionMark,
 } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
-type Tone = "neon" | "violet" | "spark" | "coral";
+type Tone = "neon" | "violet" | "spark" | "coral" | "aqua";
 
 /** Product marks, matching the icons the apps themselves ship. */
 const ICONS: Record<Tone, ComponentType<{ className?: string }>> = {
@@ -22,6 +24,7 @@ const ICONS: Record<Tone, ComponentType<{ className?: string }>> = {
   violet: Factory,
   spark: EasyQuizMark,
   coral: EasySlidesMark,
+  aqua: ArcAscensionMark,
 };
 
 const VISUALS = {
@@ -53,12 +56,53 @@ const VISUALS = {
     bullet: "bg-coral-400/15 text-coral-300",
     href: "/products/easy-slides",
   },
+  aqua: {
+    accent: "from-aqua-400/25 to-violet-glow-500/10",
+    ring: "border-aqua-400/30 text-aqua-300",
+    bar: "from-violet-glow-400 to-aqua-400",
+    bullet: "bg-aqua-400/15 text-aqua-300",
+    href: "/products/arc-ascension",
+  },
 } as const;
+
+/**
+ * Column spans on the six-column xl grid: three cards across the first row,
+ * two wider ones across the second. On the two-column grid the odd card out
+ * takes the full row.
+ */
+const SPANS = [
+  "xl:col-span-2",
+  "xl:col-span-2",
+  "xl:col-span-2",
+  "xl:col-span-3",
+  "sm:col-span-2 xl:col-span-3",
+];
+
+/** Products with their own promo art, shown in place of the abstract preview. */
+const PREVIEW_ART: Partial<Record<Tone, string>> = {
+  aqua: "/products/arc-ascension/hero.webp",
+};
 
 /** Abstract product preview — a stylised dashboard rather than a real screenshot. */
 function ProductPreview({ tone }: { tone: Tone }) {
   const cfg = VISUALS[tone];
   const Icon = ICONS[tone];
+  const art = PREVIEW_ART[tone];
+
+  if (art) {
+    return (
+      <div className="relative h-40 overflow-hidden rounded-xl border border-ink-700/70 bg-ink-950 sm:h-44">
+        {/* The art's cards sit right of centre; keep them in frame when cropped. */}
+        <Image
+          src={art}
+          alt=""
+          fill
+          sizes="(min-width: 1280px) 40vw, (min-width: 640px) 90vw, 100vw"
+          className="object-cover object-[68%_55%] transition-transform duration-700 group-hover:scale-105"
+        />
+      </div>
+    );
+  }
 
   return (
     <div
@@ -115,7 +159,7 @@ function ProductPreview({ tone }: { tone: Tone }) {
 
 export function Products() {
   const { t } = useLocale();
-  const tones = ["neon", "violet", "spark", "coral"] as const;
+  const tones = ["neon", "violet", "spark", "coral", "aqua"] as const;
 
   return (
     <section id="products" className="relative scroll-mt-24 py-24 lg:py-32">
@@ -126,13 +170,17 @@ export function Products() {
           description={t.products.description}
         />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-6">
           {t.products.items.map((product, index) => {
             const tone = tones[index] ?? "neon";
             const cfg = VISUALS[tone];
 
             return (
-              <Reveal key={product.id} delay={index * 0.1}>
+              <Reveal
+                key={product.id}
+                delay={index * 0.1}
+                className={SPANS[index]}
+              >
                 <article className="glass-panel hairline-gradient group flex h-full flex-col gap-6 rounded-3xl p-6 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_40px_80px_-40px_rgba(34,211,238,0.35)] sm:p-8">
                   <div className="flex items-center justify-between gap-4">
                     <Badge tone={tone}>{product.badge}</Badge>

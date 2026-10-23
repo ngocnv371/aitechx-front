@@ -172,3 +172,52 @@ export function EasySlidesMark({ className }: MarkProps) {
     </svg>
   );
 }
+
+/** The aqua of the orb in ARC: Ascension's own mark. */
+const AQUA = "#56f0d6";
+
+/**
+ * ARC: Ascension: an open ring with a glowing orb at its mouth and a small
+ * anomaly bound inside it — the game's app icon, redrawn on the 24px grid.
+ * Matches `ARC-Ascension/brand/mark.svg`.
+ */
+export function ArcAscensionMark({ className }: MarkProps) {
+  const gradientId = useGradientId("arc-ascension-mark");
+
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      aria-hidden
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient
+          id={gradientId}
+          x1="0"
+          y1="2"
+          x2="24"
+          y2="22"
+          gradientUnits="userSpaceOnUse"
+        >
+          {STOPS.map((stop) => (
+            <stop
+              key={stop.offset}
+              offset={stop.offset}
+              stopColor={stop.color}
+            />
+          ))}
+        </linearGradient>
+      </defs>
+      <g {...GLYPH} stroke={`url(#${gradientId})`}>
+        <path d="M18.24 7.12a7.92 7.92 0 1 0 0 9.76" />
+      </g>
+      <path
+        d="M8.76 12.48a2.76 2.76 0 0 1 5.52 0v3.12l-.92-.96-.92.96-.92-.96-.92.96-.92-.96-.92.96z"
+        fill={`url(#${gradientId})`}
+      />
+      <circle cx="20.3" cy="12" r="1.6" fill={AQUA} />
+    </svg>
+  );
+}

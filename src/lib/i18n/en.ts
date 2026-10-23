@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: "AiTechX — AI-first software engineering",
     description:
-      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite, the Easy Quiz classroom platform and Easy Slides, a free PowerPoint quiz-game maker for teachers.",
+      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite, the Easy Quiz classroom platform, Easy Slides, a free PowerPoint quiz-game maker for teachers, and ARC: Ascension, an anomaly card game for Android and Windows.",
     keywords: [
       "AI software company",
       "AI development Vietnam",
@@ -11,6 +11,7 @@ export const en = {
       "computer vision",
       "LLM integration",
       "PowerPoint quiz maker",
+      "card game",
     ],
   },
 
@@ -25,6 +26,7 @@ export const en = {
     viewProduct: "View product",
     playFree: "Play free",
     createFree: "Create a quiz free",
+    joinBeta: "Join the beta",
     backHome: "Back home",
     comingSoon: "Coming soon",
     new: "New",
@@ -89,7 +91,7 @@ export const en = {
 
   products: {
     label: "Our products",
-    title: "Four products. One obsession with craft.",
+    title: "Five products. One obsession with craft.",
     description:
       "Proven platforms we built, operate and keep improving in production — not slideware.",
     cta: "Explore product",
@@ -152,6 +154,21 @@ export const en = {
           "30 entrance + 11 emphasis effects, 37 transitions",
           "40+ sound effects and an optional countdown bar",
           "Built-in slideshow preview before you download",
+        ],
+      },
+      {
+        id: "arc-ascension",
+        badge: "Game",
+        name: "ARC: Ascension",
+        tagline: "Bind rogue anomalies into cards. Climb the Tower.",
+        description:
+          "A portrait card game for Android and Windows: open mystery boxes, forge the cards you pull, build a deck of five and fight through a campaign and a 100-floor tower. Plays fully offline, with no accounts and no purchases.",
+        features: [
+          "140 anomaly cards, each with a live 3D model",
+          "Mystery boxes from Bronze to Prism, with listed odds",
+          "Empower, fuse and corrupt the cards you pull",
+          "A three-chapter campaign and the 100-floor Tower of Ascension",
+          "Timing-ring battles across a five-element cycle",
         ],
       },
     ],
@@ -396,6 +413,7 @@ export const en = {
         "Workshop",
         "Easy Quiz",
         "Easy Slides",
+        "ARC: Ascension",
         "AI consulting / audit",
         "Something else",
       ],
@@ -466,7 +484,7 @@ export const en = {
         },
         {
           heading: "Local storage in our products",
-          body: "Typing Master and Easy Quiz keep progress and preferences in your browser. Playing as a guest needs no account, and signing in is optional for cloud sync. Easy Slides builds your presentation entirely in the browser — the questions and pictures you add are never uploaded.",
+          body: "Typing Master and Easy Quiz keep progress and preferences in your browser. Playing as a guest needs no account, and signing in is optional for cloud sync. Easy Slides builds your presentation entirely in the browser — the questions and pictures you add are never uploaded. ARC: Ascension saves your progress on your device and never connects to the internet.",
         },
         {
           heading: "Your choices",
@@ -1138,6 +1156,142 @@ export const en = {
       ],
       ctaDescription:
         "Open Easy Slides, paste in your questions and have an animated PowerPoint quiz game ready for your next lesson — free, with no account.",
+    },
+    arcAscension: {
+      meta: {
+        title: "ARC: Ascension — an anomaly card game for Android and Windows",
+        description:
+          "Bind rogue anomalies into cards: open mystery boxes, forge your deck of five and climb the 100-floor Tower of Ascension. A free, fully offline portrait card game in beta.",
+        keywords: [
+          "anomaly card game",
+          "card battle game",
+          "offline card game",
+          "portrait mobile game",
+          "deck building game",
+          "Vietnamese game",
+        ],
+      },
+      eyebrow: "Product · Game",
+      title: "ARC: Ascension",
+      tagline: "Bind rogue anomalies into cards, then climb the Tower of Ascension.",
+      description:
+        "You are Agent 07 of the Anomaly Response Cell. The Cell no longer chases anomalies down alleys: it binds them into cards. Open mystery boxes to grow your collection, forge the cards you pull, build a deck of five and fight through a campaign of fixed checkpoints and up the endless tower. Free, in beta.",
+      highlights: [
+        { value: "140", label: "Anomaly cards" },
+        { value: "24", label: "Campaign checkpoints" },
+        { value: "100", label: "Tower floors" },
+        { value: "5", label: "Elements in the cycle" },
+      ],
+      gallery: {
+        title: "A look inside",
+        items: [
+          {
+            src: "/products/arc-ascension/card-1-en.webp",
+            alt: "A legendary card bursting out of a mystery box, above the Bronze, Silver, Gold and Prism boxes",
+          },
+          {
+            src: "/products/arc-ascension/card-2-en.webp",
+            alt: "A deck of five above a grid of collected anomaly cards",
+          },
+          {
+            src: "/products/arc-ascension/card-3-en.webp",
+            alt: "A battle against the floor 100 boss of the Tower of Ascension, with a perfect x2 strike",
+          },
+        ],
+      },
+      overviewTitle: "A collection you open, forge and fight with",
+      overview:
+        "Every card is one anomaly, drawn from its authored portrait, with HP, ATK, DEF and SPD set by its species, rarity, rank and forge work. Opening a mystery box is a small show: the box rattles harder as light leaks from its seams, bursts, and each card flies out face down, flips, and its live 3D model rises out of it. From there the forge takes over — empower a stat with shards, fuse duplicates to rank a card up, or gamble it on corruption, which rewrites every stat and sometimes the element. Battles put the active card against a boss on a 2.5D stage, with signature attacks, a timing ring for perfect strikes and bench switching, while the five-element cycle decides who has the edge. The game is built portrait-first for a phone and runs the same on Windows.",
+      capabilities: [
+        {
+          title: "Mystery boxes",
+          description:
+            "Bronze, Silver, Gold and Prism boxes hold three to five cards with a guaranteed floor, and the odds for every tier are listed in the Vault.",
+        },
+        {
+          title: "The forge",
+          description:
+            "Empower ATK, DEF or SPD, fuse duplicates to climb from one to five stars, corrupt a card with void essence, or dissolve spares for resources.",
+        },
+        {
+          title: "Live 3D anomalies",
+          description:
+            "All 140 species have a live 3D model and a case file in the Index, and every pull raises the model out of its card.",
+        },
+        {
+          title: "Campaign and tower",
+          description:
+            "Three chapters of eight checkpoints, each ending in a chapter boss, then the 100-floor Tower of Ascension with a guardian every fifth floor.",
+        },
+        {
+          title: "Battles with timing",
+          description:
+            "Twenty signature attacks, a timing ring for double-damage strikes, an AUTO toggle and bench switching. SPD turns into crits and dodges.",
+        },
+        {
+          title: "Offline and private",
+          description:
+            "No accounts, ads, analytics or purchases, and no network access at all. Progress is saved on the device, in English or Vietnamese.",
+        },
+      ],
+      outcomesTitle: "What you get",
+      outcomes: [
+        "A full game that plays offline, with nothing to sign up for",
+        "No purchases: every box is earned by playing",
+        "A guided nine-step orientation that teaches each system with rewards",
+        "The same game on an Android phone and a Windows PC",
+      ],
+      useCasesTitle: "Who it is for",
+      useCases: [
+        {
+          title: "Collectors",
+          description:
+            "Chase all 140 species, shiny holo cards and five-star ranks.",
+        },
+        {
+          title: "Deck tinkerers",
+          description:
+            "Balance a deck of five around stats, elements and forge upgrades.",
+        },
+        {
+          title: "Short sessions",
+          description:
+            "A checkpoint or a few tower floors fit in a coffee break, one-handed in portrait.",
+        },
+        {
+          title: "Offline play",
+          description:
+            "On a flight or a commute, with no connection and no account needed.",
+        },
+      ],
+      faq: [
+        {
+          q: "Is ARC: Ascension free?",
+          a: "Yes. The beta is free, and there are no purchases in the game: boxes, gold and shards all come from playing.",
+        },
+        {
+          q: "Which platforms does it run on?",
+          a: "Android phones and Windows PCs. On Windows it opens as a portrait window the shape of a phone screen.",
+        },
+        {
+          q: "How do I join the beta?",
+          a: "Get in touch through the contact page and choose ARC: Ascension. We will send you the details for joining.",
+        },
+        {
+          q: "Does it need an internet connection or an account?",
+          a: "No. The game never connects to the internet and has no accounts. Your progress is saved on your device.",
+        },
+        {
+          q: "Does it collect any data?",
+          a: "No. There are no ads or analytics, and the game does not use your camera, microphone or location.",
+        },
+        {
+          q: "Which languages is it available in?",
+          a: "English and Vietnamese, chosen on first launch and switchable in Settings.",
+        },
+      ],
+      ctaDescription:
+        "ARC: Ascension is in beta on Android and Windows. Tell us you'd like to play and we'll send you the details for joining.",
     },
   },
 };

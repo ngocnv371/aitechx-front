@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import type { ComponentType } from "react";
 import { ArrowRight, Check, Factory, Sparkles } from "lucide-react";
@@ -10,14 +11,20 @@ import {
   TypingMasterMark,
   EasyQuizMark,
   EasySlidesMark,
+  ArcAscensionMark,
 } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { EASY_SLIDES_URL } from "@/lib/i18n/config";
 import { cn } from "@/lib/utils";
 
-type ProductKey = "typingMaster" | "workshop" | "easyQuiz" | "easySlides";
-type Tone = "neon" | "violet" | "lime" | "spark" | "coral";
+type ProductKey =
+  | "typingMaster"
+  | "workshop"
+  | "easyQuiz"
+  | "easySlides"
+  | "arcAscension";
+type Tone = "neon" | "violet" | "lime" | "spark" | "coral" | "aqua";
 
 /** Product mark, matching the icon the app itself ships. */
 const MARKS: Record<ProductKey, ComponentType<{ className?: string }>> = {
@@ -25,6 +32,7 @@ const MARKS: Record<ProductKey, ComponentType<{ className?: string }>> = {
   workshop: Factory,
   easyQuiz: EasyQuizMark,
   easySlides: EasySlidesMark,
+  arcAscension: ArcAscensionMark,
 };
 
 /** Accent colours per product — one source for every tinted element on the page. */
@@ -81,6 +89,16 @@ const TONES: Record<
     bullet: "bg-coral-400/15 text-coral-300",
     sparkle: "text-coral-400",
   },
+  arcAscension: {
+    name: "aqua",
+    glow: "bg-aqua-500/20",
+    ring: "border-aqua-400/30",
+    shadow: "shadow-[0_0_26px_-10px_rgba(86,240,214,0.9)]",
+    icon: "text-aqua-300",
+    chip: "border-aqua-400/30 bg-aqua-400/10 text-aqua-300",
+    bullet: "bg-aqua-400/15 text-aqua-300",
+    sparkle: "text-aqua-400",
+  },
 };
 
 /**
@@ -97,6 +115,14 @@ const PLAY_LABELS: Partial<Record<ProductKey, "playFree" | "createFree">> = {
   easySlides: "createFree",
 };
 
+/**
+ * Products in a beta that is not open to everyone yet. With no public link to
+ * send people to, their CTAs ask for beta access through the contact page.
+ */
+const BETA: Partial<Record<ProductKey, true>> = {
+  arcAscension: true,
+};
+
 /** The primary gradient pill, shared by the hero and closing CTAs. */
 const PRIMARY_CTA =
   "group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neon-400 via-neon-300 to-violet-glow-400 px-7 py-3.5 text-base font-semibold text-ink-950 shadow-[0_14px_44px_-14px_rgba(34,211,238,0.9)] transition-all duration-300 hover:brightness-110";
@@ -108,6 +134,8 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
   const Mark = MARKS[productKey];
   const playUrl = PLAY_URLS[productKey];
   const playLabel = t.common[PLAY_LABELS[productKey] ?? "playFree"];
+  const contactLabel = BETA[productKey] ? t.common.joinBeta : t.common.bookDemo;
+  const gallery = "gallery" in p ? p.gallery : undefined;
 
   return (
     <>
@@ -188,15 +216,17 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
               ) : (
                 <>
                   <Link href="/contact" className={PRIMARY_CTA}>
-                    {t.common.bookDemo}
+                    {contactLabel}
                     <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
-                  <Link
-                    href="/#pricing"
-                    className="glass-panel inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold text-ink-100 transition-colors duration-300 hover:border-neon-400/60 hover:text-white"
-                  >
-                    {t.common.contactSales}
-                  </Link>
+                  {!BETA[productKey] && (
+                    <Link
+                      href="/#pricing"
+                      className="glass-panel inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold text-ink-100 transition-colors duration-300 hover:border-neon-400/60 hover:text-white"
+                    >
+                      {t.common.contactSales}
+                    </Link>
+                  )}
                 </>
               )}
             </div>
@@ -218,6 +248,41 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
           </Reveal>
         </div>
       </section>
+
+      {/* Gallery — only for products with promo art of their own */}
+      {gallery && (
+        <section className="relative pb-20 lg:pb-28">
+          <div className="container-page flex flex-col gap-10">
+            <SectionHeading
+              align="left"
+              eyebrow={p.title}
+              title={gallery.title}
+              titleClassName="text-2xl sm:text-3xl lg:text-4xl"
+            />
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+              {gallery.items.map((item, index) => (
+                <Reveal key={item.src} delay={index * 0.08}>
+                  <figure
+                    className={cn(
+                      "relative aspect-[9/16] overflow-hidden rounded-3xl border bg-ink-950",
+                      cfg.ring,
+                      cfg.shadow,
+                    )}
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 640px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                  </figure>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Overview */}
       <section className="relative border-y border-ink-800/80 bg-ink-950/60 py-20 lg:py-24">
@@ -376,7 +441,7 @@ export function ProductDetail({ productKey }: { productKey: ProductKey }) {
             </a>
           ) : (
             <Link href="/contact" className={cn(PRIMARY_CTA, "shrink-0")}>
-              {t.common.bookDemo}
+              {contactLabel}
               <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           )}

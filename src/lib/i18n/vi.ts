@@ -4,7 +4,7 @@ export const vi: Dictionary = {
   meta: {
     title: "AiTechX — Công ty phần mềm lấy AI làm trọng tâm",
     description:
-      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop, nền tảng trắc nghiệm lớp học Easy Quiz và Easy Slides — công cụ miễn phí giúp thầy cô tạo trò chơi đố vui PowerPoint.",
+      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop, nền tảng trắc nghiệm lớp học Easy Quiz, Easy Slides — công cụ miễn phí giúp thầy cô tạo trò chơi đố vui PowerPoint — và ARC: Ascension, trò chơi thẻ bài dị thể cho Android và Windows.",
     keywords: [
       "công ty phần mềm AI",
       "phát triển AI Việt Nam",
@@ -13,6 +13,7 @@ export const vi: Dictionary = {
       "thị giác máy tính",
       "tích hợp LLM",
       "tạo trò chơi PowerPoint",
+      "trò chơi thẻ bài",
     ],
   },
 
@@ -27,6 +28,7 @@ export const vi: Dictionary = {
     viewProduct: "Xem sản phẩm",
     playFree: "Chơi miễn phí",
     createFree: "Tạo trò chơi miễn phí",
+    joinBeta: "Tham gia bản beta",
     backHome: "Về trang chủ",
     comingSoon: "Sắp ra mắt",
     new: "Mới",
@@ -91,7 +93,7 @@ export const vi: Dictionary = {
 
   products: {
     label: "Sản phẩm của chúng tôi",
-    title: "Bốn sản phẩm. Một sự cầu toàn.",
+    title: "Năm sản phẩm. Một sự cầu toàn.",
     description:
       "Những nền tảng đã được kiểm chứng, chúng tôi trực tiếp vận hành và liên tục cải tiến trong môi trường thực tế.",
     cta: "Khám phá sản phẩm",
@@ -154,6 +156,21 @@ export const vi: Dictionary = {
           "30 hiệu ứng xuất hiện, 11 nhấn mạnh, 37 kiểu chuyển trang",
           "Hơn 40 âm thanh và thanh đếm ngược tuỳ chọn",
           "Trình chiếu thử ngay trước khi tải về",
+        ],
+      },
+      {
+        id: "arc-ascension",
+        badge: "Trò chơi",
+        name: "ARC: Ascension",
+        tagline: "Phong ấn dị thể vào thẻ bài. Leo lên Tháp Thăng Thiên.",
+        description:
+          "Trò chơi thẻ bài màn hình dọc cho Android và Windows: mở hộp bí ẩn, rèn những thẻ rút được, xếp bộ bài năm thẻ rồi chiến đấu qua chiến dịch và ngọn tháp 100 tầng. Chơi hoàn toàn offline, không tài khoản, không mua bán trong game.",
+        features: [
+          "140 thẻ dị thể, mỗi thẻ có mô hình 3D sống động",
+          "Hộp bí ẩn từ Đồng đến Lăng kính, công khai tỉ lệ rơi",
+          "Cường hóa, dung hợp và tha hóa thẻ bài",
+          "Chiến dịch ba chương và Tháp Thăng Thiên 100 tầng",
+          "Trận đấu canh thời điểm, theo vòng tương khắc năm hệ",
         ],
       },
     ],
@@ -399,6 +416,7 @@ export const vi: Dictionary = {
         "Workshop",
         "Easy Quiz",
         "Easy Slides",
+        "ARC: Ascension",
         "Tư vấn / đánh giá AI",
         "Nội dung khác",
       ],
@@ -468,7 +486,7 @@ export const vi: Dictionary = {
         },
         {
           heading: "Lưu trữ cục bộ trong sản phẩm",
-          body: "Typing Master và Easy Quiz lưu tiến độ và tuỳ chọn trong trình duyệt của bạn. Chơi với tư cách khách không cần tài khoản, và đăng nhập là tuỳ chọn để đồng bộ đám mây. Easy Slides tạo bài trình chiếu hoàn toàn trên trình duyệt — câu hỏi và hình ảnh bạn thêm vào không bao giờ bị tải lên.",
+          body: "Typing Master và Easy Quiz lưu tiến độ và tuỳ chọn trong trình duyệt của bạn. Chơi với tư cách khách không cần tài khoản, và đăng nhập là tuỳ chọn để đồng bộ đám mây. Easy Slides tạo bài trình chiếu hoàn toàn trên trình duyệt — câu hỏi và hình ảnh bạn thêm vào không bao giờ bị tải lên. ARC: Ascension lưu tiến độ ngay trên thiết bị và không bao giờ kết nối internet.",
         },
         {
           heading: "Quyền của bạn",
@@ -1138,6 +1156,142 @@ export const vi: Dictionary = {
       ],
       ctaDescription:
         "Mở Easy Slides, dán câu hỏi vào và có ngay trò chơi đố vui PowerPoint sinh động cho tiết học tới — miễn phí, không cần tài khoản.",
+    },
+    arcAscension: {
+      meta: {
+        title: "ARC: Ascension — trò chơi thẻ bài dị thể cho Android và Windows",
+        description:
+          "Phong ấn dị thể vào thẻ bài: mở hộp bí ẩn, xếp bộ bài năm thẻ và leo Tháp Thăng Thiên 100 tầng. Trò chơi thẻ bài màn hình dọc miễn phí, chơi hoàn toàn offline, đang trong giai đoạn beta.",
+        keywords: [
+          "trò chơi thẻ bài",
+          "game thẻ bài offline",
+          "game thẻ bài dị thể",
+          "game màn hình dọc",
+          "game xếp bộ bài",
+          "game Việt",
+        ],
+      },
+      eyebrow: "Sản phẩm · Trò chơi",
+      title: "ARC: Ascension",
+      tagline: "Phong ấn dị thể vào thẻ bài, rồi leo lên Tháp Thăng Thiên.",
+      description:
+        "Bạn là Đặc vụ 07 của Đội Ứng phó Dị thể. Đội không còn đuổi dị thể khắp các ngõ hẻm nữa: giờ chúng được phong ấn vào thẻ bài. Mở hộp bí ẩn để mở rộng bộ sưu tập, rèn những thẻ rút được, xếp bộ bài năm thẻ rồi chiến đấu qua các trạm của chiến dịch và leo lên ngọn tháp không có đỉnh. Miễn phí, đang trong giai đoạn beta.",
+      highlights: [
+        { value: "140", label: "Thẻ dị thể" },
+        { value: "24", label: "Trạm chiến dịch" },
+        { value: "100", label: "Tầng tháp" },
+        { value: "5", label: "Hệ tương khắc" },
+      ],
+      gallery: {
+        title: "Bên trong trò chơi",
+        items: [
+          {
+            src: "/products/arc-ascension/card-1-vi.webp",
+            alt: "Một thẻ huyền thoại bung ra từ hộp bí ẩn, phía trên các hộp Đồng, Bạc, Vàng và Lăng kính",
+          },
+          {
+            src: "/products/arc-ascension/card-2-vi.webp",
+            alt: "Bộ bài năm thẻ phía trên lưới thẻ dị thể đã sưu tầm",
+          },
+          {
+            src: "/products/arc-ascension/card-3-vi.webp",
+            alt: "Trận đấu với trùm tầng 100 của Tháp Thăng Thiên, kèm một đòn hoàn hảo x2",
+          },
+        ],
+      },
+      overviewTitle: "Bộ sưu tập để mở, để rèn và để chiến đấu",
+      overview:
+        "Mỗi thẻ là một dị thể, vẽ từ chân dung riêng của nó, với chỉ số HP, ATK, DEF và SPD tuỳ theo loài, độ hiếm, hạng sao và công rèn. Mở một hộp bí ẩn là cả một màn trình diễn: chiếc hộp rung mạnh dần khi ánh sáng rỉ ra từ các khe, rồi bung ra, từng thẻ bay ra úp mặt, lật lại và mô hình 3D của dị thể trồi lên từ thẻ. Sau đó là lò rèn — cường hóa một chỉ số bằng mảnh, dung hợp các bản trùng để lên hạng, hoặc liều tha hóa bằng hư không, viết lại mọi chỉ số và đôi khi cả hệ. Trong trận đấu, thẻ đang ra trận đối đầu với trùm trên sân khấu 2.5D, với đòn đặc trưng, vòng canh thời điểm cho đòn hoàn hảo và đổi thẻ dự bị, còn vòng tương khắc năm hệ quyết định bên nào chiếm ưu thế. Trò chơi được thiết kế cho màn hình dọc của điện thoại và chạy y hệt trên Windows.",
+      capabilities: [
+        {
+          title: "Hộp bí ẩn",
+          description:
+            "Hộp Đồng, Bạc, Vàng và Lăng kính chứa từ ba đến năm thẻ với độ hiếm tối thiểu được bảo đảm, tỉ lệ rơi của từng loại được công khai trong Kho.",
+        },
+        {
+          title: "Lò rèn",
+          description:
+            "Cường hóa ATK, DEF hoặc SPD, dung hợp các bản trùng để lên từ một đến năm sao, tha hóa thẻ bằng hư không, hoặc phân rã thẻ thừa lấy tài nguyên.",
+        },
+        {
+          title: "Dị thể 3D sống động",
+          description:
+            "Cả 140 loài đều có mô hình 3D và hồ sơ trong Bách khoa, và mỗi lần rút thẻ, mô hình trồi lên từ chính tấm thẻ.",
+        },
+        {
+          title: "Chiến dịch và tháp",
+          description:
+            "Ba chương, mỗi chương tám trạm và kết thúc bằng một trùm chương, rồi đến Tháp Thăng Thiên 100 tầng với thủ vệ ở mỗi năm tầng.",
+        },
+        {
+          title: "Trận đấu canh thời điểm",
+          description:
+            "Hai mươi đòn đặc trưng, vòng canh thời điểm cho đòn gấp đôi sát thương, chế độ tự động và đổi thẻ dự bị. SPD cao giúp chí mạng và né đòn.",
+        },
+        {
+          title: "Offline và riêng tư",
+          description:
+            "Không tài khoản, quảng cáo, phân tích hay mua bán, và không hề kết nối mạng. Tiến độ lưu trên thiết bị, bằng tiếng Việt hoặc tiếng Anh.",
+        },
+      ],
+      outcomesTitle: "Bạn nhận được gì",
+      outcomes: [
+        "Một trò chơi trọn vẹn chơi offline, không cần đăng ký gì",
+        "Không mua bán: mọi chiếc hộp đều kiếm được bằng cách chơi",
+        "Chuỗi huấn luyện chín bước dạy từng tính năng, kèm phần thưởng",
+        "Cùng một trò chơi trên điện thoại Android và máy tính Windows",
+      ],
+      useCasesTitle: "Dành cho ai",
+      useCases: [
+        {
+          title: "Người sưu tầm",
+          description:
+            "Săn đủ 140 loài, thẻ ánh kim và thẻ năm sao.",
+        },
+        {
+          title: "Người mê xếp bài",
+          description:
+            "Cân bằng bộ năm thẻ theo chỉ số, hệ và các nâng cấp từ lò rèn.",
+        },
+        {
+          title: "Những phút rảnh",
+          description:
+            "Một trạm hay vài tầng tháp vừa một giờ giải lao, chơi một tay trên màn hình dọc.",
+        },
+        {
+          title: "Chơi không cần mạng",
+          description:
+            "Trên chuyến bay hay đường đi làm, không cần kết nối, không cần tài khoản.",
+        },
+      ],
+      faq: [
+        {
+          q: "ARC: Ascension có miễn phí không?",
+          a: "Có. Bản beta miễn phí và trong game không có mua bán: hộp, vàng và mảnh đều đến từ việc chơi.",
+        },
+        {
+          q: "Trò chơi chạy trên nền tảng nào?",
+          a: "Điện thoại Android và máy tính Windows. Trên Windows, trò chơi mở trong một cửa sổ dọc có kích thước như màn hình điện thoại.",
+        },
+        {
+          q: "Làm sao để tham gia bản beta?",
+          a: "Liên hệ với chúng tôi qua trang liên hệ và chọn ARC: Ascension. Chúng tôi sẽ gửi bạn thông tin để tham gia.",
+        },
+        {
+          q: "Có cần kết nối internet hay tài khoản không?",
+          a: "Không. Trò chơi không bao giờ kết nối internet và không có tài khoản. Tiến độ được lưu ngay trên thiết bị của bạn.",
+        },
+        {
+          q: "Trò chơi có thu thập dữ liệu không?",
+          a: "Không. Không có quảng cáo hay công cụ phân tích, và trò chơi không dùng camera, micro hay vị trí của bạn.",
+        },
+        {
+          q: "Trò chơi có những ngôn ngữ nào?",
+          a: "Tiếng Việt và tiếng Anh, chọn ở lần mở đầu tiên và đổi được trong phần Cài đặt.",
+        },
+      ],
+      ctaDescription:
+        "ARC: Ascension đang trong giai đoạn beta trên Android và Windows. Hãy cho chúng tôi biết bạn muốn chơi, chúng tôi sẽ gửi thông tin để tham gia.",
     },
   },
 };
