@@ -18,6 +18,7 @@ export function Footer() {
         { label: t.products.items[2].name, href: "/products/easy-quiz" },
         { label: t.products.items[3].name, href: "/products/easy-slides" },
         { label: t.products.items[4].name, href: "/products/arc-ascension" },
+        { label: t.products.items[5].name, href: "/products/arc-descent" },
         { label: t.pricing.label, href: "/#pricing" },
         { label: t.nav.solutions, href: "/#solutions" },
       ],

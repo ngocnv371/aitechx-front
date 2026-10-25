@@ -87,6 +87,17 @@ export default function HomePage() {
           operatingSystem: "Windows, Android",
         },
       },
+      {
+        "@type": "Offer",
+        price: 0,
+        priceCurrency: "VND",
+        itemOffered: {
+          "@type": "VideoGame",
+          name: "ARC: Descent",
+          applicationCategory: "GameApplication",
+          operatingSystem: "Windows, Android",
+        },
+      },
     ],
   };
 

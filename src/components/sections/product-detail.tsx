@@ -12,6 +12,7 @@ import {
   EasyQuizMark,
   EasySlidesMark,
   ArcAscensionMark,
+  ArcDescentMark,
 } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -23,8 +24,9 @@ type ProductKey =
   | "workshop"
   | "easyQuiz"
   | "easySlides"
-  | "arcAscension";
-type Tone = "neon" | "violet" | "lime" | "spark" | "coral" | "aqua";
+  | "arcAscension"
+  | "arcDescent";
+type Tone = "neon" | "violet" | "lime" | "spark" | "coral" | "aqua" | "rose";
 
 /** Product mark, matching the icon the app itself ships. */
 const MARKS: Record<ProductKey, ComponentType<{ className?: string }>> = {
@@ -33,6 +35,7 @@ const MARKS: Record<ProductKey, ComponentType<{ className?: string }>> = {
   easyQuiz: EasyQuizMark,
   easySlides: EasySlidesMark,
   arcAscension: ArcAscensionMark,
+  arcDescent: ArcDescentMark,
 };
 
 /** Accent colours per product — one source for every tinted element on the page. */
@@ -99,6 +102,16 @@ const TONES: Record<
     bullet: "bg-aqua-400/15 text-aqua-300",
     sparkle: "text-aqua-400",
   },
+  arcDescent: {
+    name: "rose",
+    glow: "bg-rose-500/20",
+    ring: "border-rose-400/30",
+    shadow: "shadow-[0_0_26px_-10px_rgba(255,106,166,0.9)]",
+    icon: "text-rose-300",
+    chip: "border-rose-400/30 bg-rose-400/10 text-rose-300",
+    bullet: "bg-rose-400/15 text-rose-300",
+    sparkle: "text-rose-400",
+  },
 };
 
 /**
@@ -121,6 +134,7 @@ const PLAY_LABELS: Partial<Record<ProductKey, "playFree" | "createFree">> = {
  */
 const BETA: Partial<Record<ProductKey, true>> = {
   arcAscension: true,
+  arcDescent: true,
 };
 
 /** The primary gradient pill, shared by the hero and closing CTAs. */

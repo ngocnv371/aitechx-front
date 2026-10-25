@@ -25,6 +25,7 @@ const routes: Array<{
     priority: 0.9,
     changeFrequency: "monthly",
   },
+  { path: "/products/arc-descent", priority: 0.9, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
   { path: "/careers", priority: 0.7, changeFrequency: "weekly" },
   { path: "/contact", priority: 0.8, changeFrequency: "yearly" },

@@ -11,12 +11,13 @@ import {
   EasyQuizMark,
   EasySlidesMark,
   ArcAscensionMark,
+  ArcDescentMark,
 } from "@/components/ui/product-mark";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 
-type Tone = "neon" | "violet" | "spark" | "coral" | "aqua";
+type Tone = "neon" | "violet" | "spark" | "coral" | "aqua" | "rose";
 
 /** Product marks, matching the icons the apps themselves ship. */
 const ICONS: Record<Tone, ComponentType<{ className?: string }>> = {
@@ -25,6 +26,7 @@ const ICONS: Record<Tone, ComponentType<{ className?: string }>> = {
   spark: EasyQuizMark,
   coral: EasySlidesMark,
   aqua: ArcAscensionMark,
+  rose: ArcDescentMark,
 };
 
 const VISUALS = {
@@ -63,24 +65,29 @@ const VISUALS = {
     bullet: "bg-aqua-400/15 text-aqua-300",
     href: "/products/arc-ascension",
   },
+  rose: {
+    accent: "from-rose-400/25 to-violet-glow-500/10",
+    ring: "border-rose-400/30 text-rose-300",
+    bar: "from-violet-glow-400 to-rose-400",
+    bullet: "bg-rose-400/15 text-rose-300",
+    href: "/products/arc-descent",
+  },
 } as const;
 
-/**
- * Column spans on the six-column xl grid: three cards across the first row,
- * two wider ones across the second. On the two-column grid the odd card out
- * takes the full row.
- */
+/** Column spans on the six-column xl grid: two rows of three cards. */
 const SPANS = [
   "xl:col-span-2",
   "xl:col-span-2",
   "xl:col-span-2",
-  "xl:col-span-3",
-  "sm:col-span-2 xl:col-span-3",
+  "xl:col-span-2",
+  "xl:col-span-2",
+  "xl:col-span-2",
 ];
 
 /** Products with their own promo art, shown in place of the abstract preview. */
 const PREVIEW_ART: Partial<Record<Tone, string>> = {
   aqua: "/products/arc-ascension/hero.webp",
+  rose: "/products/arc-descent/hero.webp",
 };
 
 /** Abstract product preview — a stylised dashboard rather than a real screenshot. */
@@ -159,7 +166,7 @@ function ProductPreview({ tone }: { tone: Tone }) {
 
 export function Products() {
   const { t } = useLocale();
-  const tones = ["neon", "violet", "spark", "coral", "aqua"] as const;
+  const tones = ["neon", "violet", "spark", "coral", "aqua", "rose"] as const;
 
   return (
     <section id="products" className="relative scroll-mt-24 py-24 lg:py-32">

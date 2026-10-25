@@ -4,7 +4,7 @@ export const vi: Dictionary = {
   meta: {
     title: "AiTechX — Công ty phần mềm lấy AI làm trọng tâm",
     description:
-      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop, nền tảng trắc nghiệm lớp học Easy Quiz, Easy Slides — công cụ miễn phí giúp thầy cô tạo trò chơi đố vui PowerPoint — và ARC: Ascension, trò chơi thẻ bài dị thể cho Android và Windows.",
+      "AiTechX xây dựng phần mềm ứng dụng AI cho doanh nghiệp: hệ thống AI theo yêu cầu, nền tảng luyện gõ Typing Master, giải pháp quản trị sản xuất Workshop, nền tảng trắc nghiệm lớp học Easy Quiz, Easy Slides — công cụ miễn phí giúp thầy cô tạo trò chơi đố vui PowerPoint — cùng hai trò chơi cho Android và Windows: ARC: Ascension (thẻ bài dị thể) và ARC: Descent (thủ thành).",
     keywords: [
       "công ty phần mềm AI",
       "phát triển AI Việt Nam",
@@ -14,6 +14,7 @@ export const vi: Dictionary = {
       "tích hợp LLM",
       "tạo trò chơi PowerPoint",
       "trò chơi thẻ bài",
+      "game thủ thành",
     ],
   },
 
@@ -93,7 +94,7 @@ export const vi: Dictionary = {
 
   products: {
     label: "Sản phẩm của chúng tôi",
-    title: "Năm sản phẩm. Một sự cầu toàn.",
+    title: "Sáu sản phẩm. Một sự cầu toàn.",
     description:
       "Những nền tảng đã được kiểm chứng, chúng tôi trực tiếp vận hành và liên tục cải tiến trong môi trường thực tế.",
     cta: "Khám phá sản phẩm",
@@ -171,6 +172,21 @@ export const vi: Dictionary = {
           "Cường hóa, dung hợp và tha hóa thẻ bài",
           "Chiến dịch ba chương và Tháp Thăng Thiên 100 tầng",
           "Trận đấu canh thời điểm, theo vòng tương khắc năm hệ",
+        ],
+      },
+      {
+        id: "arc-descent",
+        badge: "Trò chơi",
+        name: "ARC: Descent",
+        tagline: "Giữ vững phòng tuyến trước bầy dị thể. Lặn xuống Vực Thẳm.",
+        description:
+          "Trò chơi thủ thành màn hình dọc cho Android và Windows: mở hộp bí ẩn, rèn đội hình năm thẻ, giữ phòng tuyến khi bầy dị thể bò xuống từ khe nứt, rồi lặn xuống Vực Thẳm không đáy. Chơi hoàn toàn offline, không tài khoản, không mua bán trong game.",
+        features: [
+          "215 thẻ dị thể, mỗi thẻ có mô hình 3D sống động",
+          "Hộp bí ẩn từ Đồng đến Lăng kính, công khai tỉ lệ rơi",
+          "Cường hóa, dung hợp và tha hóa thẻ bài",
+          "Thủ thành với Thiên Thạch, Đóng Băng và Quá Tải",
+          "Chiến dịch ba chương và Vực Thẳm không đáy",
         ],
       },
     ],
@@ -417,6 +433,7 @@ export const vi: Dictionary = {
         "Easy Quiz",
         "Easy Slides",
         "ARC: Ascension",
+        "ARC: Descent",
         "Tư vấn / đánh giá AI",
         "Nội dung khác",
       ],
@@ -1364,6 +1381,142 @@ export const vi: Dictionary = {
       ],
       ctaDescription:
         "ARC: Ascension đang trong giai đoạn beta trên Android và Windows. Hãy cho chúng tôi biết bạn muốn chơi, chúng tôi sẽ gửi thông tin để tham gia.",
+    },
+    arcDescent: {
+      meta: {
+        title: "ARC: Descent — trò chơi thủ thành dị thể cho Android và Windows",
+        description:
+          "Phong ấn dị thể vào thẻ bài, giữ vững phòng tuyến trước bầy dị thể với đội hình năm thẻ và lặn xuống Vực Thẳm không đáy. Trò chơi màn hình dọc miễn phí, chơi hoàn toàn offline, đang trong giai đoạn beta.",
+        keywords: [
+          "game thủ thành",
+          "game thủ thành offline",
+          "game thẻ bài dị thể",
+          "game màn hình dọc",
+          "game offline điện thoại",
+          "game Việt",
+        ],
+      },
+      eyebrow: "Sản phẩm · Trò chơi",
+      title: "ARC: Descent",
+      tagline: "Giữ vững phòng tuyến trước bầy dị thể, rồi đưa trận chiến xuống Vực Thẳm.",
+      description:
+        "Bạn là Đặc vụ 07 của Đội Ứng phó Dị thể. Các khe nứt đã mở và bầy dị thể đang tràn qua. Chọn đội hình tối đa năm thẻ, giữ vững cuối chiến trường trong khi từng thẻ tự khai hỏa, gọi thiên thạch, đóng băng bầy dị thể và kích quá tải cho đội hình để giữ phòng tuyến. Rồi đưa trận chiến xuống Vực Thẳm, nơi mỗi tầng sâu khó hơn tầng trước và thưởng hậu hĩnh hơn. Miễn phí, đang trong giai đoạn beta.",
+      highlights: [
+        { value: "215", label: "Thẻ dị thể" },
+        { value: "24", label: "Trạm chiến dịch" },
+        { value: "∞", label: "Tầng Vực Thẳm" },
+        { value: "3", label: "Kỹ năng đội hình" },
+      ],
+      gallery: {
+        title: "Bên trong trò chơi",
+        items: [
+          {
+            src: "/products/arc-descent/card-1-vi.webp",
+            alt: "Một thẻ sử thi rút từ hộp bí ẩn, phía trên các hộp Đồng, Bạc, Vàng và Lăng kính",
+          },
+          {
+            src: "/products/arc-descent/card-2-vi.webp",
+            alt: "Đội hình năm thẻ phía trên lưới thẻ dị thể đã sưu tầm",
+          },
+          {
+            src: "/products/arc-descent/card-3-vi.webp",
+            alt: "Các tầng của Vực Thẳm, từ Miệng Hố đến Tĩnh Mịch, với một thủ vệ dẫn đầu đợt cuối đối đầu đội hình năm thẻ",
+          },
+        ],
+      },
+      overviewTitle: "Bộ sưu tập để mở, để rèn và để đưa xuống khe nứt",
+      overview:
+        "Mỗi thẻ là một dị thể, vẽ từ chân dung riêng của nó, với chỉ số ATK và SPD tuỳ theo loài, độ hiếm, hạng sao và công rèn. Mở một hộp bí ẩn là cả một màn trình diễn: chiếc hộp rung mạnh dần khi ánh sáng rỉ ra từ các khe, rồi bung ra, từng thẻ bay ra úp mặt, lật lại và mô hình 3D của dị thể trồi lên từ thẻ. Sau đó là lò rèn — cường hóa một chỉ số bằng mảnh, dung hợp các bản trùng để lên hạng, hoặc liều tha hóa bằng hư không, viết lại mọi chỉ số và đôi khi cả hệ. Trong trận đấu, từng đợt dị thể bò xuống chiến trường dọc về phía đội hình của bạn. Mỗi thẻ tự tung đòn đặc trưng của loài mình, có đòn nổ lan hoặc nảy giữa các mục tiêu, còn bạn điều khiển kỹ năng và vòng tương khắc năm hệ quyết định mỗi phát bắn mạnh đến đâu. Để lọt ba lần là vỡ phòng tuyến. Trò chơi được thiết kế cho màn hình dọc của điện thoại và chạy y hệt trên Windows.",
+      capabilities: [
+        {
+          title: "Thủ thành theo đợt",
+          description:
+            "Từng đợt dị thể bò xuống chiến trường, dị thể của màn dẫn đầu đợt cuối. Đội hình tự khai hỏa; để lọt ba lần là vỡ phòng tuyến.",
+        },
+        {
+          title: "Kỹ năng đội hình",
+          description:
+            "Gọi Thiên Thạch xuống bất kỳ đâu trên chiến trường, Đóng Băng bầy dị thể hoặc kích Quá Tải cho đội hình, mỗi kỹ năng có thời gian hồi riêng, và chỉnh tốc độ x1 hoặc x2.",
+        },
+        {
+          title: "Lò rèn",
+          description:
+            "Cường hóa ATK hoặc SPD, dung hợp các bản trùng để lên từ một đến năm sao, tha hóa thẻ bằng hư không, hoặc phân rã thẻ thừa lấy tài nguyên.",
+        },
+        {
+          title: "Dị thể 3D sống động",
+          description:
+            "Cả 215 loài đều có mô hình 3D và hồ sơ trong Bách khoa, và mỗi lần rút thẻ, mô hình trồi lên từ chính tấm thẻ.",
+        },
+        {
+          title: "Chiến dịch và Vực Thẳm",
+          description:
+            "Ba chương, mỗi chương tám trạm và kết thúc bằng một trùm chương, rồi đến Vực Thẳm không đáy qua năm tầng địa chất với thủ vệ ở mỗi năm tầng sâu.",
+        },
+        {
+          title: "Offline và riêng tư",
+          description:
+            "Không tài khoản, quảng cáo, phân tích hay mua bán, và không hề kết nối mạng. Tiến độ lưu trên thiết bị, bằng tiếng Việt hoặc tiếng Anh.",
+        },
+      ],
+      outcomesTitle: "Bạn nhận được gì",
+      outcomes: [
+        "Một trò chơi trọn vẹn chơi offline, không cần đăng ký gì",
+        "Không mua bán: mọi chiếc hộp đều kiếm được bằng cách chơi",
+        "Chuỗi huấn luyện chín bước dạy từng tính năng, kèm phần thưởng",
+        "Cùng một trò chơi trên điện thoại Android và máy tính Windows",
+      ],
+      useCasesTitle: "Dành cho ai",
+      useCases: [
+        {
+          title: "Người sưu tầm",
+          description:
+            "Săn đủ 215 loài, thẻ ánh kim và thẻ năm sao.",
+        },
+        {
+          title: "Người mê xếp đội hình",
+          description:
+            "Cân bằng đội hình năm thẻ theo đòn đánh, hệ và các nâng cấp từ lò rèn.",
+        },
+        {
+          title: "Những phút rảnh",
+          description:
+            "Một trạm hay vài lượt lặn Vực Thẳm vừa một giờ giải lao, chơi một tay trên màn hình dọc.",
+        },
+        {
+          title: "Chơi không cần mạng",
+          description:
+            "Trên chuyến bay hay đường đi làm, không cần kết nối, không cần tài khoản.",
+        },
+      ],
+      faq: [
+        {
+          q: "ARC: Descent có miễn phí không?",
+          a: "Có. Bản beta miễn phí và trong game không có mua bán: hộp, vàng và mảnh đều đến từ việc chơi.",
+        },
+        {
+          q: "ARC: Descent khác ARC: Ascension thế nào?",
+          a: "Trò chơi giữ lại thẻ bài, hộp bí ẩn và lò rèn của Ascension, nhưng mỗi trận đấu là một màn thủ thành với đội hình năm thẻ, và Tháp Thăng Thiên được thay bằng Vực Thẳm không đáy. Đây là một trò chơi riêng với dữ liệu lưu riêng.",
+        },
+        {
+          q: "Trò chơi chạy trên nền tảng nào?",
+          a: "Điện thoại Android và máy tính Windows. Trên Windows, trò chơi mở trong một cửa sổ dọc có kích thước như màn hình điện thoại.",
+        },
+        {
+          q: "Làm sao để tham gia bản beta?",
+          a: "Liên hệ với chúng tôi qua trang liên hệ và chọn ARC: Descent. Chúng tôi sẽ gửi bạn thông tin để tham gia.",
+        },
+        {
+          q: "Có cần kết nối internet hay tài khoản không?",
+          a: "Không. Trò chơi không bao giờ kết nối internet và không có tài khoản. Tiến độ được lưu ngay trên thiết bị của bạn.",
+        },
+        {
+          q: "Trò chơi có thu thập dữ liệu không?",
+          a: "Không. Không có quảng cáo hay công cụ phân tích, và trò chơi không dùng camera, micro hay vị trí của bạn.",
+        },
+      ],
+      ctaDescription:
+        "ARC: Descent đang trong giai đoạn beta trên Android và Windows. Hãy cho chúng tôi biết bạn muốn chơi, chúng tôi sẽ gửi thông tin để tham gia.",
     },
   },
 };

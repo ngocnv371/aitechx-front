@@ -221,3 +221,6 @@ export function ArcAscensionMark({ className }: MarkProps) {
     </svg>
   );
 }
+
+/** ARC: Descent ships the same mark as ARC: Ascension (`ARC-Descent/brand/mark.svg`). */
+export const ArcDescentMark = ArcAscensionMark;

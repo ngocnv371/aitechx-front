@@ -78,6 +78,12 @@ export function Navbar() {
       description: t.products.items[4].tagline,
       icon: Gamepad2,
     },
+    {
+      href: "/products/arc-descent",
+      name: t.products.items[5].name,
+      description: t.products.items[5].tagline,
+      icon: Gamepad2,
+    },
   ];
 
   const links = [

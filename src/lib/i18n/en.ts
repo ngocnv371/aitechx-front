@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: "AiTechX — AI-first software engineering",
     description:
-      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite, the Easy Quiz classroom platform, Easy Slides, a free PowerPoint quiz-game maker for teachers, and ARC: Ascension, an anomaly card game for Android and Windows.",
+      "AiTechX builds AI-powered software for ambitious teams: custom AI systems, the Typing Master learning platform, the Workshop manufacturing suite, the Easy Quiz classroom platform, Easy Slides, a free PowerPoint quiz-game maker for teachers, ARC: Ascension, an anomaly card game for Android and Windows, and ARC: Descent, its wave-defence sibling.",
     keywords: [
       "AI software company",
       "AI development Vietnam",
@@ -12,6 +12,7 @@ export const en = {
       "LLM integration",
       "PowerPoint quiz maker",
       "card game",
+      "wave defence game",
     ],
   },
 
@@ -91,7 +92,7 @@ export const en = {
 
   products: {
     label: "Our products",
-    title: "Five products. One obsession with craft.",
+    title: "Six products. One obsession with craft.",
     description:
       "Proven platforms we built, operate and keep improving in production — not slideware.",
     cta: "Explore product",
@@ -169,6 +170,21 @@ export const en = {
           "Empower, fuse and corrupt the cards you pull",
           "A three-chapter campaign and the 100-floor Tower of Ascension",
           "Timing-ring battles across a five-element cycle",
+        ],
+      },
+      {
+        id: "arc-descent",
+        badge: "Game",
+        name: "ARC: Descent",
+        tagline: "Hold the line against the horde. Dive the Abyss.",
+        description:
+          "A portrait wave-defence game for Android and Windows: open mystery boxes, forge a squad of five, hold the line as the horde crawls down from the rift, then dive a bottomless Abyss. Plays fully offline, with no accounts and no purchases.",
+        features: [
+          "215 anomaly cards, each with a live 3D model",
+          "Mystery boxes from Bronze to Prism, with listed odds",
+          "Empower, fuse and corrupt the cards you pull",
+          "Wave defence with METEOR, FREEZE and OVERDRIVE",
+          "A three-chapter campaign and the bottomless Abyss",
         ],
       },
     ],
@@ -414,6 +430,7 @@ export const en = {
         "Easy Quiz",
         "Easy Slides",
         "ARC: Ascension",
+        "ARC: Descent",
         "AI consulting / audit",
         "Something else",
       ],
@@ -1364,6 +1381,142 @@ export const en = {
       ],
       ctaDescription:
         "ARC: Ascension is in beta on Android and Windows. Tell us you'd like to play and we'll send you the details for joining.",
+    },
+    arcDescent: {
+      meta: {
+        title: "ARC: Descent — an anomaly wave-defence game for Android and Windows",
+        description:
+          "Bind rogue anomalies into cards, hold the line against the horde with a squad of five and dive a bottomless Abyss. A free, fully offline portrait game in beta.",
+        keywords: [
+          "anomaly card game",
+          "wave defence game",
+          "tower defense game",
+          "offline mobile game",
+          "portrait mobile game",
+          "Vietnamese game",
+        ],
+      },
+      eyebrow: "Product · Game",
+      title: "ARC: Descent",
+      tagline: "Hold the line against the horde, then take the fight down into the Abyss.",
+      description:
+        "You are Agent 07 of the Anomaly Response Cell. The rifts are open and the horde is crawling through. Pick a squad of up to five cards and hold the bottom of the field while each one fires on its own, calling meteors, freezing the horde and overdriving the squad to keep the line. Then take the fight down into the Abyss, where every depth is harder than the last and pays better. Free, in beta.",
+      highlights: [
+        { value: "215", label: "Anomaly cards" },
+        { value: "24", label: "Campaign checkpoints" },
+        { value: "∞", label: "Abyss depths" },
+        { value: "3", label: "Squad skills" },
+      ],
+      gallery: {
+        title: "A look inside",
+        items: [
+          {
+            src: "/products/arc-descent/card-1-en.webp",
+            alt: "An epic card pulled from a mystery box, above the Bronze, Silver, Gold and Prism boxes",
+          },
+          {
+            src: "/products/arc-descent/card-2-en.webp",
+            alt: "A squad of five above a grid of collected anomaly cards",
+          },
+          {
+            src: "/products/arc-descent/card-3-en.webp",
+            alt: "The strata of the Abyss, from the Shallows to the Bottomless, with a guardian leading the last wave against a squad of five",
+          },
+        ],
+      },
+      overviewTitle: "A collection you open, forge and send down the rift",
+      overview:
+        "Every card is one anomaly, drawn from its authored portrait, with ATK and SPD set by its species, rarity, rank and forge work. Opening a mystery box is a small show: the box rattles harder as light leaks from its seams, bursts, and each card flies out face down, flips, and its live 3D model rises out of it. The forge takes it from there — empower a stat with shards, fuse duplicates to rank a card up, or gamble it on corruption, which rewrites every stat and sometimes the element. In a fight, waves of anomalies crawl down a vertical field toward your squad. Each card fires its species' signature attack on its own, some splashing or chaining between targets, while you play the skills and the five-element cycle decides how hard each shot lands. Three breaches and the line breaks. The game is built portrait-first for a phone and runs the same on Windows.",
+      capabilities: [
+        {
+          title: "Wave defence",
+          description:
+            "Waves crawl down the field with the stage's own anomaly leading the last one. The squad fires on its own; three breaches break the line.",
+        },
+        {
+          title: "Squad skills",
+          description:
+            "Call a METEOR anywhere on the field, FREEZE the horde or OVERDRIVE the squad's fire, each on its own cooldown, and run the field at x1 or x2.",
+        },
+        {
+          title: "The forge",
+          description:
+            "Empower ATK or SPD, fuse duplicates to climb from one to five stars, corrupt a card with void essence, or dissolve spares for resources.",
+        },
+        {
+          title: "Live 3D anomalies",
+          description:
+            "All 215 species have a live 3D model and a case file in the Index, and every pull raises the model out of its card.",
+        },
+        {
+          title: "Campaign and Abyss",
+          description:
+            "Three chapters of eight checkpoints, each ending in a chapter boss, then a bottomless Abyss across five strata with a guardian every fifth depth.",
+        },
+        {
+          title: "Offline and private",
+          description:
+            "No accounts, ads, analytics or purchases, and no network access at all. Progress is saved on the device, in English or Vietnamese.",
+        },
+      ],
+      outcomesTitle: "What you get",
+      outcomes: [
+        "A full game that plays offline, with nothing to sign up for",
+        "No purchases: every box is earned by playing",
+        "A guided nine-step orientation that teaches each system with rewards",
+        "The same game on an Android phone and a Windows PC",
+      ],
+      useCasesTitle: "Who it is for",
+      useCases: [
+        {
+          title: "Collectors",
+          description:
+            "Chase all 215 species, shiny holo cards and five-star ranks.",
+        },
+        {
+          title: "Squad builders",
+          description:
+            "Balance a squad of five around attacks, elements and forge upgrades.",
+        },
+        {
+          title: "Short sessions",
+          description:
+            "A checkpoint or a few Abyss dives fit in a coffee break, one-handed in portrait.",
+        },
+        {
+          title: "Offline play",
+          description:
+            "On a flight or a commute, with no connection and no account needed.",
+        },
+      ],
+      faq: [
+        {
+          q: "Is ARC: Descent free?",
+          a: "Yes. The beta is free, and there are no purchases in the game: boxes, gold and shards all come from playing.",
+        },
+        {
+          q: "How is it different from ARC: Ascension?",
+          a: "It keeps Ascension's cards, boxes and forge, but every fight is a wave defence with a squad of five, and the Tower of Ascension gives way to a bottomless Abyss. It is a separate game with its own save.",
+        },
+        {
+          q: "Which platforms does it run on?",
+          a: "Android phones and Windows PCs. On Windows it opens as a portrait window the shape of a phone screen.",
+        },
+        {
+          q: "How do I join the beta?",
+          a: "Get in touch through the contact page and choose ARC: Descent. We will send you the details for joining.",
+        },
+        {
+          q: "Does it need an internet connection or an account?",
+          a: "No. The game never connects to the internet and has no accounts. Your progress is saved on your device.",
+        },
+        {
+          q: "Does it collect any data?",
+          a: "No. There are no ads or analytics, and the game does not use your camera, microphone or location.",
+        },
+      ],
+      ctaDescription:
+        "ARC: Descent is in beta on Android and Windows. Tell us you'd like to play and we'll send you the details for joining.",
     },
   },
 };

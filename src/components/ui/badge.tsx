@@ -8,7 +8,7 @@ export function Badge({
 }: {
   children: ReactNode;
   className?: string;
-  tone?: "neon" | "violet" | "neutral" | "lime" | "spark" | "coral" | "aqua";
+  tone?: "neon" | "violet" | "neutral" | "lime" | "spark" | "coral" | "aqua" | "rose";
 }) {
   const tones = {
     neon: "border-neon-400/40 bg-neon-400/10 text-neon-300",
@@ -18,6 +18,7 @@ export function Badge({
     spark: "border-spark-400/40 bg-spark-400/10 text-spark-300",
     coral: "border-coral-400/40 bg-coral-400/10 text-coral-300",
     aqua: "border-aqua-400/40 bg-aqua-400/10 text-aqua-300",
+    rose: "border-rose-400/40 bg-rose-400/10 text-rose-300",
     neutral: "border-ink-600 bg-ink-800/70 text-ink-200",
   } as const;
 
