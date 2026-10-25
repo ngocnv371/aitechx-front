@@ -28,6 +28,7 @@ export const en = {
     playFree: "Play free",
     createFree: "Create a quiz free",
     joinBeta: "Join the beta",
+    getOnStore: "Get it on Microsoft Store",
     backHome: "Back home",
     comingSoon: "Coming soon",
     new: "New",
@@ -1250,7 +1251,7 @@ export const en = {
       meta: {
         title: "ARC: Ascension — an anomaly card game for Android and Windows",
         description:
-          "Bind rogue anomalies into cards: open mystery boxes, forge your deck of five and climb the 100-floor Tower of Ascension. A free, fully offline portrait card game in beta.",
+          "Bind rogue anomalies into cards: open mystery boxes, forge your deck of five and climb the 100-floor Tower of Ascension. A free, fully offline portrait card game, out now on the Microsoft Store.",
         keywords: [
           "anomaly card game",
           "card battle game",
@@ -1264,7 +1265,7 @@ export const en = {
       title: "ARC: Ascension",
       tagline: "Bind rogue anomalies into cards, then climb the Tower of Ascension.",
       description:
-        "You are Agent 07 of the Anomaly Response Cell. The Cell no longer chases anomalies down alleys: it binds them into cards. Open mystery boxes to grow your collection, forge the cards you pull, build a deck of five and fight through a campaign of fixed checkpoints and up the endless tower. Free, in beta.",
+        "You are Agent 07 of the Anomaly Response Cell. The Cell no longer chases anomalies down alleys: it binds them into cards. Open mystery boxes to grow your collection, forge the cards you pull, build a deck of five and fight through a campaign of fixed checkpoints and up the endless tower. Free on the Microsoft Store.",
       highlights: [
         { value: "140", label: "Anomaly cards" },
         { value: "24", label: "Campaign checkpoints" },
@@ -1356,15 +1357,15 @@ export const en = {
       faq: [
         {
           q: "Is ARC: Ascension free?",
-          a: "Yes. The beta is free, and there are no purchases in the game: boxes, gold and shards all come from playing.",
+          a: "Yes. The game is free, and there are no purchases in it: boxes, gold and shards all come from playing.",
         },
         {
           q: "Which platforms does it run on?",
           a: "Android phones and Windows PCs. On Windows it opens as a portrait window the shape of a phone screen.",
         },
         {
-          q: "How do I join the beta?",
-          a: "Get in touch through the contact page and choose ARC: Ascension. We will send you the details for joining.",
+          q: "Where can I get it?",
+          a: "On Windows, install it free from the Microsoft Store. The Android version is still in beta: get in touch through the contact page and choose ARC: Ascension, and we will send you the details for joining.",
         },
         {
           q: "Does it need an internet connection or an account?",
@@ -1380,7 +1381,7 @@ export const en = {
         },
       ],
       ctaDescription:
-        "ARC: Ascension is in beta on Android and Windows. Tell us you'd like to play and we'll send you the details for joining.",
+        "ARC: Ascension is out now on the Microsoft Store for Windows. Install it free and start binding anomalies.",
     },
     arcDescent: {
       meta: {

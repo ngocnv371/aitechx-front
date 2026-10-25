@@ -30,6 +30,7 @@ export const vi: Dictionary = {
     playFree: "Chơi miễn phí",
     createFree: "Tạo trò chơi miễn phí",
     joinBeta: "Tham gia bản beta",
+    getOnStore: "Tải trên Microsoft Store",
     backHome: "Về trang chủ",
     comingSoon: "Sắp ra mắt",
     new: "Mới",
@@ -1250,7 +1251,7 @@ export const vi: Dictionary = {
       meta: {
         title: "ARC: Ascension — trò chơi thẻ bài dị thể cho Android và Windows",
         description:
-          "Phong ấn dị thể vào thẻ bài: mở hộp bí ẩn, xếp bộ bài năm thẻ và leo Tháp Thăng Thiên 100 tầng. Trò chơi thẻ bài màn hình dọc miễn phí, chơi hoàn toàn offline, đang trong giai đoạn beta.",
+          "Phong ấn dị thể vào thẻ bài: mở hộp bí ẩn, xếp bộ bài năm thẻ và leo Tháp Thăng Thiên 100 tầng. Trò chơi thẻ bài màn hình dọc miễn phí, chơi hoàn toàn offline, đã có mặt trên Microsoft Store.",
         keywords: [
           "trò chơi thẻ bài",
           "game thẻ bài offline",
@@ -1264,7 +1265,7 @@ export const vi: Dictionary = {
       title: "ARC: Ascension",
       tagline: "Phong ấn dị thể vào thẻ bài, rồi leo lên Tháp Thăng Thiên.",
       description:
-        "Bạn là Đặc vụ 07 của Đội Ứng phó Dị thể. Đội không còn đuổi dị thể khắp các ngõ hẻm nữa: giờ chúng được phong ấn vào thẻ bài. Mở hộp bí ẩn để mở rộng bộ sưu tập, rèn những thẻ rút được, xếp bộ bài năm thẻ rồi chiến đấu qua các trạm của chiến dịch và leo lên ngọn tháp không có đỉnh. Miễn phí, đang trong giai đoạn beta.",
+        "Bạn là Đặc vụ 07 của Đội Ứng phó Dị thể. Đội không còn đuổi dị thể khắp các ngõ hẻm nữa: giờ chúng được phong ấn vào thẻ bài. Mở hộp bí ẩn để mở rộng bộ sưu tập, rèn những thẻ rút được, xếp bộ bài năm thẻ rồi chiến đấu qua các trạm của chiến dịch và leo lên ngọn tháp không có đỉnh. Miễn phí trên Microsoft Store.",
       highlights: [
         { value: "140", label: "Thẻ dị thể" },
         { value: "24", label: "Trạm chiến dịch" },
@@ -1356,15 +1357,15 @@ export const vi: Dictionary = {
       faq: [
         {
           q: "ARC: Ascension có miễn phí không?",
-          a: "Có. Bản beta miễn phí và trong game không có mua bán: hộp, vàng và mảnh đều đến từ việc chơi.",
+          a: "Có. Trò chơi miễn phí và không có mua bán: hộp, vàng và mảnh đều đến từ việc chơi.",
         },
         {
           q: "Trò chơi chạy trên nền tảng nào?",
           a: "Điện thoại Android và máy tính Windows. Trên Windows, trò chơi mở trong một cửa sổ dọc có kích thước như màn hình điện thoại.",
         },
         {
-          q: "Làm sao để tham gia bản beta?",
-          a: "Liên hệ với chúng tôi qua trang liên hệ và chọn ARC: Ascension. Chúng tôi sẽ gửi bạn thông tin để tham gia.",
+          q: "Tải trò chơi ở đâu?",
+          a: "Trên Windows, cài đặt miễn phí từ Microsoft Store. Bản Android vẫn đang trong giai đoạn beta: liên hệ với chúng tôi qua trang liên hệ và chọn ARC: Ascension, chúng tôi sẽ gửi bạn thông tin để tham gia.",
         },
         {
           q: "Có cần kết nối internet hay tài khoản không?",
@@ -1380,7 +1381,7 @@ export const vi: Dictionary = {
         },
       ],
       ctaDescription:
-        "ARC: Ascension đang trong giai đoạn beta trên Android và Windows. Hãy cho chúng tôi biết bạn muốn chơi, chúng tôi sẽ gửi thông tin để tham gia.",
+        "ARC: Ascension đã có mặt trên Microsoft Store cho Windows. Cài đặt miễn phí và bắt đầu phong ấn dị thể.",
     },
     arcDescent: {
       meta: {

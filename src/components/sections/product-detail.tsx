@@ -121,11 +121,16 @@ const TONES: Record<
 const PLAY_URLS: Partial<Record<ProductKey, string>> = {
   easyQuiz: "https://easyquiz.aitechx.vn",
   easySlides: EASY_SLIDES_URL,
+  // The web listing opens the Store app on Windows and still works elsewhere.
+  arcAscension: "https://apps.microsoft.com/detail/9NWSBNGSPVJ9",
 };
 
 /** Label for the live-app CTA; tools say "create", games say "play". */
-const PLAY_LABELS: Partial<Record<ProductKey, "playFree" | "createFree">> = {
+const PLAY_LABELS: Partial<
+  Record<ProductKey, "playFree" | "createFree" | "getOnStore">
+> = {
   easySlides: "createFree",
+  arcAscension: "getOnStore",
 };
 
 /**
@@ -133,7 +138,6 @@ const PLAY_LABELS: Partial<Record<ProductKey, "playFree" | "createFree">> = {
  * send people to, their CTAs ask for beta access through the contact page.
  */
 const BETA: Partial<Record<ProductKey, true>> = {
-  arcAscension: true,
   arcDescent: true,
 };
 
