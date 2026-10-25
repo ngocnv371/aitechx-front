@@ -484,7 +484,7 @@ export const en = {
         },
         {
           heading: "Local storage in our products",
-          body: "Typing Master and Easy Quiz keep progress and preferences in your browser. Playing as a guest needs no account, and signing in is optional for cloud sync. Easy Slides builds your presentation entirely in the browser — the questions and pictures you add are never uploaded. ARC: Ascension saves your progress on your device and never connects to the internet.",
+          body: "Typing Master and Easy Quiz keep progress and preferences in your browser. Playing as a guest needs no account, and signing in is optional for cloud sync. Easy Slides builds your presentation entirely in the browser — the questions and pictures you add are never uploaded. ARC: Ascension and ARC: Descent save your progress on your device and never connect to the internet.",
         },
         {
           heading: "Your choices",
@@ -545,6 +545,78 @@ export const en = {
         {
           heading: "Availability",
           body: "We monitor our services and rehearse recovery so that problems are found and resolved quickly.",
+        },
+      ],
+    },
+    arcAscensionPrivacy: {
+      meta: {
+        title: "ARC: Ascension privacy policy",
+        description:
+          "ARC: Ascension collects no personal information: no accounts, ads or analytics, and it never connects to the internet.",
+      },
+      title: "ARC: Ascension privacy policy",
+      lead: "ARC: Ascension does not collect, store or share personal information. This policy covers the game on Windows and Android.",
+      updated: "October 2026",
+      sections: [
+        {
+          heading: "What we collect",
+          body: "Nothing. ARC: Ascension has no accounts, ads, analytics or in-app purchases, and it does not collect, transmit or share any personal information with AiTechX or anyone else.",
+        },
+        {
+          heading: "Data on your device",
+          body: "Your progress and settings are saved on your device, together with small diagnostic logs that help the game recover from errors. Screenshots you choose to take are saved to your Pictures folder. These files never leave your device and are removed when you uninstall the game.",
+        },
+        {
+          heading: "Permissions and internet",
+          body: "The game does not use your camera, microphone, contacts or location, and it does not connect to the internet. It plays fully offline.",
+        },
+        {
+          heading: "Third parties",
+          body: "ARC: Ascension contains no third-party advertising, analytics or tracking services. The store you install it from (such as the Microsoft Store) handles the download under its own privacy policy.",
+        },
+        {
+          heading: "Children",
+          body: "Because the game collects no personal information, it collects none from children either.",
+        },
+        {
+          heading: "Changes and contact",
+          body: "If a future version adds any feature that handles personal data, we will update this policy before it ships. Questions: hello@aitechx.vn.",
+        },
+      ],
+    },
+    arcDescentPrivacy: {
+      meta: {
+        title: "ARC: Descent privacy policy",
+        description:
+          "ARC: Descent collects no personal information: no accounts, ads or analytics, and it never connects to the internet.",
+      },
+      title: "ARC: Descent privacy policy",
+      lead: "ARC: Descent does not collect, store or share personal information. This policy covers the game on Windows and Android.",
+      updated: "October 2026",
+      sections: [
+        {
+          heading: "What we collect",
+          body: "Nothing. ARC: Descent has no accounts, ads, analytics or in-app purchases, and it does not collect, transmit or share any personal information with AiTechX or anyone else.",
+        },
+        {
+          heading: "Data on your device",
+          body: "Your progress and settings are saved on your device, together with small diagnostic logs that help the game recover from errors. Screenshots you choose to take are saved to your Pictures folder. These files never leave your device and are removed when you uninstall the game.",
+        },
+        {
+          heading: "Permissions and internet",
+          body: "The game does not use your camera, microphone, contacts or location, and it does not connect to the internet. It plays fully offline.",
+        },
+        {
+          heading: "Third parties",
+          body: "ARC: Descent contains no third-party advertising, analytics or tracking services. The store you install it from (such as the Microsoft Store) handles the download under its own privacy policy.",
+        },
+        {
+          heading: "Children",
+          body: "Because the game collects no personal information, it collects none from children either.",
+        },
+        {
+          heading: "Changes and contact",
+          body: "If a future version adds any feature that handles personal data, we will update this policy before it ships. Questions: hello@aitechx.vn.",
         },
       ],
     },

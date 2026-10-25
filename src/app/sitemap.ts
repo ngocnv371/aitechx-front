@@ -29,6 +29,8 @@ const routes: Array<{
   { path: "/careers", priority: 0.7, changeFrequency: "weekly" },
   { path: "/contact", priority: 0.8, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/privacy/arc-ascension", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/privacy/arc-descent", priority: 0.3, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
   { path: "/security", priority: 0.3, changeFrequency: "yearly" },
 ];

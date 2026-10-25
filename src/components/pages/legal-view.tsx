@@ -4,7 +4,7 @@ import { PageHero } from "@/components/layout/page-hero";
 import { useLocale } from "@/components/providers/locale-provider";
 import { Reveal } from "@/components/ui/reveal";
 
-export type LegalPageKey = "privacy" | "terms" | "security";
+export type LegalPageKey = "privacy" | "terms" | "security" | "arcAscensionPrivacy" | "arcDescentPrivacy";
 
 export function LegalView({ page }: { page: LegalPageKey }) {
   const { t } = useLocale();

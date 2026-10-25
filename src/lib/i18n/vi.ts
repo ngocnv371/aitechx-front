@@ -486,7 +486,7 @@ export const vi: Dictionary = {
         },
         {
           heading: "Lưu trữ cục bộ trong sản phẩm",
-          body: "Typing Master và Easy Quiz lưu tiến độ và tuỳ chọn trong trình duyệt của bạn. Chơi với tư cách khách không cần tài khoản, và đăng nhập là tuỳ chọn để đồng bộ đám mây. Easy Slides tạo bài trình chiếu hoàn toàn trên trình duyệt — câu hỏi và hình ảnh bạn thêm vào không bao giờ bị tải lên. ARC: Ascension lưu tiến độ ngay trên thiết bị và không bao giờ kết nối internet.",
+          body: "Typing Master và Easy Quiz lưu tiến độ và tuỳ chọn trong trình duyệt của bạn. Chơi với tư cách khách không cần tài khoản, và đăng nhập là tuỳ chọn để đồng bộ đám mây. Easy Slides tạo bài trình chiếu hoàn toàn trên trình duyệt — câu hỏi và hình ảnh bạn thêm vào không bao giờ bị tải lên. ARC: Ascension và ARC: Descent lưu tiến độ ngay trên thiết bị và không bao giờ kết nối internet.",
         },
         {
           heading: "Quyền của bạn",
@@ -547,6 +547,78 @@ export const vi: Dictionary = {
         {
           heading: "Tính sẵn sàng",
           body: "Chúng tôi giám sát dịch vụ và diễn tập khôi phục để sự cố được phát hiện và xử lý nhanh chóng.",
+        },
+      ],
+    },
+    arcAscensionPrivacy: {
+      meta: {
+        title: "Chính sách bảo mật ARC: Ascension",
+        description:
+          "ARC: Ascension không thu thập thông tin cá nhân: không tài khoản, không quảng cáo, không phân tích, và không bao giờ kết nối internet.",
+      },
+      title: "Chính sách bảo mật ARC: Ascension",
+      lead: "ARC: Ascension không thu thập, lưu trữ hay chia sẻ thông tin cá nhân. Chính sách này áp dụng cho trò chơi trên Windows và Android.",
+      updated: "Tháng 10 năm 2026",
+      sections: [
+        {
+          heading: "Dữ liệu chúng tôi thu thập",
+          body: "Không có. ARC: Ascension không có tài khoản, quảng cáo, công cụ phân tích hay mua hàng trong ứng dụng, và không thu thập, gửi đi hay chia sẻ bất kỳ thông tin cá nhân nào với AiTechX hay bên nào khác.",
+        },
+        {
+          heading: "Dữ liệu trên thiết bị của bạn",
+          body: "Tiến độ và cài đặt được lưu ngay trên thiết bị, cùng một số tệp nhật ký chẩn đoán nhỏ giúp trò chơi phục hồi khi gặp lỗi. Ảnh chụp màn hình bạn chủ động chụp được lưu vào thư mục Ảnh. Các tệp này không bao giờ rời khỏi thiết bị và sẽ bị xoá khi bạn gỡ cài đặt trò chơi.",
+        },
+        {
+          heading: "Quyền truy cập và internet",
+          body: "Trò chơi không sử dụng camera, micro, danh bạ hay vị trí của bạn, và không kết nối internet. Trò chơi chạy hoàn toàn ngoại tuyến.",
+        },
+        {
+          heading: "Bên thứ ba",
+          body: "ARC: Ascension không chứa dịch vụ quảng cáo, phân tích hay theo dõi của bên thứ ba. Cửa hàng bạn tải trò chơi về (như Microsoft Store) xử lý việc tải xuống theo chính sách bảo mật riêng của họ.",
+        },
+        {
+          heading: "Trẻ em",
+          body: "Vì trò chơi không thu thập thông tin cá nhân, nên cũng không thu thập thông tin của trẻ em.",
+        },
+        {
+          heading: "Thay đổi và liên hệ",
+          body: "Nếu phiên bản sau bổ sung tính năng xử lý dữ liệu cá nhân, chúng tôi sẽ cập nhật chính sách này trước khi phát hành. Mọi thắc mắc xin gửi tới hello@aitechx.vn.",
+        },
+      ],
+    },
+    arcDescentPrivacy: {
+      meta: {
+        title: "Chính sách bảo mật ARC: Descent",
+        description:
+          "ARC: Descent không thu thập thông tin cá nhân: không tài khoản, không quảng cáo, không phân tích, và không bao giờ kết nối internet.",
+      },
+      title: "Chính sách bảo mật ARC: Descent",
+      lead: "ARC: Descent không thu thập, lưu trữ hay chia sẻ thông tin cá nhân. Chính sách này áp dụng cho trò chơi trên Windows và Android.",
+      updated: "Tháng 10 năm 2026",
+      sections: [
+        {
+          heading: "Dữ liệu chúng tôi thu thập",
+          body: "Không có. ARC: Descent không có tài khoản, quảng cáo, công cụ phân tích hay mua hàng trong ứng dụng, và không thu thập, gửi đi hay chia sẻ bất kỳ thông tin cá nhân nào với AiTechX hay bên nào khác.",
+        },
+        {
+          heading: "Dữ liệu trên thiết bị của bạn",
+          body: "Tiến độ và cài đặt được lưu ngay trên thiết bị, cùng một số tệp nhật ký chẩn đoán nhỏ giúp trò chơi phục hồi khi gặp lỗi. Ảnh chụp màn hình bạn chủ động chụp được lưu vào thư mục Ảnh. Các tệp này không bao giờ rời khỏi thiết bị và sẽ bị xoá khi bạn gỡ cài đặt trò chơi.",
+        },
+        {
+          heading: "Quyền truy cập và internet",
+          body: "Trò chơi không sử dụng camera, micro, danh bạ hay vị trí của bạn, và không kết nối internet. Trò chơi chạy hoàn toàn ngoại tuyến.",
+        },
+        {
+          heading: "Bên thứ ba",
+          body: "ARC: Descent không chứa dịch vụ quảng cáo, phân tích hay theo dõi của bên thứ ba. Cửa hàng bạn tải trò chơi về (như Microsoft Store) xử lý việc tải xuống theo chính sách bảo mật riêng của họ.",
+        },
+        {
+          heading: "Trẻ em",
+          body: "Vì trò chơi không thu thập thông tin cá nhân, nên cũng không thu thập thông tin của trẻ em.",
+        },
+        {
+          heading: "Thay đổi và liên hệ",
+          body: "Nếu phiên bản sau bổ sung tính năng xử lý dữ liệu cá nhân, chúng tôi sẽ cập nhật chính sách này trước khi phát hành. Mọi thắc mắc xin gửi tới hello@aitechx.vn.",
         },
       ],
     },
