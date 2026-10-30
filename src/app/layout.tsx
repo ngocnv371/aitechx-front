@@ -73,6 +73,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   category: "technology",
+  other: {
+    "google-adsense-account": "ca-pub-3599233318321564",
+  },
 };
 
 export const viewport: Viewport = {
